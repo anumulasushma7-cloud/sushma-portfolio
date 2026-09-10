@@ -1,234 +1,322 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <meta
-        name="description"
-        content="A. Sushma - Projects and Portfolio showcasing web development, UI design, Zenora, Healthy Bites and creative projects."
-    >
+<meta
+    name="description"
+    content="A. Sushma - Projects and Portfolio showcasing web development, UI design, Zenora, Healthy Bites and creative projects."
+>
 
-    <meta
-        name="author"
-        content="A. Sushma"
-    >
+<meta
+    name="author"
+    content="A. Sushma"
+>
 
-    <title>Projects | A. Sushma</title>
+<title>Projects | A. Sushma</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- HEADER -->
 
-    <!-- HEADER -->
+<header class="site-header">
 
-    <header class="site-header">
+    <nav class="navbar">
 
-        <nav class="navbar">
+        <a
+            href="index.html"
+            class="brand"
+        >
 
-            <a
-                href="index.html"
-                class="brand"
-            >
+            <span class="brand-logo">
+                Z
+            </span>
 
-                <span class="brand-logo">
-                    Z
-                </span>
+            <span class="brand-text">
 
-                <span class="brand-text">
+                <strong>
+                    A. Sushma
+                </strong>
 
-                    <strong>
-                        A. Sushma
-                    </strong>
+                <small>
+                    Creative Technology
+                </small>
 
-                    <small>
-                        Creative Technology
-                    </small>
+            </span>
 
-                </span>
+        </a>
 
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <div
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
             </a>
 
+            <a href="about.html">
+                About
+            </a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a
+                href="projects.html"
+                class="active"
             >
+                Projects
+            </a>
 
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="contact.html">
+                Contact
+            </a>
 
-            </button>
+        </div>
+
+    </nav>
+
+</header>
 
 
-            <div
-                class="nav-links"
-                id="navLinks"
-            >
 
-                <a href="index.html">
-                    Home
-                </a>
+<!-- MAIN -->
 
-                <a href="about.html">
-                    About
-                </a>
+<main>
 
-                <a href="skills.html">
-                    Skills
-                </a>
 
-                <a
-                    href="projects.html"
-                    class="active"
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div class="background-shape shape-one"></div>
+
+        <div class="background-shape shape-three"></div>
+
+
+        <div class="page-hero-content reveal">
+
+            <span class="eyebrow">
+                My Work ✦
+            </span>
+
+
+            <h1>
+
+                Projects that turn
+
+                <span>
+                    ideas into reality.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                A collection of projects where technology,
+                creativity, design and problem-solving
+                come together.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section class="section">
+
+        <div class="section-heading reveal">
+
+            <span class="section-tag">
+                Selected Projects
+            </span>
+
+
+            <h2>
+
+                Things I've
+
+                <span>
+                    built & created.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                From full applications to creative web
+                experiences, these projects represent my
+                learning, experimentation and passion
+                for technology.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ZENORA -->
+
+        <article class="project-card featured-project reveal">
+
+
+            <div class="project-image zenora-image">
+
+                <img
+                    src="data:image/jpeg;base64,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"
+                    alt="Zenora - Your Life, Organized."
+                    loading="eager"
+                    class="clickable-project-image"
                 >
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
 
             </div>
 
-        </nav>
 
-    </header>
+            <div class="project-content">
 
-
-
-    <!-- MAIN -->
-
-    <main>
-
-
-        <!-- HERO -->
-
-        <section class="page-hero">
-
-            <div class="background-shape shape-one"></div>
-
-            <div class="background-shape shape-three"></div>
-
-
-            <div class="page-hero-content reveal">
-
-                <span class="eyebrow">
-                    My Work ✦
+                <span class="project-number">
+                    01
                 </span>
 
 
-                <h1>
+                <span class="project-category">
+                    FLUTTER APPLICATION
+                </span>
 
-                    Projects that turn
+
+                <h3>
+
+                    Zenora —
 
                     <span>
-                        ideas into reality.
+                        Your Life, Organized.
                     </span>
 
-                </h1>
+                </h3>
 
 
                 <p>
 
-                    A collection of projects where technology,
-                    creativity, design and problem-solving
-                    come together.
+                    Zenora is a smart personal assistant concept
+                    designed to organize everyday life in one place.
+                    It combines reminders, study planning, water
+                    tracking, expenses, meals, activities and more
+                    into a single modern experience.
 
                 </p>
 
-            </div>
 
-        </section>
-
-
-
-        <!-- PROJECTS -->
-
-        <section class="section">
-
-            <div class="section-heading reveal">
-
-                <span class="section-tag">
-                    Selected Projects
-                </span>
-
-
-                <h2>
-
-                    Things I've
+                <div class="project-tags">
 
                     <span>
-                        built & created.
+                        Flutter
                     </span>
 
-                </h2>
+                    <span>
+                        Dart
+                    </span>
 
+                    <span>
+                        Firebase
+                    </span>
 
-                <p>
+                    <span>
+                        UI/UX
+                    </span>
 
-                    From full applications to creative web
-                    experiences, these projects represent my
-                    learning, experimentation and passion
-                    for technology.
+                    <span>
+                        AI
+                    </span>
 
-                </p>
+                </div>
 
             </div>
 
+        </article>
 
 
-            <!-- ZENORA -->
 
-            <article class="project-card featured-project reveal">
+        <!-- IMAGE PROJECTS -->
+
+        <div class="image-project-grid">
 
 
-                <div class="project-image zenora-image">
+            <!-- HEALTHY BITES -->
+
+            <article class="image-project-card reveal">
+
+                <div class="image-box">
 
                     <img
-                        src="data:image/jpeg;base64,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"
-                        alt="Zenora - Your Life, Organized."
-                        loading="eager"
+                        src="./images/healthy_bites.jpeg"
+                        alt="Healthy Bites project design"
+                        loading="lazy"
+                        class="clickable-project-image"
                     >
 
                 </div>
 
 
-                <div class="project-content">
+                <div class="image-project-info">
 
                     <span class="project-number">
-                        01
+                        02
                     </span>
 
 
                     <span class="project-category">
-                        FLUTTER APPLICATION
+                        WEB DESIGN
                     </span>
 
 
                     <h3>
 
-                        Zenora —
+                        Healthy
 
                         <span>
-                            Your Life, Organized.
+                            Bites
                         </span>
 
                     </h3>
@@ -236,246 +324,9 @@
 
                     <p>
 
-                        Zenora is a smart personal assistant concept
-                        designed to organize everyday life in one place.
-                        It combines reminders, study planning, water
-                        tracking, expenses, meals, activities and more
-                        into a single modern experience.
-
-                    </p>
-
-
-                    <div class="project-tags">
-
-                        <span>
-                            Flutter
-                        </span>
-
-                        <span>
-                            Dart
-                        </span>
-
-                        <span>
-                            Firebase
-                        </span>
-
-                        <span>
-                            UI/UX
-                        </span>
-
-                        <span>
-                            AI
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- IMAGE PROJECTS -->
-
-            <div class="image-project-grid">
-
-
-                <!-- HEALTHY BITES -->
-
-                <article class="image-project-card reveal">
-
-                    <div class="image-box">
-
-                        <img
-                            src="./images/healthy_bites.jpeg"
-                            alt="Healthy Bites project design"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="image-project-info">
-
-                        <span class="project-number">
-                            02
-                        </span>
-
-
-                        <span class="project-category">
-                            WEB DESIGN
-                        </span>
-
-
-                        <h3>
-
-                            Healthy
-
-                            <span>
-                                Bites
-                            </span>
-
-                        </h3>
-
-
-                        <p>
-
-                            A fresh and engaging food-focused web
-                            design concept created with a clean,
-                            friendly and visually appealing interface.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>
-                                HTML
-                            </span>
-
-                            <span>
-                                CSS
-                            </span>
-
-                            <span>
-                                UI Design
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FASHION CREATIVE -->
-
-                <article class="image-project-card reveal">
-
-                    <div class="image-box">
-
-                        <img
-                            src="./images/fashion_project.jpeg"
-                            alt="Fashion creative project design"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="image-project-info">
-
-                        <span class="project-number">
-                            03
-                        </span>
-
-
-                        <span class="project-category">
-                            CREATIVE DESIGN
-                        </span>
-
-
-                        <h3>
-
-                            Fashion
-
-                            <span>
-                                Creative
-                            </span>
-
-                        </h3>
-
-
-                        <p>
-
-                            A visually focused fashion design project
-                            exploring composition, typography,
-                            branding and modern visual presentation.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>
-                                Canva
-                            </span>
-
-                            <span>
-                                Graphic Design
-                            </span>
-
-                            <span>
-                                Creative UI
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-
-            <!-- PORTFOLIO -->
-
-            <article class="project-card reveal">
-
-                <div class="project-image portfolio-image">
-
-                    <div class="project-image-content">
-
-                        <div class="project-icon-box">
-                            &lt;/&gt;
-                        </div>
-
-
-                        <h3>
-                            Personal Portfolio
-                        </h3>
-
-
-                        <p>
-                            A professional internship portfolio website.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <span class="project-number">
-                        04
-                    </span>
-
-
-                    <span class="project-category">
-                        WEB DEVELOPMENT
-                    </span>
-
-
-                    <h3>
-
-                        Personal
-
-                        <span>
-                            Portfolio
-                        </span>
-
-                    </h3>
-
-
-                    <p>
-
-                        A responsive personal portfolio website created
-                        to showcase my skills, projects, education and
-                        journey as an IT student.
+                        A fresh and engaging food-focused web
+                        design concept created with a clean,
+                        friendly and visually appealing interface.
 
                     </p>
 
@@ -491,11 +342,7 @@
                         </span>
 
                         <span>
-                            JavaScript
-                        </span>
-
-                        <span>
-                            Responsive Design
+                            UI Design
                         </span>
 
                     </div>
@@ -506,51 +353,40 @@
 
 
 
-            <!-- DOCUMENT DESIGN -->
+            <!-- FASHION CREATIVE -->
 
-            <article class="project-card reveal">
+            <article class="image-project-card reveal">
 
-                <div class="project-image document-image">
+                <div class="image-box">
 
-                    <div class="project-image-content">
-
-                        <div class="project-icon-box">
-                            ✦
-                        </div>
-
-
-                        <h3>
-                            Document & Design
-                        </h3>
-
-
-                        <p>
-                            Creative academic and digital documentation.
-                        </p>
-
-                    </div>
+                    <img
+                        src="./images/fashion_project.jpeg"
+                        alt="Fashion creative project design"
+                        loading="lazy"
+                        class="clickable-project-image"
+                    >
 
                 </div>
 
 
-                <div class="project-content">
+                <div class="image-project-info">
 
                     <span class="project-number">
-                        05
+                        03
                     </span>
 
 
                     <span class="project-category">
-                        DESIGN & DOCUMENTATION
+                        CREATIVE DESIGN
                     </span>
 
 
                     <h3>
 
-                        Document &
+                        Fashion
 
                         <span>
-                            Design Work
+                            Creative
                         </span>
 
                     </h3>
@@ -558,9 +394,9 @@
 
                     <p>
 
-                        Academic documents, presentations and creative
-                        digital designs created with attention to
-                        structure, clarity and visual presentation.
+                        A visually focused fashion design project
+                        exploring composition, typography,
+                        branding and modern visual presentation.
 
                     </p>
 
@@ -572,15 +408,11 @@
                         </span>
 
                         <span>
-                            MS Office
+                            Graphic Design
                         </span>
 
                         <span>
-                            Presentation
-                        </span>
-
-                        <span>
-                            Documentation
+                            Creative UI
                         </span>
 
                     </div>
@@ -590,121 +422,115 @@
             </article>
 
 
-
-            <!-- PROJECT PHILOSOPHY -->
-
-            <section class="project-philosophy reveal">
-
-                <div class="philosophy-content">
-
-                    <span class="eyebrow">
-                        MY APPROACH
-                    </span>
+        </div>
 
 
-                    <h2>
 
-                        I don't just build projects.
+        <!-- PORTFOLIO -->
 
-                        <span>
-                            I build experiences.
-                        </span>
+        <article class="project-card reveal">
 
-                    </h2>
+            <div class="project-image portfolio-image">
+
+                <div class="project-image-content">
+
+                    <div class="project-icon-box">
+                        &lt;/&gt;
+                    </div>
+
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
 
 
                     <p>
-
-                        Every project is an opportunity to learn something
-                        new, solve a real problem and create something
-                        meaningful. I focus on combining functionality,
-                        simplicity and beautiful design.
-
+                        A professional internship portfolio website.
                     </p>
 
                 </div>
 
-            </section>
+            </div>
 
 
+            <div class="project-content">
 
-            <!-- CTA -->
-
-            <section class="project-cta reveal">
-
-                <div class="cta-card">
-
-                    <span class="eyebrow">
-                        LET'S CREATE
-                    </span>
-
-
-                    <h2>
-
-                        Have an idea?
-
-                        <span>
-                            Let's build it.
-                        </span>
-
-                    </h2>
-
-
-                    <p>
-
-                        I'm always interested in learning, experimenting
-                        and working on meaningful technology projects.
-
-                    </p>
-
-
-                    <a
-                        href="contact.html"
-                        class="primary-button"
-                    >
-
-                        Get In Touch
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </section>
-
-
-        </section>
-
-    </main>
-
-
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-        <div class="footer-content">
-
-
-            <div class="footer-brand">
-
-                <span class="brand-logo">
-                    Z
+                <span class="project-number">
+                    04
                 </span>
 
 
-                <div>
+                <span class="project-category">
+                    WEB DEVELOPMENT
+                </span>
 
-                    <strong>
-                        A. Sushma
-                    </strong>
+
+                <h3>
+
+                    Personal
+
+                    <span>
+                        Portfolio
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    A responsive personal portfolio website created
+                    to showcase my skills, projects, education and
+                    journey as an IT student.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        Responsive Design
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DOCUMENT DESIGN -->
+
+        <article class="project-card reveal">
+
+            <div class="project-image document-image">
+
+                <div class="project-image-content">
+
+                    <div class="project-icon-box">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        Document & Design
+                    </h3>
 
 
                     <p>
-                        IT Student • Web Developer • Creative Designer
+                        Creative academic and digital documentation.
                     </p>
 
                 </div>
@@ -712,28 +538,179 @@
             </div>
 
 
+            <div class="project-content">
 
-            <div class="footer-links">
+                <span class="project-number">
+                    05
+                </span>
 
-                <a href="index.html">
-                    Home
+
+                <span class="project-category">
+                    DESIGN & DOCUMENTATION
+                </span>
+
+
+                <h3>
+
+                    Document &
+
+                    <span>
+                        Design Work
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Academic documents, presentations and creative
+                    digital designs created with attention to
+                    structure, clarity and visual presentation.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Canva
+                    </span>
+
+                    <span>
+                        MS Office
+                    </span>
+
+                    <span>
+                        Presentation
+                    </span>
+
+                    <span>
+                        Documentation
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT PHILOSOPHY -->
+
+        <section class="project-philosophy reveal">
+
+            <div class="philosophy-content">
+
+                <span class="eyebrow">
+                    MY APPROACH
+                </span>
+
+
+                <h2>
+
+                    I don't just build projects.
+
+                    <span>
+                        I build experiences.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Every project is an opportunity to learn something
+                    new, solve a real problem and create something
+                    meaningful. I focus on combining functionality,
+                    simplicity and beautiful design.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA -->
+
+        <section class="project-cta reveal">
+
+            <div class="cta-card">
+
+                <span class="eyebrow">
+                    LET'S CREATE
+                </span>
+
+
+                <h2>
+
+                    Have an idea?
+
+                    <span>
+                        Let's build it.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    I'm always interested in learning, experimenting
+                    and working on meaningful technology projects.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="primary-button"
+                >
+
+                    Get In Touch
+
+                    <span>
+                        →
+                    </span>
+
                 </a>
 
-                <a href="about.html">
-                    About
-                </a>
+            </div>
 
-                <a href="skills.html">
-                    Skills
-                </a>
+        </section>
 
-                <a href="projects.html">
-                    Projects
-                </a>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <span class="brand-logo">
+                Z
+            </span>
+
+
+            <div>
+
+                <strong>
+                    A. Sushma
+                </strong>
+
+
+                <p>
+                    IT Student • Web Developer • Creative Designer
+                </p>
 
             </div>
 
@@ -741,25 +718,181 @@
 
 
 
-        <div class="footer-bottom">
+        <div class="footer-links">
 
-            <p>
+            <a href="index.html">
+                Home
+            </a>
 
-                © 2026 A. Sushma.
-                Built with creativity and technology.
+            <a href="about.html">
+                About
+            </a>
 
-            </p>
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
 
         </div>
 
-    </footer>
+    </div>
 
 
 
-    <!-- JAVASCRIPT -->
+    <div class="footer-bottom">
 
-    <script src="js/script.js"></script>
+        <p>
 
+            © 2026 A. Sushma.
+            Built with creativity and technology.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- FULLSCREEN IMAGE VIEWER -->
+
+<div
+    class="image-fullscreen"
+    id="imageFullscreen"
+    aria-hidden="true"
+>
+
+    <button
+        class="image-fullscreen-close"
+        id="imageFullscreenClose"
+        type="button"
+        aria-label="Close fullscreen image"
+    >
+        ×
+    </button>
+
+
+    <img
+        id="fullscreenImage"
+        src=""
+        alt="Fullscreen project preview"
+    >
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/script.js"></script>
+
+
+<!-- FULLSCREEN IMAGE SCRIPT -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const images = document.querySelectorAll(
+            ".clickable-project-image"
+        );
+
+        const fullscreen =
+            document.getElementById("imageFullscreen");
+
+        const fullscreenImage =
+            document.getElementById("fullscreenImage");
+
+        const closeButton =
+            document.getElementById("imageFullscreenClose");
+
+
+        images.forEach(function (image) {
+
+            image.addEventListener("click", function () {
+
+                fullscreenImage.src = image.src;
+
+                fullscreenImage.alt = image.alt;
+
+                fullscreen.classList.add("active");
+
+                fullscreen.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.classList.add(
+                    "image-viewer-open"
+                );
+
+            });
+
+        });
+
+
+        function closeFullscreen() {
+
+            fullscreen.classList.remove("active");
+
+            fullscreen.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            fullscreenImage.src = "";
+
+            document.body.classList.remove(
+                "image-viewer-open"
+            );
+
+        }
+
+
+        closeButton.addEventListener(
+            "click",
+            closeFullscreen
+        );
+
+
+        fullscreen.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === fullscreen) {
+
+                    closeFullscreen();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Escape") {
+
+                    closeFullscreen();
+
+                }
+
+            }
+        );
+
+    });
+
+</script>
+```
 
 </body>
 
