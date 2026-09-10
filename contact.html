@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Contact A. Sushma - IT Student, Web Developer and Creative Designer."
+    >
+
+    <title>Contact | A. Sushma</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS Browser SDK -->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <!-- EmailJS Public Key -->
+    <script>
+        emailjs.init({
+            publicKey: "yiXktjrq30Oo9Ym4w"
+        });
+    </script>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-logo">𝓢</span>
+
+                <span class="brand-text">
+
+                    <strong>
+                        A. Sushma
+                    </strong>
+
+                    <small>
+                        Creative Technology
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="skills.html">
+                    Skills
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =================================================
+             CONTACT PAGE HERO
+        ================================================== -->
+
+        <section class="page-hero contact-hero">
+
+            <div class="background-shape shape-one"></div>
+
+            <div class="background-shape shape-two"></div>
+
+
+            <div class="page-hero-inner reveal">
+
+                <span class="eyebrow">
+                    Let's connect ✦
+                </span>
+
+
+                <h1>
+                    Let's create
+                    <span>something great.</span>
+                </h1>
+
+
+                <p>
+                    Have an idea, project or collaboration in mind?
+                    I would love to hear from you.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT SECTION
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="section-heading reveal">
+
+                <span class="section-tag">
+                    Get in touch
+                </span>
+
+
+                <h2>
+                    Let's start a conversation.
+                </h2>
+
+
+                <p>
+                    Tell me a little about what you would like to create,
+                    explore or discuss.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <!-- =================================================
+                     CONTACT INFORMATION
+                ================================================== -->
+
+                <div class="contact-info reveal">
+
+                    <div class="contact-intro-card">
+
+                        <div class="contact-icon">
+                            ✦
+                        </div>
+
+
+                        <h3>
+                            Hello there!
+                        </h3>
+
+
+                        <p>
+                            I am A. Sushma, an IT student and aspiring
+                            technology professional who enjoys transforming
+                            ideas into meaningful digital experiences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            🎓 Institute
+                        </strong>
+
+                        <span>
+                            KITS Akshar Institute of Technology
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            💻 Focus
+                        </strong>
+
+                        <span>
+                            Web Development &amp; App Designing
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            🎨 Creative Work
+                        </strong>
+
+                        <span>
+                            UI Design, Documents &amp; Digital Design
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            ✨ Goal
+                        </strong>
+
+                        <span>
+                            Building useful technology for real-life problems
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONTACT FORM
+                ================================================== -->
+
+                <div class="contact-form-card reveal">
+
+                    <div class="form-header">
+
+                        <span class="section-tag">
+                            Send a message
+                        </span>
+
+
+                        <h3>
+                            Tell Me About Your Idea
+                        </h3>
+
+
+                        <p>
+                            Complete the form below and your message
+                            will be sent directly to my email.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                        novalidate
+                    >
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                            >
+
+
+                            <small
+                                class="form-error"
+                                id="nameError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+
+                            <small
+                                class="form-error"
+                                id="emailError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="title"
+                                placeholder="What would you like to discuss?"
+                            >
+
+
+                            <small
+                                class="form-error"
+                                id="subjectError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message here..."
+                            ></textarea>
+
+
+                            <small
+                                class="form-error"
+                                id="messageError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="primary-button contact-submit"
+                            id="contactSubmit"
+                        >
+                            Send Message
+                            <span>→</span>
+                        </button>
+
+
+                        <!-- SUCCESS -->
+
+                        <div
+                            class="form-success"
+                            id="formSuccess"
+                            role="status"
+                            aria-live="polite"
+                        >
+
+                            <span>
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Message sent successfully!
+                                </strong>
+
+
+                                <p>
+                                    Thank you for contacting me.
+                                    Your message has been sent to my email.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            class="form-error"
+                            id="sendError"
+                            role="alert"
+                            aria-live="assertive"
+                        ></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="cta-card reveal">
+
+                <div>
+
+                    <span class="section-tag">
+                        Thank you for visiting
+                    </span>
+
+
+                    <h2>
+                        Great ideas begin with a simple conversation.
+                    </h2>
+
+
+                    <p>
+                        Explore my projects before you leave.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="projects.html"
+                    class="secondary-button"
+                >
+                    Explore Projects
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <span class="brand-logo">
+                    𝓢
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        A. Sushma
+                    </strong>
+
+
+                    <p>
+                        IT Student • Web Developer • Creative Designer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="skills.html">
+                    Skills
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 A. Sushma. Built with creativity and technology.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MAIN JAVASCRIPT
+    ====================================================== -->
+
+    <script src="css/js/script.js"></script>
+
+</body>
+
+</html>
