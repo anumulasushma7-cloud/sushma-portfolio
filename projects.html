@@ -13,13 +13,17 @@
     <title>Projects | A. Sushma</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <main>
 
-        <!-- PROJECT HERO -->
+        <!-- =========================
+             PROJECT HERO
+        ========================== -->
+
         <section class="page-hero">
 
             <div class="background-shape shape-one"></div>
@@ -44,15 +48,21 @@
         </section>
 
 
-        <!-- PROJECTS -->
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
         <section class="projects-section">
 
             <div class="container">
 
                 <!-- SECTION HEADING -->
+
                 <div class="section-heading reveal">
 
-                    <span class="eyebrow">SELECTED PROJECTS</span>
+                    <span class="eyebrow">
+                        SELECTED PROJECTS
+                    </span>
 
                     <h2>
                         Things I've
@@ -68,9 +78,9 @@
                 </div>
 
 
-                <!-- ========================================= -->
-                <!-- ZENORA -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     ZENORA
+                ========================== -->
 
                 <article class="project-card featured-project reveal">
 
@@ -81,12 +91,18 @@
                             alt="Zenora - Your Life, Organized."
                             loading="eager">
 
+                        <div class="image-click-hint">
+                            Click to view
+                        </div>
+
                     </div>
 
 
                     <div class="project-content">
 
-                        <span class="project-number">01</span>
+                        <span class="project-number">
+                            01
+                        </span>
 
                         <span class="project-category">
                             FLUTTER APPLICATION
@@ -120,9 +136,9 @@
                 </article>
 
 
-                <!-- ========================================= -->
-                <!-- IMAGE PROJECTS -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     IMAGE PROJECTS
+                ========================== -->
 
                 <div class="image-project-grid">
 
@@ -138,12 +154,18 @@
                                 alt="Healthy Bites project design"
                                 loading="lazy">
 
+                            <div class="image-click-hint">
+                                Click to view
+                            </div>
+
                         </div>
 
 
                         <div class="image-project-info">
 
-                            <span class="project-number">02</span>
+                            <span class="project-number">
+                                02
+                            </span>
 
                             <span class="project-category">
                                 WEB DESIGN
@@ -184,12 +206,18 @@
                                 alt="Fashion creative project design"
                                 loading="lazy">
 
+                            <div class="image-click-hint">
+                                Click to view
+                            </div>
+
                         </div>
 
 
                         <div class="image-project-info">
 
-                            <span class="project-number">03</span>
+                            <span class="project-number">
+                                03
+                            </span>
 
                             <span class="project-category">
                                 CREATIVE DESIGN
@@ -221,9 +249,9 @@
                 </div>
 
 
-                <!-- ========================================= -->
-                <!-- PERSONAL PORTFOLIO -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     PERSONAL PORTFOLIO
+                ========================== -->
 
                 <article class="project-card reveal">
 
@@ -250,7 +278,9 @@
 
                     <div class="project-content">
 
-                        <span class="project-number">04</span>
+                        <span class="project-number">
+                            04
+                        </span>
 
                         <span class="project-category">
                             WEB DEVELOPMENT
@@ -281,9 +311,9 @@
                 </article>
 
 
-                <!-- ========================================= -->
-                <!-- DOCUMENT DESIGN -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     DOCUMENT DESIGN
+                ========================== -->
 
                 <article class="project-card reveal">
 
@@ -310,7 +340,9 @@
 
                     <div class="project-content">
 
-                        <span class="project-number">05</span>
+                        <span class="project-number">
+                            05
+                        </span>
 
                         <span class="project-category">
                             DESIGN & DOCUMENTATION
@@ -341,9 +373,9 @@
                 </article>
 
 
-                <!-- ========================================= -->
-                <!-- PROJECT PHILOSOPHY -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     PROJECT PHILOSOPHY
+                ========================== -->
 
                 <section class="project-philosophy reveal">
 
@@ -370,9 +402,9 @@
                 </section>
 
 
-                <!-- ========================================= -->
-                <!-- CTA -->
-                <!-- ========================================= -->
+                <!-- =========================
+                     CTA
+                ========================== -->
 
                 <section class="project-cta reveal">
 
@@ -408,9 +440,9 @@
     </main>
 
 
-    <!-- ========================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================= -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="site-footer">
 
@@ -480,9 +512,9 @@
     </footer>
 
 
-    <!-- ========================================= -->
-    <!-- FULLSCREEN IMAGE VIEWER -->
-    <!-- ========================================= -->
+    <!-- =========================
+         FULLSCREEN IMAGE VIEWER
+    ========================== -->
 
     <div
         class="image-fullscreen-overlay"
@@ -495,24 +527,118 @@
             type="button"
             aria-label="Close fullscreen image">
 
-            &times;
+            ×
 
         </button>
 
 
-        <img
-            id="fullscreenPreviewImage"
-            src=""
-            alt="Fullscreen project preview">
+        <div class="fullscreen-image-container">
+
+            <img
+                id="fullscreenPreviewImage"
+                src=""
+                alt="Fullscreen project preview">
+
+        </div>
 
     </div>
 
 
-    <!-- ========================================= -->
-    <!-- FULLSCREEN IMAGE STYLES -->
-    <!-- ========================================= -->
+    <!-- =========================
+         EXTRA PROJECT STYLES
+    ========================== -->
 
     <style>
+
+        /* =================================
+           LARGER CONTENT BOXES
+        ================================= */
+
+        .project-card {
+            min-height: 480px;
+        }
+
+
+        .project-content {
+            padding: 55px 60px;
+            min-height: 380px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .project-content h3 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-top: 15px;
+            margin-bottom: 22px;
+        }
+
+
+        .project-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 28px;
+        }
+
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+
+        .project-tags span {
+            padding: 9px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+
+        /* =================================
+           SMALL PROJECT TEXT BOXES
+        ================================= */
+
+        .image-project-info {
+            padding: 38px 38px 42px;
+            min-height: 285px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .image-project-info h3 {
+            font-size: 2rem;
+            line-height: 1.15;
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        .image-project-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+
+        /* =================================
+           IMAGE CLICK
+        ================================= */
+
+        .project-image,
+        .image-box {
+            position: relative;
+            overflow: hidden;
+        }
+
 
         .project-image img,
         .image-box img {
@@ -520,28 +646,77 @@
         }
 
 
+        .image-click-hint {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+
+            transform: translateX(-50%) translateY(10px);
+
+            padding: 9px 17px;
+
+            border-radius: 50px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            color: #252030;
+
+            font-size: 0.75rem;
+            font-weight: 600;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+
+            white-space: nowrap;
+        }
+
+
+        .project-image:hover .image-click-hint,
+        .image-box:hover .image-click-hint {
+            opacity: 1;
+
+            transform:
+                translateX(-50%)
+                translateY(0);
+        }
+
+
+        /* =================================
+           FULLSCREEN OVERLAY
+        ================================= */
+
         .image-fullscreen-overlay {
             position: fixed;
+
             inset: 0;
+
             width: 100%;
             height: 100%;
-            padding: 30px;
+
+            padding: 35px;
+
             box-sizing: border-box;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            background: rgba(10, 8, 20, 0.96);
+            background: rgba(8, 6, 18, 0.97);
 
             opacity: 0;
             visibility: hidden;
 
-            z-index: 99999;
+            z-index: 999999;
 
             transition:
-                opacity 0.25s ease,
-                visibility 0.25s ease;
+                opacity 0.3s ease,
+                visibility 0.3s ease;
 
             cursor: zoom-out;
         }
@@ -553,62 +728,92 @@
         }
 
 
+        /* =================================
+           FULLSCREEN IMAGE
+        ================================= */
+
+        .fullscreen-image-container {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            pointer-events: none;
+        }
+
+
         .image-fullscreen-overlay img {
             display: block;
 
-            max-width: 95vw;
-            max-height: 92vh;
+            max-width: 96vw;
+            max-height: 94vh;
 
             width: auto;
             height: auto;
 
             object-fit: contain;
 
-            border-radius: 18px;
+            border-radius: 16px;
 
             box-shadow:
-                0 25px 80px rgba(0, 0, 0, 0.55);
+                0 30px 100px rgba(0, 0, 0, 0.65);
+
+            transform: scale(0.92);
+
+            opacity: 0;
+
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
 
             cursor: default;
 
-            transform: scale(0.94);
-
-            transition:
-                transform 0.25s ease;
+            pointer-events: auto;
         }
 
 
         .image-fullscreen-overlay.active img {
             transform: scale(1);
+            opacity: 1;
         }
 
+
+        /* =================================
+           CLOSE BUTTON
+        ================================= */
 
         .image-fullscreen-close {
             position: absolute;
 
-            top: 22px;
-            right: 26px;
+            top: 24px;
+            right: 28px;
 
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
 
             border: none;
+
             border-radius: 50%;
 
             background: rgba(255, 255, 255, 0.16);
 
             color: #ffffff;
 
-            font-size: 32px;
+            font-size: 34px;
+
             line-height: 1;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             cursor: pointer;
 
-            z-index: 2;
+            z-index: 10;
 
             transition:
                 transform 0.2s ease,
@@ -617,7 +822,7 @@
 
 
         .image-fullscreen-close:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
 
             background:
                 rgba(255, 255, 255, 0.28);
@@ -629,7 +834,92 @@
         }
 
 
+        /* =================================
+           TABLET
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .project-content {
+                padding: 42px;
+            }
+
+
+            .project-card {
+                min-height: auto;
+            }
+
+
+            .image-project-info {
+                padding: 32px;
+                min-height: 260px;
+            }
+
+        }
+
+
+        /* =================================
+           MOBILE
+        ================================= */
+
         @media (max-width: 600px) {
+
+            .project-content {
+                padding: 30px 25px;
+                min-height: 330px;
+            }
+
+
+            .project-content h3 {
+                font-size: 2rem;
+            }
+
+
+            .project-content p {
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+
+            .image-project-info {
+                padding: 28px 25px 32px;
+                min-height: 270px;
+            }
+
+
+            .image-project-info h3 {
+                font-size: 1.8rem;
+            }
+
+
+            .image-project-info p {
+                font-size: 0.95rem;
+            }
+
+
+            .project-tags {
+                gap: 7px;
+            }
+
+
+            .project-tags span {
+                padding: 8px 13px;
+                font-size: 0.78rem;
+            }
+
+
+            .image-click-hint {
+                opacity: 1;
+
+                transform:
+                    translateX(-50%)
+                    translateY(0);
+
+                bottom: 14px;
+
+                padding: 8px 13px;
+            }
+
 
             .image-fullscreen-overlay {
                 padding: 15px;
@@ -637,21 +927,20 @@
 
 
             .image-fullscreen-overlay img {
-                max-width: 96vw;
+                max-width: 97vw;
                 max-height: 88vh;
-
                 border-radius: 12px;
             }
 
 
             .image-fullscreen-close {
-                top: 14px;
-                right: 14px;
+                top: 13px;
+                right: 13px;
 
-                width: 42px;
-                height: 42px;
+                width: 44px;
+                height: 44px;
 
-                font-size: 27px;
+                font-size: 28px;
             }
 
         }
@@ -659,9 +948,9 @@
     </style>
 
 
-    <!-- ========================================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ========================================= -->
+    <!-- =========================
+         IMAGE FULLSCREEN SCRIPT
+    ========================== -->
 
     <script>
 
@@ -737,7 +1026,7 @@
 
                     }
 
-                }, 250);
+                }, 300);
 
             }
 
@@ -784,16 +1073,6 @@
             );
 
 
-            previewImage.addEventListener(
-                "click",
-                function (event) {
-
-                    event.stopPropagation();
-
-                }
-            );
-
-
             document.addEventListener(
                 "keydown",
                 function (event) {
@@ -815,7 +1094,8 @@
     </script>
 
 
-    <!-- MAIN WEBSITE JAVASCRIPT -->
+    <!-- WEBSITE JAVASCRIPT -->
+
     <script src="js/script.js"></script>
 
 </body>
