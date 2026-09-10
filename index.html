@@ -47,13 +47,9 @@
             <div class="nav-links" id="navLinks">
 
                 <a href="index.html" class="active">Home</a>
-
                 <a href="about.html">About</a>
-
                 <a href="skills.html">Skills</a>
-
                 <a href="projects.html">Projects</a>
-
                 <a href="contact.html">Contact</a>
 
             </div>
@@ -64,8 +60,6 @@
 
 
     <main>
-
-        <!-- HERO -->
 
         <section class="hero-section">
 
@@ -127,8 +121,6 @@
                 </div>
 
 
-                <!-- PROFILE -->
-
                 <div class="hero-visual">
 
                     <div class="profile-card">
@@ -136,7 +128,7 @@
                         <div class="profile-image-wrap">
 
                             <img
-                                src="css/js/images/profile.jpeg"
+                                src="images/profile.jpeg"
                                 alt="A. Sushma"
                                 class="profile-image"
                                 id="profileImage"
@@ -216,8 +208,6 @@
 
         </section>
 
-
-        <!-- WHAT I DO -->
 
         <section class="section">
 
@@ -323,8 +313,6 @@
         </section>
 
 
-        <!-- FEATURED PROJECT -->
-
         <section class="section featured-project-section">
 
             <div class="featured-project reveal">
@@ -377,26 +365,21 @@
                     <div class="zenora-window">
 
                         <div class="zenora-topbar">
-
                             <span></span>
                             <span></span>
                             <span></span>
-
                         </div>
 
                         <div class="zenora-body">
 
                             <div class="zenora-title-line"></div>
-
                             <div class="zenora-title-line short"></div>
 
                             <div class="zenora-box-grid">
-
                                 <div></div>
                                 <div></div>
                                 <div></div>
                                 <div></div>
-
                             </div>
 
                         </div>
@@ -409,8 +392,6 @@
 
         </section>
 
-
-        <!-- CTA -->
 
         <section class="section">
 
@@ -432,7 +413,6 @@
 
                 </div>
 
-
                 <a
                     href="contact.html"
                     class="secondary-button"
@@ -448,15 +428,15 @@
     </main>
 
 
-    <!-- FOOTER -->
-
     <footer class="site-footer">
 
         <div class="footer-content">
 
             <div class="footer-brand">
 
-                <span class="brand-logo">𝓢</span>
+                <span class="brand-logo">
+                    𝓢
+                </span>
 
                 <div>
 
@@ -475,25 +455,11 @@
 
             <div class="footer-links">
 
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="skills.html">
-                    Skills
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
 
             </div>
 
@@ -513,17 +479,35 @@
 
     <script>
 
-        const profileImage = document.getElementById("profileImage");
-        const profileFallback = document.getElementById("profileFallback");
+        const profileImage =
+            document.getElementById("profileImage");
+
+        const profileFallback =
+            document.getElementById("profileFallback");
+
 
         if (profileImage && profileFallback) {
 
-            profileImage.addEventListener("error", function () {
+            profileImage.addEventListener(
+                "load",
+                function () {
 
-                profileImage.style.display = "none";
-                profileFallback.style.display = "flex";
+                    profileFallback.style.display = "none";
 
-            });
+                }
+            );
+
+
+            profileImage.addEventListener(
+                "error",
+                function () {
+
+                    profileImage.style.display = "none";
+
+                    profileFallback.style.display = "flex";
+
+                }
+            );
 
         }
 
