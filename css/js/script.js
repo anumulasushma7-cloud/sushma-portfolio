@@ -365,3 +365,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/* IMAGE FULLSCREEN VIEW */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const projectImages = document.querySelectorAll(
+        ".project-image img, .image-box img"
+    );
+
+    projectImages.forEach(function (image) {
+
+        image.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            const overlay = document.createElement("div");
+            overlay.className = "image-fullscreen";
+
+            const fullImage = document.createElement("img");
+            fullImage.src = image.src;
+            fullImage.alt = image.alt;
+
+            const closeButton = document.createElement("button");
+            closeButton.className = "image-fullscreen-close";
+            closeButton.innerHTML = "×";
+            closeButton.setAttribute("aria-label", "Close fullscreen image");
+
+            overlay.appendChild(fullImage);
+            overlay.appendChild(closeButton);
+
+            document.body.appendChild(overlay);
+
+            document.body.style.overflow = "hidden";
+
+            function closeFullscreen() {
+                overlay.remove();
+                document.body.style.overflow = "";
+                document.removeEventListener("keydown", escapeHandler);
+            }
+
+            function escapeHandler(event) {
+                if (event.key === "Escape") {
+                    closeFullscreen();
+                }
+            }
+
+            closeButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                closeFullscreen();
+            });
+
+            overlay.addEventListener("click", function (event) {
+                if (event.target === overlay) {
+                    closeFullscreen();
+                }
+            });
+
+            document.addEventListener("keydown", escapeHandler);
+
+        });
+
+    });
+
+});
