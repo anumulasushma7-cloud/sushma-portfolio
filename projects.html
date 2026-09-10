@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -24,2624 +22,1375 @@
 
     <title>Projects | A. Sushma</title>
 
+    <link rel="stylesheet" href="css/style.css">
 
-<style>
+    <style>
 
-    /* =====================================================
-       RESET
-    ===================================================== */
+        /* =====================================================
+           PROJECT PAGE
+        ====================================================== */
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-
-    html {
-        scroll-behavior: smooth;
-    }
+        .projects-page {
+            overflow: hidden;
+        }
 
 
-    body {
-        font-family:
-            "Segoe UI",
-            Arial,
-            Helvetica,
-            sans-serif;
+        /* =====================================================
+           PROJECT HERO
+        ====================================================== */
 
-        background:
-            linear-gradient(
+        .projects-hero {
+            position: relative;
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .projects-hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 90px 24px 70px;
+        }
+
+        .projects-hero h1 {
+            margin: 18px 0 20px;
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        .projects-hero h1 span {
+            background: linear-gradient(
                 135deg,
-                #f8f6ff 0%,
-                #fff5fb 45%,
-                #eefaff 100%
+                #ff4fd8,
+                #9b7cffff,
+                #00c2ff
             );
-
-        color: #24233a;
-
-        min-height: 100vh;
-
-        overflow-x: hidden;
-    }
-
-
-    body::before {
-        content: "";
-
-        position: fixed;
-
-        width: 500px;
-        height: 500px;
-
-        top: -180px;
-        right: -150px;
-
-        background:
-            radial-gradient(
-                circle,
-                rgba(255, 182, 230, .32),
-                transparent 70%
-            );
-
-        pointer-events: none;
-
-        z-index: -1;
-    }
-
-
-    body::after {
-        content: "";
-
-        position: fixed;
-
-        width: 450px;
-        height: 450px;
-
-        bottom: -180px;
-        left: -150px;
-
-        background:
-            radial-gradient(
-                circle,
-                rgba(127, 219, 255, .22),
-                transparent 70%
-            );
-
-        pointer-events: none;
-
-        z-index: -1;
-    }
-
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-
-    img {
-        max-width: 100%;
-        display: block;
-    }
-
-
-    button {
-        font: inherit;
-    }
-
-
-    /* =====================================================
-       HEADER / NAVIGATION
-       SAME STYLE AS ABOUT PAGE
-    ===================================================== */
-
-    .site-header {
-        position: sticky;
-        top: 0;
-
-        z-index: 1000;
-
-        padding: 16px 22px;
-    }
-
-
-    .navbar {
-        width: min(1180px, 100%);
-
-        margin: auto;
-
-        min-height: 72px;
-
-        padding: 10px 14px 10px 18px;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: space-between;
-
-        gap: 20px;
-
-        border: 1px solid rgba(255, 255, 255, .8);
-
-        background:
-            rgba(255, 255, 255, .72);
-
-        backdrop-filter: blur(18px);
-
-        -webkit-backdrop-filter: blur(18px);
-
-        border-radius: 24px;
-
-        box-shadow:
-            0 15px 45px rgba(96, 76, 145, .12);
-    }
-
-
-    .brand {
-        display: flex;
-
-        align-items: center;
-
-        gap: 11px;
-
-        flex-shrink: 0;
-    }
-
-
-    .brand-logo {
-        width: 48px;
-        height: 48px;
-
-        border-radius: 16px;
-
-        display: grid;
-
-        place-items: center;
-
-        font-size: 25px;
-
-        font-weight: 900;
-
-        color: white;
-
-        background:
-            linear-gradient(
-                135deg,
-                #7c5cfc,
-                #c36cff 48%,
-                #ff6ba9
-            );
-
-        box-shadow:
-            0 8px 24px rgba(124, 92, 252, .28);
-    }
-
-
-    .brand-text {
-        display: flex;
-
-        flex-direction: column;
-
-        line-height: 1.15;
-    }
-
-
-    .brand-text strong {
-        font-size: 16px;
-
-        letter-spacing: -.3px;
-    }
-
-
-    .brand-text small {
-        margin-top: 4px;
-
-        font-size: 10px;
-
-        color: #8b88a2;
-
-        letter-spacing: .9px;
-
-        text-transform: uppercase;
-    }
-
-
-    .nav-links {
-        display: flex;
-
-        align-items: center;
-
-        gap: 6px;
-    }
-
-
-    .nav-links a {
-        position: relative;
-
-        padding: 11px 15px;
-
-        border-radius: 13px;
-
-        font-size: 14px;
-
-        font-weight: 600;
-
-        color: #68657e;
-
-        transition:
-            color .25s ease,
-            background .25s ease,
-            transform .25s ease;
-    }
-
-
-    .nav-links a:hover {
-        color: #6248d9;
-
-        background:
-            rgba(124, 92, 252, .08);
-
-        transform: translateY(-1px);
-    }
-
-
-    .nav-links a.active {
-        color: #6248d9;
-
-        background:
-            rgba(124, 92, 252, .11);
-    }
-
-
-    .nav-links a.active::after {
-        content: "";
-
-        position: absolute;
-
-        left: 50%;
-
-        bottom: 5px;
-
-        width: 5px;
-        height: 5px;
-
-        border-radius: 50%;
-
-        transform: translateX(-50%);
-
-        background: #7c5cfc;
-    }
-
-
-    .menu-toggle {
-        display: none;
-
-        width: 46px;
-        height: 46px;
-
-        border: 0;
-
-        border-radius: 14px;
-
-        cursor: pointer;
-
-        background:
-            rgba(124, 92, 252, .09);
-
-        position: relative;
-
-        z-index: 1002;
-    }
-
-
-    .menu-toggle span {
-        display: block;
-
-        width: 21px;
-        height: 2px;
-
-        margin: 5px auto;
-
-        border-radius: 5px;
-
-        background: #6248d9;
-
-        transition: .25s ease;
-    }
-
-
-    .menu-toggle.open span:nth-child(1) {
-        transform:
-            translateY(7px)
-            rotate(45deg);
-    }
-
-
-    .menu-toggle.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-
-    .menu-toggle.open span:nth-child(3) {
-        transform:
-            translateY(-7px)
-            rotate(-45deg);
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .page-hero {
-        position: relative;
-
-        min-height: 430px;
-
-        display: grid;
-
-        place-items: center;
-
-        padding: 90px 24px 80px;
-
-        overflow: hidden;
-    }
-
-
-    .background-shape {
-        position: absolute;
-
-        border-radius: 50%;
-
-        filter: blur(2px);
-
-        pointer-events: none;
-    }
-
-
-    .shape-one {
-        width: 270px;
-        height: 270px;
-
-        top: 20px;
-        left: -100px;
-
-        background:
-            rgba(184, 181, 255, .30);
-    }
-
-
-    .shape-three {
-        width: 300px;
-        height: 300px;
-
-        right: -110px;
-        bottom: -90px;
-
-        background:
-            rgba(255, 182, 230, .27);
-    }
-
-
-    .page-hero-content {
-        width: min(900px, 100%);
-
-        text-align: center;
-
-        position: relative;
-
-        z-index: 2;
-    }
-
-
-    .eyebrow,
-    .section-tag {
-        display: inline-flex;
-
-        align-items: center;
-
-        padding: 8px 14px;
-
-        border-radius: 100px;
-
-        font-size: 11px;
-
-        font-weight: 800;
-
-        letter-spacing: 1.4px;
-
-        color: #7358dc;
-
-        background:
-            rgba(124, 92, 252, .09);
-
-        border:
-            1px solid rgba(124, 92, 252, .11);
-    }
-
-
-    .page-hero h1 {
-        margin-top: 22px;
-
-        font-size:
-            clamp(42px, 7vw, 76px);
-
-        line-height: .98;
-
-        letter-spacing: -4px;
-
-        font-weight: 850;
-    }
-
-
-    .page-hero h1 span,
-    .section-heading h2 span,
-    .project-content h3 span,
-    .image-project-info h3 span,
-    .philosophy-content h2 span,
-    .cta-card h2 span {
-        background:
-            linear-gradient(
-                90deg,
-                #7155e8,
-                #b35df2,
-                #f15d9d
-            );
-
-        -webkit-background-clip: text;
-
-        background-clip: text;
-
-        color: transparent;
-    }
-
-
-    .page-hero p {
-        max-width: 680px;
-
-        margin: 26px auto 0;
-
-        font-size: 17px;
-
-        line-height: 1.8;
-
-        color: #747188;
-    }
-
-
-    /* =====================================================
-       MAIN SECTION
-    ===================================================== */
-
-    .section {
-        width:
-            min(
-                1180px,
-                calc(100% - 40px)
-            );
-
-        margin: auto;
-
-        padding: 30px 0 100px;
-    }
-
-
-    .section-heading {
-        max-width: 760px;
-
-        margin: 0 auto 55px;
-
-        text-align: center;
-    }
-
-
-    .section-heading h2 {
-        margin-top: 20px;
-
-        font-size:
-            clamp(34px, 5vw, 52px);
-
-        line-height: 1.08;
-
-        letter-spacing: -2px;
-    }
-
-
-    .section-heading p {
-        margin-top: 18px;
-
-        color: #77738c;
-
-        line-height: 1.8;
-
-        font-size: 15px;
-    }
-
-
-    /* =====================================================
-       PROJECT CARDS
-    ===================================================== */
-
-    .project-card {
-        display: grid;
-
-        grid-template-columns:
-            minmax(0, 1.05fr)
-            minmax(0, .95fr);
-
-        overflow: hidden;
-
-        margin-bottom: 34px;
-
-        border-radius: 32px;
-
-        border:
-            1px solid rgba(255, 255, 255, .9);
-
-        background:
-            rgba(255, 255, 255, .70);
-
-        box-shadow:
-            0 22px 65px rgba(89, 72, 137, .10);
-
-        backdrop-filter: blur(15px);
-
-        -webkit-backdrop-filter: blur(15px);
-
-        transition:
-            transform .35s ease,
-            box-shadow .35s ease;
-    }
-
-
-    .project-card:hover {
-        transform: translateY(-6px);
-
-        box-shadow:
-            0 30px 75px rgba(89, 72, 137, .15);
-    }
-
-
-    .project-image {
-        min-height: 440px;
-
-        position: relative;
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       ZENORA IMAGE
-    ===================================================== */
-
-    .zenora-image {
-        display: grid;
-
-        place-items: center;
-
-        padding: 30px;
-
-        cursor: zoom-in;
-
-        background:
-            linear-gradient(
-                135deg,
-                #f3edff,
-                #fff1fa 45%,
-                #eafaff
-            );
-    }
-
-
-    .zenora-logo-art {
-        width: min(430px, 100%);
-
-        aspect-ratio: 1;
-
-        position: relative;
-
-        display: grid;
-
-        place-items: center;
-
-        border-radius: 50%;
-
-        background:
-            radial-gradient(
-                circle at 50% 45%,
-                rgba(255,255,255,.98),
-                rgba(241,238,255,.92) 65%,
-                rgba(224,239,255,.8)
-            );
-
-        box-shadow:
-            0 25px 60px rgba(124,92,252,.16);
-
-        border:
-            1px solid rgba(255,255,255,.9);
-    }
-
-
-    .zenora-ring {
-        position: absolute;
-
-        inset: 13%;
-
-        border-radius: 50%;
-
-        border:
-            2px solid rgba(127,219,255,.27);
-    }
-
-
-    .z-center {
-        width: 43%;
-
-        aspect-ratio: 1;
-
-        display: grid;
-
-        place-items: center;
-
-        border-radius: 50%;
-
-        background:
-            radial-gradient(
-                circle at 30% 20%,
-                white,
-                rgba(255,255,255,.65)
-            );
-
-        box-shadow:
-            0 15px 40px rgba(124,92,252,.18),
-            inset 0 0 30px rgba(127,219,255,.20);
-
-        border:
-            1px solid rgba(255,255,255,.95);
-
-        position: relative;
-
-        z-index: 4;
-    }
-
-
-    .z-letter {
-        font-size: 82px;
-
-        font-weight: 950;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        line-height: 1;
-
-        background:
-            linear-gradient(
-                135deg,
-                #29d4f5,
-                #6e58ed 48%,
-                #ff4fb4
-            );
-
-        -webkit-background-clip: text;
-
-        background-clip: text;
-
-        color: transparent;
-
-        transform: skew(-7deg);
-
-        text-shadow:
-            0 7px 20px rgba(124,92,252,.13);
-    }
-
-
-    .zenora-icon {
-        position: absolute;
-
-        width: 24%;
-
-        aspect-ratio: 1;
-
-        border-radius: 50%;
-
-        display: grid;
-
-        place-items: center;
-
-        font-size: 42px;
-
-        background:
-            rgba(255,255,255,.56);
-
-        border:
-            1px solid rgba(255,255,255,.85);
-
-        box-shadow:
-            0 12px 30px rgba(80,70,120,.13);
-
-        backdrop-filter: blur(12px);
-
-        -webkit-backdrop-filter: blur(12px);
-
-        z-index: 5;
-    }
-
-
-    .icon-pill {
-        top: 7%;
-        left: 38%;
-    }
-
-
-    .icon-calendar {
-        top: 27%;
-        left: 7%;
-    }
-
-
-    .icon-water {
-        top: 27%;
-        right: 7%;
-    }
-
-
-    .icon-study {
-        bottom: 15%;
-        left: 15%;
-    }
-
-
-    .icon-food {
-        bottom: 15%;
-        right: 15%;
-    }
-
-
-    .icon-health {
-        bottom: 4%;
-        left: 38%;
-    }
-
-
-    .project-image::after {
-        content:
-            "Click to view fullscreen";
-
-        position: absolute;
-
-        left: 50%;
-
-        bottom: 18px;
-
-        transform:
-            translateX(-50%)
-            translateY(10px);
-
-        opacity: 0;
-
-        padding: 8px 13px;
-
-        border-radius: 100px;
-
-        font-size: 10px;
-
-        font-weight: 700;
-
-        color: #625b76;
-
-        background:
-            rgba(255,255,255,.78);
-
-        backdrop-filter: blur(10px);
-
-        transition: .3s ease;
-
-        pointer-events: none;
-    }
-
-
-    .project-image:hover::after {
-        opacity: 1;
-
-        transform:
-            translateX(-50%)
-            translateY(0);
-    }
-
-
-    /* =====================================================
-       PROJECT CONTENT
-    ===================================================== */
-
-    .project-content {
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        padding: 55px;
-    }
-
-
-    .project-number {
-        font-size: 12px;
-
-        font-weight: 900;
-
-        letter-spacing: 1px;
-
-        color: #9a96ac;
-    }
-
-
-    .project-category {
-        display: block;
-
-        margin-top: 12px;
-
-        font-size: 10px;
-
-        font-weight: 900;
-
-        letter-spacing: 1.5px;
-
-        color: #795fe0;
-    }
-
-
-    .project-content h3,
-    .image-project-info h3 {
-        margin-top: 15px;
-
-        font-size:
-            clamp(29px, 4vw, 43px);
-
-        line-height: 1.08;
-
-        letter-spacing: -1.8px;
-    }
-
-
-    .project-content p,
-    .image-project-info p {
-        margin-top: 19px;
-
-        color: #767287;
-
-        font-size: 15px;
-
-        line-height: 1.85;
-    }
-
-
-    .project-tags {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        gap: 8px;
-
-        margin-top: 24px;
-    }
-
-
-    .project-tags span {
-        padding: 8px 11px;
-
-        border-radius: 10px;
-
-        font-size: 11px;
-
-        font-weight: 700;
-
-        color: #68627d;
-
-        background:
-            rgba(124,92,252,.07);
-
-        border:
-            1px solid rgba(124,92,252,.08);
-    }
-
-
-    /* =====================================================
-       IMAGE PROJECTS
-    ===================================================== */
-
-    .image-project-grid {
-        display: grid;
-
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
-
-        gap: 28px;
-
-        margin-bottom: 34px;
-    }
-
-
-    .image-project-card {
-        overflow: hidden;
-
-        border-radius: 30px;
-
-        border:
-            1px solid rgba(255,255,255,.9);
-
-        background:
-            rgba(255,255,255,.72);
-
-        box-shadow:
-            0 22px 60px rgba(89,72,137,.09);
-
-        transition:
-            transform .35s ease,
-            box-shadow .35s ease;
-    }
-
-
-    .image-project-card:hover {
-        transform: translateY(-6px);
-
-        box-shadow:
-            0 28px 70px rgba(89,72,137,.14);
-    }
-
-
-    .image-box {
-        height: 330px;
-
-        overflow: hidden;
-
-        cursor: zoom-in;
-
-        background:
-            #eeeaf8;
-    }
-
-
-    .image-box img {
-        width: 100%;
-
-        height: 100%;
-
-        object-fit: cover;
-
-        transition:
-            transform .6s ease;
-    }
-
-
-    .image-box:hover img {
-        transform: scale(1.045);
-    }
-
-
-    .image-project-info {
-        padding: 34px;
-    }
-
-
-    /* =====================================================
-       PORTFOLIO / DOCUMENT
-    ===================================================== */
-
-    .portfolio-image,
-    .document-image {
-        min-height: 380px;
-
-        display: grid;
-
-        place-items: center;
-
-        text-align: center;
-
-        padding: 35px;
-    }
-
-
-    .portfolio-image {
-        background:
-            linear-gradient(
-                135deg,
-                #ebe8ff,
-                #f9efff,
-                #e8faff
-            );
-    }
-
-
-    .document-image {
-        background:
-            linear-gradient(
-                135deg,
-                #e8fff4,
-                #eef9ff,
-                #fff0fa
-            );
-    }
-
-
-    .project-image-content {
-        position: relative;
-
-        z-index: 2;
-    }
-
-
-    .project-icon-box {
-        width: 82px;
-        height: 82px;
-
-        margin:
-            0 auto 20px;
-
-        display: grid;
-
-        place-items: center;
-
-        border-radius: 24px;
-
-        font-size: 27px;
-
-        font-weight: 900;
-
-        color: white;
-
-        background:
-            linear-gradient(
-                135deg,
-                #7c5cfc,
-                #f267b2
-            );
-
-        box-shadow:
-            0 18px 40px rgba(124,92,252,.25);
-    }
-
-
-    .project-image-content h3 {
-        font-size: 28px;
-
-        letter-spacing: -1px;
-    }
-
-
-    .project-image-content p {
-        margin-top: 9px;
-
-        color: #77738c;
-    }
-
-
-    /* =====================================================
-       PHILOSOPHY
-    ===================================================== */
-
-    .project-philosophy {
-        margin: 70px 0 34px;
-
-        padding: 65px 55px;
-
-        border-radius: 32px;
-
-        text-align: center;
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(255,255,255,.82),
-                rgba(244,240,255,.72)
-            );
-
-        border:
-            1px solid rgba(255,255,255,.9);
-
-        box-shadow:
-            0 22px 60px rgba(89,72,137,.08);
-    }
-
-
-    .philosophy-content {
-        max-width: 760px;
-
-        margin: auto;
-    }
-
-
-    .philosophy-content h2 {
-        margin-top: 20px;
-
-        font-size:
-            clamp(31px, 5vw, 50px);
-
-        line-height: 1.08;
-
-        letter-spacing: -2px;
-    }
-
-
-    .philosophy-content p {
-        margin-top: 20px;
-
-        color: #77738c;
-
-        line-height: 1.85;
-    }
-
-
-    /* =====================================================
-       CTA
-    ===================================================== */
-
-    .project-cta {
-        margin-top: 34px;
-    }
-
-
-    .cta-card {
-        position: relative;
-
-        overflow: hidden;
-
-        padding: 70px 30px;
-
-        border-radius: 34px;
-
-        text-align: center;
-
-        background:
-            linear-gradient(
-                135deg,
-                #f3efff,
-                #fff1f8,
-                #edfaff
-            );
-
-        border:
-            1px solid rgba(255,255,255,.9);
-
-        box-shadow:
-            0 25px 70px rgba(89,72,137,.09);
-    }
-
-
-    .cta-card::before,
-    .cta-card::after {
-        content: "";
-
-        position: absolute;
-
-        border-radius: 50%;
-
-        pointer-events: none;
-    }
-
-
-    .cta-card::before {
-        width: 240px;
-        height: 240px;
-
-        top: -130px;
-        left: -90px;
-
-        background:
-            rgba(184,181,255,.28);
-    }
-
-
-    .cta-card::after {
-        width: 240px;
-        height: 240px;
-
-        bottom: -140px;
-        right: -90px;
-
-        background:
-            rgba(255,182,230,.25);
-    }
-
-
-    .cta-card h2 {
-        position: relative;
-
-        z-index: 2;
-
-        margin-top: 18px;
-
-        font-size:
-            clamp(35px, 6vw, 58px);
-
-        letter-spacing: -2.5px;
-    }
-
-
-    .cta-card p {
-        position: relative;
-
-        z-index: 2;
-
-        max-width: 620px;
-
-        margin: 18px auto 0;
-
-        color: #77738c;
-
-        line-height: 1.8;
-    }
-
-
-    .primary-button {
-        position: relative;
-
-        z-index: 3;
-
-        display: inline-flex;
-
-        align-items: center;
-
-        gap: 13px;
-
-        margin-top: 27px;
-
-        padding: 14px 20px;
-
-        border-radius: 15px;
-
-        color: white;
-
-        font-size: 14px;
-
-        font-weight: 800;
-
-        background:
-            linear-gradient(
-                135deg,
-                #7558e9,
-                #b45ced,
-                #ef639f
-            );
-
-        box-shadow:
-            0 13px 30px rgba(124,92,252,.22);
-
-        transition:
-            transform .25s ease,
-            box-shadow .25s ease;
-    }
-
-
-    .primary-button:hover {
-        transform: translateY(-3px);
-
-        box-shadow:
-            0 18px 38px rgba(124,92,252,.29);
-    }
-
-
-    .primary-button span {
-        font-size: 18px;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    .site-footer {
-        width:
-            min(
-                1180px,
-                calc(100% - 40px)
-            );
-
-        margin:
-            0 auto 25px;
-
-        padding: 30px 0 0;
-
-        border-top:
-            1px solid rgba(124,92,252,.10);
-    }
-
-
-    .footer-content {
-        display: flex;
-
-        align-items: center;
-
-        justify-content: space-between;
-
-        gap: 30px;
-    }
-
-
-    .footer-brand {
-        display: flex;
-
-        align-items: center;
-
-        gap: 13px;
-    }
-
-
-    .footer-brand .brand-logo {
-        width: 42px;
-        height: 42px;
-
-        border-radius: 13px;
-
-        font-size: 21px;
-    }
-
-
-    .footer-brand strong {
-        font-size: 14px;
-    }
-
-
-    .footer-brand p {
-        margin-top: 4px;
-
-        font-size: 11px;
-
-        color: #8b879e;
-    }
-
-
-    .footer-links {
-        display: flex;
-
-        gap: 18px;
-
-        flex-wrap: wrap;
-
-        justify-content: flex-end;
-    }
-
-
-    .footer-links a {
-        font-size: 12px;
-
-        font-weight: 700;
-
-        color: #77738b;
-
-        transition: .2s ease;
-    }
-
-
-    .footer-links a:hover {
-        color: #7558e9;
-    }
-
-
-    .footer-bottom {
-        padding: 25px 0;
-
-        text-align: center;
-    }
-
-
-    .footer-bottom p {
-        color: #9a96a8;
-
-        font-size: 11px;
-    }
-
-
-    /* =====================================================
-       FULLSCREEN VIEWER
-    ===================================================== */
-
-    .image-fullscreen {
-        position: fixed;
-
-        inset: 0;
-
-        z-index: 5000;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        padding: 30px;
-
-        background:
-            rgba(25, 21, 42, .88);
-
-        backdrop-filter: blur(18px);
-
-        -webkit-backdrop-filter: blur(18px);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transition:
-            opacity .25s ease,
-            visibility .25s ease;
-    }
-
-
-    .image-fullscreen.active {
-        opacity: 1;
-
-        visibility: visible;
-    }
-
-
-    .image-fullscreen img {
-        max-width: 92vw;
-
-        max-height: 88vh;
-
-        width: auto;
-
-        height: auto;
-
-        object-fit: contain;
-
-        border-radius: 24px;
-
-        box-shadow:
-            0 30px 90px rgba(0,0,0,.35);
-
-        transform: scale(.94);
-
-        transition:
-            transform .3s ease;
-    }
-
-
-    .image-fullscreen.active img {
-        transform: scale(1);
-    }
-
-
-    .fullscreen-close {
-        position: absolute;
-
-        top: 22px;
-
-        right: 25px;
-
-        width: 50px;
-
-        height: 50px;
-
-        border: 0;
-
-        border-radius: 50%;
-
-        cursor: pointer;
-
-        font-size: 30px;
-
-        line-height: 1;
-
-        color: white;
-
-        background:
-            rgba(255,255,255,.13);
-
-        backdrop-filter: blur(10px);
-
-        transition:
-            transform .2s ease,
-            background .2s ease;
-    }
-
-
-    .fullscreen-close:hover {
-        transform: rotate(90deg);
-
-        background:
-            rgba(255,255,255,.22);
-    }
-
-
-    /* =====================================================
-       REVEAL ANIMATION
-    ===================================================== */
-
-    .reveal {
-        opacity: 0;
-
-        transform: translateY(25px);
-
-        transition:
-            opacity .7s ease,
-            transform .7s ease;
-    }
-
-
-    .reveal.visible {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
-
-    /* =====================================================
-       TABLET
-    ===================================================== */
-
-    @media (max-width: 900px) {
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .projects-hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+            opacity: .78;
+        }
+
+
+        /* =====================================================
+           BACKGROUND SHAPES
+        ====================================================== */
+
+        .project-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(5px);
+            pointer-events: none;
+            opacity: .45;
+        }
+
+        .project-shape-one {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -90px;
+            background: #ffb6e6;
+            animation: projectFloatOne 8s ease-in-out infinite;
+        }
+
+        .project-shape-two {
+            width: 330px;
+            height: 330px;
+            right: -110px;
+            bottom: -120px;
+            background: #b8d8ff;
+            animation: projectFloatTwo 9s ease-in-out infinite;
+        }
+
+        @keyframes projectFloatOne {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, 25px);
+            }
+        }
+
+        @keyframes projectFloatTwo {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-25px, -20px);
+            }
+        }
+
+
+        /* =====================================================
+           PROJECT FILTER / INTRO
+        ====================================================== */
+
+        .projects-heading {
+            max-width: 850px;
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .projects-heading h2 {
+            margin: 14px 0;
+        }
+
+        .projects-heading p {
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           PROJECT GRID
+        ====================================================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
 
         .project-card {
-            grid-template-columns: 1fr;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            padding: 18px;
+            background: rgba(255, 255, 255, .62);
+            border: 1px solid rgba(255, 255, 255, .78);
+            box-shadow:
+                0 20px 60px rgba(70, 50, 100, .10);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            transition:
+                transform .4s ease,
+                box-shadow .4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 28px 70px rgba(70, 50, 100, .16);
+        }
+
+        .project-image-wrap {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            aspect-ratio: 16 / 10;
+            background: #f5f1ff;
+            cursor: zoom-in;
+        }
+
+        .project-image-wrap img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition:
+                transform .65s ease,
+                filter .4s ease;
+        }
+
+        .project-card:hover .project-image-wrap img {
+            transform: scale(1.045);
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 16px;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(20, 10, 35, .38),
+                    transparent 45%
+                );
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+        .project-card:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .zoom-button {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, .9);
+            color: #6d4ddf;
+            font-size: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
         }
 
 
-        .project-image {
-            min-height: 400px;
-        }
-
+        /* =====================================================
+           PROJECT CONTENT
+        ====================================================== */
 
         .project-content {
-            padding: 40px;
+            padding: 25px 10px 10px;
         }
 
-
-        .image-project-grid {
-            grid-template-columns: 1fr;
+        .project-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 42px;
+            height: 28px;
+            padding: 0 10px;
+            border-radius: 999px;
+            background: rgba(155, 124, 255, .12);
+            color: #7c5cfc;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .5px;
         }
 
-
-        .footer-content {
-            flex-direction: column;
-
-            align-items: flex-start;
+        .project-content h3 {
+            margin: 14px 0 10px;
+            font-size: 27px;
         }
 
-
-        .footer-links {
-            justify-content: flex-start;
+        .project-content p {
+            margin: 0;
+            line-height: 1.75;
+            opacity: .78;
         }
 
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-       SAME BEHAVIOUR AS ABOUT PAGE
-    ===================================================== */
-
-    @media (max-width: 760px) {
-
-        .site-header {
-            padding: 10px 12px;
-        }
-
-
-        .navbar {
-            min-height: 64px;
-
-            border-radius: 19px;
-
-            padding:
-                8px 9px 8px 12px;
-        }
-
-
-        .brand-logo {
-            width: 43px;
-
-            height: 43px;
-
-            border-radius: 13px;
-        }
-
-
-        .brand-text strong {
-            font-size: 14px;
-        }
-
-
-        .brand-text small {
-            font-size: 8px;
-        }
-
-
-        .menu-toggle {
-            display: block;
-        }
-
-
-        .nav-links {
-            position: absolute;
-
-            top: calc(100% + 9px);
-
-            left: 0;
-
-            right: 0;
-
+        .project-tags {
             display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
 
-            flex-direction: column;
+        .project-tags span {
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .7);
+            border: 1px solid rgba(150, 120, 220, .12);
+            font-size: 12px;
+            font-weight: 700;
+        }
 
-            align-items: stretch;
 
-            gap: 5px;
+        /* =====================================================
+           ZENORA FEATURE CARD
+        ====================================================== */
 
-            padding: 10px;
+        .zenora-project-card {
+            grid-column: 1 / -1;
+            padding: 20px;
+        }
 
-            border-radius: 20px;
+        .zenora-project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+            gap: 32px;
+            align-items: center;
+        }
 
+        .zenora-project-image {
+            aspect-ratio: 16 / 10;
+            min-height: 380px;
+        }
+
+        .zenora-project-image img {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .zenora-project-content {
+            padding: 20px 15px 20px 5px;
+        }
+
+        .zenora-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: rgba(124, 92, 252, .11);
+            color: #7654ed;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .4px;
+        }
+
+        .zenora-project-content h2 {
+            margin: 17px 0 14px;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.08;
+        }
+
+        .zenora-project-content h2 span {
+            background: linear-gradient(
+                135deg,
+                #7c5cfc,
+                #00c2ff,
+                #ff6b9d
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .zenora-project-content .lead {
+            font-size: 16px;
+            line-height: 1.85;
+            opacity: .78;
+        }
+
+        .zenora-features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin: 22px 0;
+        }
+
+        .zenora-feature {
+            padding: 12px 14px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, .6);
+            border: 1px solid rgba(124, 92, 252, .08);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .zenora-feature::before {
+            content: "✦";
+            margin-right: 7px;
+            color: #9b7cffff;
+        }
+
+
+        /* =====================================================
+           OTHER PROJECT VISUALS
+        ====================================================== */
+
+        .healthy-image {
             background:
-                rgba(255,255,255,.94);
-
-            border:
-                1px solid rgba(255,255,255,.95);
-
-            box-shadow:
-                0 20px 50px rgba(70,60,110,.16);
-
-            backdrop-filter: blur(20px);
-
-            -webkit-backdrop-filter: blur(20px);
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transform:
-                translateY(-8px)
-                scale(.98);
-
-            transform-origin: top;
-
-            transition:
-                opacity .22s ease,
-                visibility .22s ease,
-                transform .22s ease;
+                linear-gradient(
+                    135deg,
+                    #eafff4,
+                    #fff6dc,
+                    #ffeaf7
+                );
         }
 
-
-        .nav-links.open {
-            opacity: 1;
-
-            visibility: visible;
-
-            transform:
-                translateY(0)
-                scale(1);
+        .fashion-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe8f4,
+                    #efe8ff,
+                    #e7f8ff
+                );
         }
 
-
-        .nav-links a {
-            padding: 14px 16px;
-
-            text-align: center;
-
-            border-radius: 13px;
+        .portfolio-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ece8ff,
+                    #f9f4ff,
+                    #e6f8ff
+                );
         }
 
-
-        .nav-links a.active::after {
-            display: none;
-        }
-
-
-        .page-hero {
-            min-height: 390px;
-
-            padding:
-                65px 20px 65px;
-        }
-
-
-        .page-hero h1 {
-            letter-spacing: -2.5px;
-        }
-
-
-        .page-hero p {
-            font-size: 15px;
-        }
-
-
-        .section {
-            width:
-                min(
-                    100% - 26px,
-                    1180px
+        .documents-image {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f7ff,
+                    #f1ecff,
+                    #fff0f8
                 );
         }
 
 
-        .section-heading {
-            margin-bottom: 38px;
-        }
+        /* =====================================================
+           PHILOSOPHY
+        ====================================================== */
 
-
-        .project-card,
-        .image-project-card,
-        .project-philosophy,
-        .cta-card {
-            border-radius: 24px;
-        }
-
-
-        .project-image {
-            min-height: 330px;
-        }
-
-
-        .zenora-image {
-            padding: 20px;
-        }
-
-
-        .z-letter {
-            font-size: 58px;
-        }
-
-
-        .zenora-icon {
-            font-size: 28px;
-        }
-
-
-        .project-content {
-            padding: 31px 25px;
-        }
-
-
-        .image-box {
-            height: 260px;
-        }
-
-
-        .image-project-info {
-            padding: 28px 24px;
-        }
-
-
-        .portfolio-image,
-        .document-image {
-            min-height: 310px;
-        }
-
-
-        .project-philosophy {
-            margin-top: 45px;
-
-            padding:
-                45px 25px;
-        }
-
-
-        .cta-card {
-            padding:
-                52px 22px;
-        }
-
-
-        .footer-content {
-            align-items: center;
-
+        .philosophy-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            padding: 55px;
             text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 234, 248, .8),
+                    rgba(232, 247, 255, .78)
+                );
+            border: 1px solid rgba(255, 255, 255, .8);
+            box-shadow:
+                0 25px 70px rgba(80, 60, 120, .10);
+        }
+
+        .philosophy-card::before,
+        .philosophy-card::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .philosophy-card::before {
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 182, 230, .28);
+            left: -70px;
+            top: -70px;
+        }
+
+        .philosophy-card::after {
+            width: 200px;
+            height: 200px;
+            background: rgba(127, 219, 255, .23);
+            right: -80px;
+            bottom: -90px;
+        }
+
+        .philosophy-card h2 {
+            position: relative;
+            z-index: 2;
+            margin: 15px 0;
+            font-size: clamp(30px, 5vw, 50px);
+        }
+
+        .philosophy-card p {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
         }
 
 
-        .footer-brand {
-            flex-direction: column;
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .projects-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 38px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .62);
+            border: 1px solid rgba(255, 255, 255, .78);
+            box-shadow:
+                0 20px 60px rgba(70, 50, 100, .09);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .projects-cta h2 {
+            margin: 12px 0 8px;
+        }
+
+        .projects-cta p {
+            margin: 0;
+            opacity: .72;
         }
 
 
-        .footer-links {
-            justify-content: center;
-        }
+        /* =====================================================
+           FULLSCREEN VIEWER
+        ====================================================== */
 
-    }
-
-
-    /* =====================================================
-       SMALL PHONES
-    ===================================================== */
-
-    @media (max-width: 420px) {
-
-        .brand-text small {
+        .image-fullscreen {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
             display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(13, 9, 25, .92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .image-fullscreen.active {
+            display: flex;
+        }
+
+        .fullscreen-image {
+            max-width: 94vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 18px;
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, .4);
+            animation: fullscreenIn .3s ease;
+        }
+
+        @keyframes fullscreenIn {
+
+            from {
+                opacity: 0;
+                transform: scale(.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        .fullscreen-close {
+            position: fixed;
+            top: 22px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .95);
+            color: #5b466e;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 100000;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .2);
+            transition:
+                transform .25s ease,
+                background .25s ease;
+        }
+
+        .fullscreen-close:hover {
+            transform: scale(1.08);
+            background: #ffffff;
         }
 
 
-        .page-hero h1 {
-            font-size: 40px;
+        /* =====================================================
+           REVEAL ANIMATION
+        ====================================================== */
+
+        .project-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .project-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
 
-        .zenora-logo-art {
-            width: 310px;
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .zenora-project-card {
+                grid-column: auto;
+            }
+
+            .zenora-project-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .zenora-project-image {
+                min-height: 300px;
+            }
+
+            .projects-cta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
         }
 
 
-        .z-letter {
-            font-size: 52px;
+        @media (max-width: 700px) {
+
+            .projects-hero-inner {
+                padding: 75px 20px 55px;
+            }
+
+            .projects-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .project-card {
+                border-radius: 22px;
+                padding: 13px;
+            }
+
+            .project-image-wrap {
+                border-radius: 17px;
+            }
+
+            .project-content {
+                padding: 21px 7px 7px;
+            }
+
+            .zenora-project-content {
+                padding: 15px 5px 10px;
+            }
+
+            .zenora-features {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-card {
+                padding: 38px 22px;
+                border-radius: 24px;
+            }
+
+            .projects-cta {
+                padding: 28px 23px;
+                border-radius: 23px;
+            }
+
         }
 
-
-        .zenora-icon {
-            font-size: 23px;
-        }
-
-
-        .project-image {
-            min-height: 310px;
-        }
-
-    }
-
-</style>
+    </style>
 
 </head>
 
 
-<body>
+<body class="projects-page">
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<header class="site-header">
+    <header class="site-header">
 
-    <nav class="navbar">
+        <nav class="navbar">
 
+            <a href="index.html" class="brand">
 
-        <a
-            href="index.html"
-            class="brand"
-            aria-label="A. Sushma Home"
-        >
+                <span class="brand-logo">𝓢</span>
 
-            <!-- EXACT SAME LOGO AS ABOUT PAGE -->
+                <span class="brand-text">
+                    <strong>A. Sushma</strong>
+                    <small>Creative Technology</small>
+                </span>
 
-            <span class="brand-logo">
-                𝓢
-            </span>
-
-
-            <span class="brand-text">
-
-                <strong>
-                    A. Sushma
-                </strong>
-
-                <small>
-                    Creative Technology
-                </small>
-
-            </span>
-
-        </a>
-
-
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-
-            <span></span>
-
-            <span></span>
-
-        </button>
-
-
-
-        <div
-            class="nav-links"
-            id="navLinks"
-        >
-
-            <a href="index.html">
-                Home
             </a>
 
 
-            <a href="about.html">
-                About
-            </a>
-
-
-            <a href="skills.html">
-                Skills
-            </a>
-
-
-            <a
-                href="projects.html"
-                class="active"
-                aria-current="page"
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
             >
-                Projects
-            </a>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
 
 
-            <a href="contact.html">
-                Contact
-            </a>
+            <div class="nav-links" id="navLinks">
 
-        </div>
+                <a href="index.html">
+                    Home
+                </a>
 
-    </nav>
+                <a href="about.html">
+                    About
+                </a>
 
-</header>
+                <a href="skills.html">
+                    Skills
+                </a>
 
+                <a
+                    href="projects.html"
+                    class="active"
+                >
+                    Projects
+                </a>
 
+                <a href="contact.html">
+                    Contact
+                </a>
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
+            </div>
 
-<main>
+        </nav>
 
-
-    <!-- =================================================
-         HERO
-    ================================================== -->
-
-    <section class="page-hero">
-
-
-        <div
-            class="background-shape shape-one"
-        ></div>
-
-
-        <div
-            class="background-shape shape-three"
-        ></div>
+    </header>
 
 
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-        <div
-            class="page-hero-content reveal"
-        >
-
-
-            <span class="eyebrow">
-                My Work ✦
-            </span>
+    <main>
 
 
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-            <h1>
+        <section class="projects-hero">
 
-                Projects that turn
+            <div class="project-shape project-shape-one"></div>
+            <div class="project-shape project-shape-two"></div>
 
-                <span>
-                    ideas into reality.
+
+            <div class="projects-hero-inner project-reveal">
+
+                <span class="section-tag">
+                    My Creative Work ✦
                 </span>
 
-            </h1>
+
+                <h1>
+                    Ideas turned into
+                    <span>projects.</span>
+                </h1>
 
 
+                <p>
+                    A collection of technology, design and creative
+                    projects built with curiosity, purpose and a
+                    focus on creating useful digital experiences.
+                </p>
 
-            <p>
+            </div>
 
-                A collection of projects where technology,
-                creativity, design and problem-solving
-                come together.
-
-            </p>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         PROJECT SECTION
-    ================================================== -->
-
-    <section class="section">
-
-
-
-        <div class="section-heading reveal">
-
-
-            <span class="section-tag">
-                Selected Projects
-            </span>
-
-
-
-            <h2>
-
-                Things I've
-
-                <span>
-                    built & created.
-                </span>
-
-            </h2>
-
-
-
-            <p>
-
-                From full applications to creative web
-                experiences, these projects represent my
-                learning, experimentation and passion
-                for technology.
-
-            </p>
-
-
-        </div>
+        </section>
 
 
 
         <!-- =================================================
-             ZENORA
+             PROJECTS
         ================================================== -->
 
-        <article
-            class="project-card featured-project reveal"
-        >
+        <section class="section">
 
 
-            <div
-                class="project-image zenora-image clickable-project-image"
-                data-fullscreen="zenora"
-            >
+            <div class="projects-heading project-reveal">
+
+                <span class="section-tag">
+                    Featured Projects
+                </span>
 
 
-                <div class="zenora-logo-art">
+                <h2>
+                    Things I have created.
+                </h2>
 
 
-                    <div class="zenora-ring"></div>
+                <p>
+                    From application concepts to websites and creative
+                    digital work, each project represents something
+                    I have learned, explored or built.
+                </p>
+
+            </div>
 
 
 
-                    <!-- PILL -->
+            <div class="projects-grid">
 
-                    <div class="zenora-icon icon-pill">
-                        💊
+
+                <!-- =============================================
+                     ZENORA
+                ============================================== -->
+
+                <article
+                    class="project-card zenora-project-card project-reveal"
+                >
+
+                    <div class="zenora-project-layout">
+
+
+                        <div
+                            class="project-image-wrap zenora-project-image"
+                            data-image="zenora"
+                        >
+
+                            <img
+                                id="zenoraProjectImage"
+                                alt="Zenora application logo and feature icons"
+                                src="data:image/webp;base64,UklGRkpGAQBXRUJQVlA4ID5GAQBwegWdASrmBOYEPpVIn0wlpDQyo5XZmoASiWNu2HwIO7ah+Z9DiyB+"
+                            >
+
+                            <div class="image-overlay">
+
+                                <span class="zoom-button">
+                                    ⛶
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="zenora-project-content">
+
+                            <span class="zenora-badge">
+                                ✦ Featured Project
+                            </span>
+
+
+                            <h2>
+                                <span>Zenora</span>
+                            </h2>
+
+
+                            <p class="lead">
+                                A personal life-assistant application concept
+                                designed to organize everyday responsibilities,
+                                reminders, study, meals, water, expenses,
+                                activities and important information in one
+                                beautiful digital space.
+                            </p>
+
+
+                            <div class="zenora-features">
+
+                                <div class="zenora-feature">
+                                    AI Assistant
+                                </div>
+
+                                <div class="zenora-feature">
+                                    Smart Reminders
+                                </div>
+
+                                <div class="zenora-feature">
+                                    Study OS
+                                </div>
+
+                                <div class="zenora-feature">
+                                    Health &amp; Wellness
+                                </div>
+
+                                <div class="zenora-feature">
+                                    Finance
+                                </div>
+
+                                <div class="zenora-feature">
+                                    Family Support
+                                </div>
+
+                            </div>
+
+
+                            <div class="project-tags">
+
+                                <span>
+                                    Flutter
+                                </span>
+
+                                <span>
+                                    UI/UX
+                                </span>
+
+                                <span>
+                                    Firebase
+                                </span>
+
+                                <span>
+                                    Mobile App
+                                </span>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-
-
-                    <!-- CALENDAR -->
-
-                    <div class="zenora-icon icon-calendar">
-                        📅
-                    </div>
+                </article>
 
 
 
-                    <!-- WATER -->
+                <!-- =============================================
+                     HEALTHY BITES
+                ============================================== -->
 
-                    <div class="zenora-icon icon-water">
-                        💧
-                    </div>
-
-
-
-                    <!-- STUDY -->
-
-                    <div class="zenora-icon icon-study">
-                        🎓
-                    </div>
+                <article class="project-card project-reveal">
 
 
+                    <div
+                        class="project-image-wrap healthy-image"
+                        data-image="healthy"
+                    >
 
-                    <!-- FOOD -->
+                        <img
+                            src="images/healthy_bites.jpeg"
+                            alt="Healthy Bites project"
+                            onerror="this.style.display='none';"
+                        >
 
-                    <div class="zenora-icon icon-food">
-                        🍴
-                    </div>
+                        <div class="image-overlay">
 
+                            <span class="zoom-button">
+                                ⛶
+                            </span>
 
-
-                    <!-- HEALTH -->
-
-                    <div class="zenora-icon icon-health">
-                        💗
-                    </div>
-
-
-
-                    <!-- CENTER Z -->
-
-                    <div class="z-center">
-
-                        <div class="z-letter">
-                            Z
                         </div>
 
                     </div>
 
 
-                </div>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            02
+                        </span>
 
 
-            </div>
+                        <h3>
+                            Healthy Bites
+                        </h3>
 
 
-
-            <div class="project-content">
-
-
-                <span class="project-number">
-                    01
-                </span>
+                        <p>
+                            A creative food and wellness concept focused
+                            on presenting healthy choices in a simple,
+                            attractive and user-friendly way.
+                        </p>
 
 
+                        <div class="project-tags">
 
-                <span class="project-category">
-                    FLUTTER APPLICATION
-                </span>
+                            <span>
+                                Web Design
+                            </span>
 
+                            <span>
+                                UI Design
+                            </span>
 
+                            <span>
+                                Creativity
+                            </span>
 
-                <h3>
+                        </div>
 
-                    Zenora —
+                    </div>
 
-                    <span>
-                        Your Life, Organized.
-                    </span>
-
-                </h3>
-
-
-
-                <p>
-
-                    Zenora is a smart personal assistant concept
-                    designed to organize everyday life in one place.
-                    It combines reminders, study planning, water
-                    tracking, expenses, meals, activities and more
-                    into a single modern experience.
-
-                </p>
+                </article>
 
 
 
-                <div class="project-tags">
+                <!-- =============================================
+                     FASHION CREATIVE
+                ============================================== -->
 
-                    <span>
-                        Flutter
-                    </span>
-
-                    <span>
-                        Dart
-                    </span>
-
-                    <span>
-                        Firebase
-                    </span>
-
-                    <span>
-                        UI/UX
-                    </span>
-
-                    <span>
-                        AI
-                    </span>
-
-                </div>
+                <article class="project-card project-reveal">
 
 
-            </div>
-
-
-        </article>
-
-
-
-        <!-- =================================================
-             IMAGE PROJECTS
-        ================================================== -->
-
-        <div class="image-project-grid">
-
-
-            <!-- HEALTHY BITES -->
-
-            <article
-                class="image-project-card reveal"
-            >
-
-
-                <div
-                    class="image-box clickable-project-image"
-                >
-
-                    <img
-                        src="images/healthy_bites.jpeg"
-                        alt="Healthy Bites project design"
-                        loading="lazy"
+                    <div
+                        class="project-image-wrap fashion-image"
+                        data-image="fashion"
                     >
 
-                </div>
+                        <img
+                            src="images/fashion_project.jpeg"
+                            alt="Fashion creative project"
+                            onerror="this.style.display='none';"
+                        >
 
+                        <div class="image-overlay">
 
+                            <span class="zoom-button">
+                                ⛶
+                            </span>
 
-                <div class="image-project-info">
-
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-
-
-                    <span class="project-category">
-                        WEB DESIGN
-                    </span>
-
-
-
-                    <h3>
-
-                        Healthy
-
-                        <span>
-                            Bites
-                        </span>
-
-                    </h3>
-
-
-
-                    <p>
-
-                        A fresh and engaging food-focused web
-                        design concept created with a clean,
-                        friendly and visually appealing interface.
-
-                    </p>
-
-
-
-                    <div class="project-tags">
-
-                        <span>
-                            HTML
-                        </span>
-
-                        <span>
-                            CSS
-                        </span>
-
-                        <span>
-                            UI Design
-                        </span>
+                        </div>
 
                     </div>
 
 
-                </div>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            03
+                        </span>
 
 
-            </article>
+                        <h3>
+                            Fashion Creative
+                        </h3>
+
+
+                        <p>
+                            A visual design project exploring fashion,
+                            presentation, aesthetics and creative
+                            digital composition.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>
+                                Creative Design
+                            </span>
+
+                            <span>
+                                Visuals
+                            </span>
+
+                            <span>
+                                Branding
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
 
 
-            <!-- FASHION -->
+                <!-- =============================================
+                     PERSONAL PORTFOLIO
+                ============================================== -->
 
-            <article
-                class="image-project-card reveal"
-            >
+                <article class="project-card project-reveal">
 
 
-                <div
-                    class="image-box clickable-project-image"
-                >
-
-                    <img
-                        src="images/fashion_project.jpeg"
-                        alt="Fashion creative project design"
-                        loading="lazy"
+                    <div
+                        class="project-image-wrap portfolio-image"
+                        data-image="portfolio"
                     >
 
-                </div>
+                        <div
+                            style="
+                                width:100%;
+                                height:100%;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                padding:30px;
+                            "
+                        >
+
+                            <div
+                                style="
+                                    width:85%;
+                                    height:75%;
+                                    border-radius:20px;
+                                    padding:20px;
+                                    background:rgba(255,255,255,.75);
+                                    box-shadow:0 20px 40px rgba(80,60,120,.12);
+                                "
+                            >
+
+                                <div
+                                    style="
+                                        width:45%;
+                                        height:10px;
+                                        border-radius:20px;
+                                        background:#9b7cffff;
+                                        margin-bottom:14px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        width:75%;
+                                        height:8px;
+                                        border-radius:20px;
+                                        background:#dcd5ff;
+                                        margin-bottom:25px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        display:grid;
+                                        grid-template-columns:1fr 1fr;
+                                        gap:10px;
+                                    "
+                                >
+
+                                    <div
+                                        style="
+                                            height:70px;
+                                            border-radius:14px;
+                                            background:#ffe5f5;
+                                        "
+                                    ></div>
+
+                                    <div
+                                        style="
+                                            height:70px;
+                                            border-radius:14px;
+                                            background:#e5f5ff;
+                                        "
+                                    ></div>
+
+                                    <div
+                                        style="
+                                            height:45px;
+                                            border-radius:14px;
+                                            background:#e8ffeF;
+                                        "
+                                    ></div>
+
+                                    <div
+                                        style="
+                                            height:45px;
+                                            border-radius:14px;
+                                            background:#eee8ff;
+                                        "
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
+                        <div class="image-overlay">
 
-                <div class="image-project-info">
+                            <span class="zoom-button">
+                                ⛶
+                            </span>
 
-
-                    <span class="project-number">
-                        03
-                    </span>
-
-
-
-                    <span class="project-category">
-                        CREATIVE DESIGN
-                    </span>
-
-
-
-                    <h3>
-
-                        Fashion
-
-                        <span>
-                            Creative
-                        </span>
-
-                    </h3>
-
-
-
-                    <p>
-
-                        A visually focused fashion design project
-                        exploring composition, typography,
-                        branding and modern visual presentation.
-
-                    </p>
-
-
-
-                    <div class="project-tags">
-
-                        <span>
-                            Canva
-                        </span>
-
-                        <span>
-                            Graphic Design
-                        </span>
-
-                        <span>
-                            Creative UI
-                        </span>
+                        </div>
 
                     </div>
 
 
-                </div>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            04
+                        </span>
 
 
-            </article>
+                        <h3>
+                            Personal Portfolio
+                        </h3>
 
 
-        </div>
+                        <p>
+                            A professional portfolio website created to
+                            showcase my skills, projects, learning journey
+                            and creative technology work.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>
+                                HTML
+                            </span>
+
+                            <span>
+                                CSS
+                            </span>
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
 
 
-        <!-- =================================================
-             PORTFOLIO
-        ================================================== -->
+                <!-- =============================================
+                     DOCUMENT & DESIGN WORK
+                ============================================== -->
 
-        <article
-            class="project-card reveal"
-        >
+                <article class="project-card project-reveal">
 
 
-            <div
-                class="project-image portfolio-image"
-            >
+                    <div
+                        class="project-image-wrap documents-image"
+                        data-image="documents"
+                    >
+
+                        <div
+                            style="
+                                width:100%;
+                                height:100%;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                padding:30px;
+                            "
+                        >
+
+                            <div
+                                style="
+                                    width:68%;
+                                    height:78%;
+                                    background:rgba(255,255,255,.88);
+                                    border-radius:16px;
+                                    padding:25px;
+                                    box-shadow:0 18px 45px rgba(70,50,100,.13);
+                                    transform:rotate(-2deg);
+                                "
+                            >
+
+                                <div
+                                    style="
+                                        width:52%;
+                                        height:12px;
+                                        border-radius:20px;
+                                        background:#7c5cfc;
+                                        margin-bottom:20px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        width:100%;
+                                        height:7px;
+                                        border-radius:20px;
+                                        background:#e5e0f5;
+                                        margin-bottom:10px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        width:90%;
+                                        height:7px;
+                                        border-radius:20px;
+                                        background:#e5e0f5;
+                                        margin-bottom:10px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        width:75%;
+                                        height:7px;
+                                        border-radius:20px;
+                                        background:#e5e0f5;
+                                        margin-bottom:25px;
+                                    "
+                                ></div>
+
+                                <div
+                                    style="
+                                        width:100%;
+                                        height:75px;
+                                        border-radius:12px;
+                                        background:linear-gradient(
+                                            135deg,
+                                            #ffe9f6,
+                                            #e9f7ff
+                                        );
+                                    "
+                                ></div>
+
+                            </div>
+
+                        </div>
 
 
-                <div class="project-image-content">
+                        <div class="image-overlay">
 
+                            <span class="zoom-button">
+                                ⛶
+                            </span>
 
-                    <div class="project-icon-box">
-                        &lt;/&gt;
+                        </div>
+
                     </div>
 
 
+                    <div class="project-content">
 
-                    <h3>
-                        Personal Portfolio
-                    </h3>
-
-
-
-                    <p>
-                        A professional internship portfolio website.
-                    </p>
+                        <span class="project-number">
+                            05
+                        </span>
 
 
-                </div>
+                        <h3>
+                            Document &amp; Design Work
+                        </h3>
 
 
-            </div>
+                        <p>
+                            Professional resumes, documents, presentations,
+                            spreadsheets and creative digital materials
+                            designed with clarity and visual consistency.
+                        </p>
 
 
+                        <div class="project-tags">
 
-            <div class="project-content">
+                            <span>
+                                Documents
+                            </span>
 
+                            <span>
+                                Excel
+                            </span>
 
-                <span class="project-number">
-                    04
-                </span>
+                            <span>
+                                Design
+                            </span>
 
+                        </div>
 
-
-                <span class="project-category">
-                    WEB DEVELOPMENT
-                </span>
-
-
-
-                <h3>
-
-                    Personal
-
-                    <span>
-                        Portfolio
-                    </span>
-
-                </h3>
-
-
-
-                <p>
-
-                    A responsive personal portfolio website created
-                    to showcase my skills, projects, education and
-                    journey as an IT student.
-
-                </p>
-
-
-
-                <div class="project-tags">
-
-                    <span>
-                        HTML
-                    </span>
-
-                    <span>
-                        CSS
-                    </span>
-
-                    <span>
-                        JavaScript
-                    </span>
-
-                    <span>
-                        Responsive Design
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </article>
-
-
-
-        <!-- =================================================
-             DOCUMENT DESIGN
-        ================================================== -->
-
-        <article
-            class="project-card reveal"
-        >
-
-
-            <div
-                class="project-image document-image"
-            >
-
-
-                <div class="project-image-content">
-
-
-                    <div class="project-icon-box">
-                        ✦
                     </div>
 
-
-
-                    <h3>
-                        Document & Design
-                    </h3>
-
-
-
-                    <p>
-                        Creative academic and digital documentation.
-                    </p>
-
-
-                </div>
+                </article>
 
 
             </div>
 
-
-
-            <div class="project-content">
-
-
-                <span class="project-number">
-                    05
-                </span>
-
-
-
-                <span class="project-category">
-                    DESIGN & DOCUMENTATION
-                </span>
-
-
-
-                <h3>
-
-                    Document &
-
-                    <span>
-                        Design Work
-                    </span>
-
-                </h3>
-
-
-
-                <p>
-
-                    Academic documents, presentations and creative
-                    digital designs created with attention to
-                    structure, clarity and visual presentation.
-
-                </p>
-
-
-
-                <div class="project-tags">
-
-                    <span>
-                        Canva
-                    </span>
-
-                    <span>
-                        MS Office
-                    </span>
-
-                    <span>
-                        Presentation
-                    </span>
-
-                    <span>
-                        Documentation
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </article>
+        </section>
 
 
 
@@ -2649,44 +1398,28 @@
              PHILOSOPHY
         ================================================== -->
 
-        <section
-            class="project-philosophy reveal"
-        >
+        <section class="section">
 
+            <div class="philosophy-card project-reveal">
 
-            <div class="philosophy-content">
-
-
-                <span class="eyebrow">
-                    MY APPROACH
+                <span class="section-tag">
+                    My Approach
                 </span>
 
 
-
                 <h2>
-
-                    I don't just build projects.
-
-                    <span>
-                        I build experiences.
-                    </span>
-
+                    Create. Learn. Improve.
                 </h2>
 
 
-
                 <p>
-
-                    Every project is an opportunity to learn something
-                    new, solve a real problem and create something
-                    meaningful. I focus on combining functionality,
-                    simplicity and beautiful design.
-
+                    Every project is an opportunity to learn something new.
+                    I like building with purpose, experimenting with ideas,
+                    improving the user experience and turning concepts into
+                    practical digital solutions.
                 </p>
 
-
             </div>
-
 
         </section>
 
@@ -2696,39 +1429,27 @@
              CTA
         ================================================== -->
 
-        <section
-            class="project-cta reveal"
-        >
+        <section class="section">
 
+            <div class="projects-cta project-reveal">
 
-            <div class="cta-card">
+                <div>
 
-
-                <span class="eyebrow">
-                    LET'S CREATE
-                </span>
-
-
-
-                <h2>
-
-                    Have an idea?
-
-                    <span>
-                        Let's build it.
+                    <span class="section-tag">
+                        Let's connect
                     </span>
 
-                </h2>
+
+                    <h2>
+                        Have an idea worth exploring?
+                    </h2>
 
 
+                    <p>
+                        I would love to hear about it.
+                    </p>
 
-                <p>
-
-                    I'm always interested in learning, experimenting
-                    and working on meaningful technology projects.
-
-                </p>
-
+                </div>
 
 
                 <a
@@ -2736,7 +1457,7 @@
                     class="primary-button"
                 >
 
-                    Get In Touch
+                    Start a Conversation
 
                     <span>
                         →
@@ -2744,245 +1465,209 @@
 
                 </a>
 
-
             </div>
-
 
         </section>
 
-
-    </section>
-
-
-</main>
+    </main>
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-<footer class="site-footer">
+    <footer class="site-footer">
 
-
-    <div class="footer-content">
-
-
-        <div class="footer-brand">
+        <div class="footer-content">
 
 
-            <span class="brand-logo">
-                𝓢
-            </span>
+            <div class="footer-brand">
+
+                <span class="brand-logo">
+                    𝓢
+                </span>
 
 
+                <div>
 
-            <div>
-
-
-                <strong>
-                    A. Sushma
-                </strong>
+                    <strong>
+                        A. Sushma
+                    </strong>
 
 
+                    <p>
+                        IT Student • Web Developer • Creative Designer
+                    </p>
 
-                <p>
-                    IT Student • Web Developer • Creative Designer
-                </p>
-
+                </div>
 
             </div>
 
 
-        </div>
 
+            <div class="footer-links">
 
+                <a href="index.html">
+                    Home
+                </a>
 
-        <div class="footer-links">
+                <a href="about.html">
+                    About
+                </a>
 
+                <a href="skills.html">
+                    Skills
+                </a>
 
-            <a href="index.html">
-                Home
-            </a>
+                <a href="projects.html">
+                    Projects
+                </a>
 
+                <a href="contact.html">
+                    Contact
+                </a>
 
-            <a href="about.html">
-                About
-            </a>
-
-
-            <a href="skills.html">
-                Skills
-            </a>
-
-
-            <a href="projects.html">
-                Projects
-            </a>
-
-
-            <a href="contact.html">
-                Contact
-            </a>
-
+            </div>
 
         </div>
 
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 A. Sushma. Built with creativity and technology.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         FULLSCREEN IMAGE VIEWER
+    ====================================================== -->
+
+    <div
+        class="image-fullscreen"
+        id="imageFullscreen"
+        aria-hidden="true"
+    >
+
+        <button
+            class="fullscreen-close"
+            id="fullscreenClose"
+            type="button"
+            aria-label="Close fullscreen image"
+        >
+            ×
+        </button>
+
+
+        <img
+            class="fullscreen-image"
+            id="fullscreenImage"
+            src=""
+            alt="Project preview"
+        >
 
     </div>
 
 
 
-    <div class="footer-bottom">
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
 
-        <p>
+                /* =============================================
+                   MOBILE NAVIGATION
+                ============================================== */
 
-            © 2026 A. Sushma.
+                const menuToggle =
+                    document.getElementById("menuToggle");
 
-            Built with creativity and technology.
-
-        </p>
-
-
-    </div>
-
-
-</footer>
+                const navLinks =
+                    document.getElementById("navLinks");
 
 
+                if (menuToggle && navLinks) {
 
-<!-- =====================================================
-     FULLSCREEN VIEWER
-===================================================== -->
+                    menuToggle.addEventListener(
+                        "click",
+                        function () {
 
-<div
-    class="image-fullscreen"
-    id="imageFullscreen"
-    aria-hidden="true"
->
+                            const isOpen =
+                                navLinks.classList.toggle("open");
 
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                isOpen ? "true" : "false"
+                            );
 
-    <button
-        class="fullscreen-close"
-        id="fullscreenClose"
-        type="button"
-        aria-label="Close fullscreen image"
-    >
-        ×
-    </button>
+                            menuToggle.setAttribute(
+                                "aria-label",
+                                isOpen
+                                    ? "Close navigation menu"
+                                    : "Open navigation menu"
+                            );
 
-
-
-    <img
-        id="fullscreenImage"
-        src=""
-        alt="Fullscreen project preview"
-    >
+                        }
+                    );
 
 
-</div>
+                    navLinks
+                        .querySelectorAll("a")
+                        .forEach(
+                            function (link) {
 
+                                link.addEventListener(
+                                    "click",
+                                    function () {
 
+                                        navLinks.classList.remove(
+                                            "open"
+                                        );
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+                                        menuToggle.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
 
-<script>
+                                        menuToggle.setAttribute(
+                                            "aria-label",
+                                            "Open navigation menu"
+                                        );
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+                                    }
+                                );
 
-
-        /* =================================================
-           MOBILE NAVIGATION
-        ================================================== */
-
-        const menuToggle =
-            document.getElementById(
-                "menuToggle"
-            );
-
-
-        const navLinks =
-            document.getElementById(
-                "navLinks"
-            );
-
-
-        if (
-            menuToggle &&
-            navLinks
-        ) {
-
-
-            menuToggle.addEventListener(
-                "click",
-                function (event) {
-
-                    event.stopPropagation();
-
-
-                    const isOpen =
-                        navLinks.classList.toggle(
-                            "open"
+                            }
                         );
 
 
-                    menuToggle.classList.toggle(
-                        "open",
-                        isOpen
-                    );
+                    document.addEventListener(
+                        "keydown",
+                        function (event) {
 
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        isOpen
-                            ? "true"
-                            : "false"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        isOpen
-                            ? "Close navigation menu"
-                            : "Open navigation menu"
-                    );
-
-                }
-            );
-
-
-
-            /* Close menu when navigation is selected */
-
-            navLinks
-                .querySelectorAll("a")
-                .forEach(
-                    function (link) {
-
-                        link.addEventListener(
-                            "click",
-                            function () {
+                            if (event.key === "Escape") {
 
                                 navLinks.classList.remove(
                                     "open"
                                 );
 
-
-                                menuToggle.classList.remove(
-                                    "open"
-                                );
-
-
                                 menuToggle.setAttribute(
                                     "aria-expanded",
                                     "false"
                                 );
-
 
                                 menuToggle.setAttribute(
                                     "aria-label",
@@ -2990,551 +1675,231 @@ document.addEventListener(
                                 );
 
                             }
-                        );
 
-                    }
-                );
-
-
-
-            /* Close menu when clicking outside */
-
-            document.addEventListener(
-                "click",
-                function (event) {
-
-                    if (
-                        !navLinks.contains(
-                            event.target
-                        ) &&
-                        !menuToggle.contains(
-                            event.target
-                        )
-                    ) {
-
-                        navLinks.classList.remove(
-                            "open"
-                        );
-
-
-                        menuToggle.classList.remove(
-                            "open"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                    }
+                        }
+                    );
 
                 }
-            );
-
-        }
 
 
 
-        /* =================================================
-           FULLSCREEN IMAGE VIEWER
-        ================================================== */
+                /* =============================================
+                   FULLSCREEN IMAGE VIEWER
+                ============================================== */
 
-        const fullscreen =
-            document.getElementById(
-                "imageFullscreen"
-            );
+                const fullscreen =
+                    document.getElementById(
+                        "imageFullscreen"
+                    );
 
+                const fullscreenImage =
+                    document.getElementById(
+                        "fullscreenImage"
+                    );
 
-        const fullscreenImage =
-            document.getElementById(
-                "fullscreenImage"
-            );
-
-
-        const closeButton =
-            document.getElementById(
-                "fullscreenClose"
-            );
-
-
-        const clickableImages =
-            document.querySelectorAll(
-                ".clickable-project-image"
-            );
-
-
-
-        function openFullscreen(
-            image
-        ) {
-
-            if (
-                !image ||
-                !image.src
-            ) {
-
-                return;
-
-            }
-
-
-            fullscreenImage.src =
-                image.src;
-
-
-            fullscreenImage.alt =
-                image.alt ||
-                "Project preview";
-
-
-            fullscreen.classList.add(
-                "active"
-            );
-
-
-            fullscreen.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-
-            document.body.style.overflow =
-                "hidden";
-
-        }
-
-
-
-        function openZenoraFullscreen() {
-
-
-            const zenoraArtwork =
-                document.querySelector(
-                    ".zenora-logo-art"
-                );
-
-
-            if (!zenoraArtwork) {
-
-                return;
-
-            }
-
-
-            /*
-                The Zenora artwork is built directly
-                inside this HTML file, so create an
-                SVG snapshot for fullscreen viewing.
-            */
-
-            const clone =
-                zenoraArtwork.cloneNode(
-                    true
-                );
-
-
-            clone.style.width =
-                "700px";
-
-
-            clone.style.height =
-                "700px";
-
-
-            clone.style.background =
-                "radial-gradient(circle at 50% 45%, rgba(255,255,255,.98), rgba(241,238,255,.92) 65%, rgba(224,239,255,.8))";
-
-
-            clone.style.borderRadius =
-                "50%";
-
-
-            clone.style.position =
-                "relative";
-
-
-            clone.style.display =
-                "grid";
-
-
-            clone.style.placeItems =
-                "center";
-
-
-            const serialized =
-                new XMLSerializer()
-                    .serializeToString(
-                        clone
+                const fullscreenClose =
+                    document.getElementById(
+                        "fullscreenClose"
                     );
 
 
-            const svgData =
-
-                `
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="900"
-                    height="900"
-                    viewBox="0 0 900 900"
-                >
-
-                    <rect
-                        width="900"
-                        height="900"
-                        fill="#f8f6ff"
-                    />
-
-                    <foreignObject
-                        x="100"
-                        y="100"
-                        width="700"
-                        height="700"
-                    >
-
-                        <div
-                            xmlns="http://www.w3.org/1999/xhtml"
-                            style="
-                                width:700px;
-                                height:700px;
-                                display:grid;
-                                place-items:center;
-                            "
-                        >
-
-                            ${serialized}
-
-                        </div>
-
-                    </foreignObject>
-
-                </svg>
-                `;
+                const clickableImages =
+                    document.querySelectorAll(
+                        ".project-image-wrap"
+                    );
 
 
-            const blob =
-                new Blob(
-                    [svgData],
-                    {
-                        type:
-                            "image/svg+xml"
+                clickableImages.forEach(
+                    function (wrapper) {
+
+                        wrapper.addEventListener(
+                            "click",
+                            function () {
+
+                                const image =
+                                    wrapper.querySelector("img");
+
+                                if (!image) {
+                                    return;
+                                }
+
+                                if (
+                                    !image.src ||
+                                    image.style.display === "none"
+                                ) {
+                                    return;
+                                }
+
+                                fullscreenImage.src =
+                                    image.src;
+
+                                fullscreenImage.alt =
+                                    image.alt || "Project preview";
+
+                                fullscreen.classList.add(
+                                    "active"
+                                );
+
+                                fullscreen.setAttribute(
+                                    "aria-hidden",
+                                    "false"
+                                );
+
+                                document.body.style.overflow =
+                                    "hidden";
+
+                            }
+                        );
+
                     }
                 );
 
 
-            const url =
-                URL.createObjectURL(
-                    blob
+                function closeFullscreen() {
+
+                    fullscreen.classList.remove(
+                        "active"
+                    );
+
+                    fullscreen.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    fullscreenImage.src = "";
+
+                    document.body.style.overflow = "";
+
+                }
+
+
+                if (fullscreenClose) {
+
+                    fullscreenClose.addEventListener(
+                        "click",
+                        closeFullscreen
+                    );
+
+                }
+
+
+                if (fullscreen) {
+
+                    fullscreen.addEventListener(
+                        "click",
+                        function (event) {
+
+                            if (
+                                event.target === fullscreen
+                            ) {
+
+                                closeFullscreen();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            fullscreen.classList.contains(
+                                "active"
+                            )
+                        ) {
+
+                            closeFullscreen();
+
+                        }
+
+                    }
                 );
 
 
-            fullscreenImage.src =
-                url;
 
+                /* =============================================
+                   REVEAL ANIMATIONS
+                ============================================== */
 
-            fullscreenImage.alt =
-                "Zenora application artwork";
-
-
-            fullscreen.classList.add(
-                "active"
-            );
-
-
-            fullscreen.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-
-            document.body.style.overflow =
-                "hidden";
-
-        }
-
-
-
-        function closeFullscreen() {
-
-
-            if (
-                fullscreenImage.src.startsWith(
-                    "blob:"
-                )
-            ) {
-
-                URL.revokeObjectURL(
-                    fullscreenImage.src
-                );
-
-            }
-
-
-            fullscreen.classList.remove(
-                "active"
-            );
-
-
-            fullscreen.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-
-
-            fullscreenImage.src =
-                "";
-
-
-            document.body.style.overflow =
-                "";
-
-        }
-
-
-
-        clickableImages.forEach(
-            function (container) {
-
-
-                const image =
-                    container.querySelector(
-                        "img"
+                const revealElements =
+                    document.querySelectorAll(
+                        ".project-reveal"
                     );
 
 
-                if (image) {
+                if (
+                    "IntersectionObserver"
+                    in window
+                ) {
+
+                    const observer =
+                        new IntersectionObserver(
+                            function (
+                                entries,
+                                observerInstance
+                            ) {
+
+                                entries.forEach(
+                                    function (entry) {
+
+                                        if (
+                                            entry.isIntersecting
+                                        ) {
+
+                                            entry.target.classList.add(
+                                                "visible"
+                                            );
+
+                                            observerInstance.unobserve(
+                                                entry.target
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+                            },
+                            {
+                                threshold: 0.12
+                            }
+                        );
 
 
-                    container.addEventListener(
-                        "click",
-                        function () {
+                    revealElements.forEach(
+                        function (element) {
 
-                            openFullscreen(
-                                image
+                            observer.observe(element);
+
+                        }
+                    );
+
+                } else {
+
+                    revealElements.forEach(
+                        function (element) {
+
+                            element.classList.add(
+                                "visible"
                             );
 
                         }
                     );
 
-
-                }
-                else if (
-                    container.dataset.fullscreen ===
-                    "zenora"
-                ) {
-
-
-                    container.addEventListener(
-                        "click",
-                        function () {
-
-                            openZenoraFullscreen();
-
-                        }
-                    );
-
                 }
 
             }
         );
 
-
-
-        if (closeButton) {
-
-            closeButton.addEventListener(
-                "click",
-                closeFullscreen
-            );
-
-        }
-
-
-
-        if (fullscreen) {
-
-
-            fullscreen.addEventListener(
-                "click",
-                function (event) {
-
-
-                    if (
-                        event.target ===
-                        fullscreen
-                    ) {
-
-                        closeFullscreen();
-
-                    }
-
-                }
-            );
-
-        }
-
-
-
-        /* =================================================
-           KEYBOARD
-        ================================================== */
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
-
-
-                if (
-                    event.key ===
-                    "Escape"
-                ) {
-
-
-                    if (
-                        fullscreen.classList.contains(
-                            "active"
-                        )
-                    ) {
-
-                        closeFullscreen();
-
-                    }
-
-
-                    if (
-                        navLinks &&
-                        navLinks.classList.contains(
-                            "open"
-                        )
-                    ) {
-
-
-                        navLinks.classList.remove(
-                            "open"
-                        );
-
-
-                        menuToggle.classList.remove(
-                            "open"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                    }
-
-                }
-
-            }
-        );
-
-
-
-        /* =================================================
-           REVEAL ANIMATIONS
-        ================================================== */
-
-        const revealElements =
-            document.querySelectorAll(
-                ".reveal"
-            );
-
-
-        if (
-            "IntersectionObserver"
-            in window
-        ) {
-
-
-            const observer =
-                new IntersectionObserver(
-                    function (
-                        entries,
-                        observerInstance
-                    ) {
-
-
-                        entries.forEach(
-                            function (entry) {
-
-
-                                if (
-                                    entry.isIntersecting
-                                ) {
-
-
-                                    entry.target.classList.add(
-                                        "visible"
-                                    );
-
-
-                                    observerInstance.unobserve(
-                                        entry.target
-                                    );
-
-                                }
-
-                            }
-                        );
-
-                    },
-                    {
-                        threshold: .12
-                    }
-                );
-
-
-            revealElements.forEach(
-                function (element) {
-
-                    observer.observe(
-                        element
-                    );
-
-                }
-            );
-
-
-        }
-        else {
-
-
-            revealElements.forEach(
-                function (element) {
-
-                    element.classList.add(
-                        "visible"
-                    );
-
-                }
-            );
-
-        }
-
-
-    }
-
-);
-
-</script>
+    </script>
 
 
 </body>
 
 </html>
-
