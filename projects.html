@@ -1,84 +1,483 @@
-<!-- ================= IMAGE PROJECTS ================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="image-project-grid">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<!-- HEALTHY BITES -->
+    <meta name="description"
+        content="A. Sushma - Projects and Portfolio showcasing web development, UI design, Zenora, Healthy Bites and creative projects.">
 
-<article class="image-project-card">
+    <meta name="author" content="A. Sushma">
 
-    <div class="image-box">
+    <title>Projects | A. Sushma</title>
 
-        <img
-            src="images/healthy_bites.jpeg"
-            alt="Healthy Bites project"
-        >
+    <link rel="stylesheet" href="css/style.css">
 
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <div class="image-project-info">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
 
-        <span class="project-category">
-            02 / CREATIVE DESIGN
-        </span>
+<body>
 
-        <h3>
-            Healthy Bites
-        </h3>
+    <!-- HEADER -->
+    <header class="site-header">
 
-        <p>
-            A food and wellness design project focused on presenting
-            healthy choices through a clean and attractive visual concept.
-        </p>
+        <div class="container nav-container">
 
-        <div class="card-tags">
-            <span>Canva</span>
-            <span>Visual Design</span>
-            <span>Creative Work</span>
+            <a href="index.html" class="logo">
+                <span class="logo-mark">Z</span>
+                <span class="logo-text">Sushma</span>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="skills.html">Skills</a>
+
+                <a href="projects.html" class="active">Projects</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
         </div>
 
-    </div>
-
-</article>
+    </header>
 
 
-<!-- FASHION CREATIVE -->
+    <!-- HERO -->
+    <main>
 
-<article class="image-project-card">
+        <section class="page-hero">
 
-    <div class="image-box">
+            <div class="background-shape shape-one"></div>
+            <div class="background-shape shape-two"></div>
 
-        <img
-            src="images/fashion_project.jpeg"
-            alt="Fashion creative design project"
-        >
+            <div class="container page-hero-inner reveal">
 
-    </div>
+                <span class="eyebrow">MY WORK</span>
 
-    <div class="image-project-info">
+                <h1>
+                    Projects that turn
+                    <span>ideas into reality.</span>
+                </h1>
 
-        <span class="project-category">
-            03 / VISUAL DESIGN
-        </span>
+                <p>
+                    A collection of projects where technology, creativity,
+                    design and problem-solving come together.
+                </p>
 
-        <h3>
-            Fashion Creative
-        </h3>
+            </div>
 
-        <p>
-            A fashion-focused creative project exploring composition,
-            typography, visual balance and modern presentation.
-        </p>
+        </section>
 
-        <div class="card-tags">
-            <span>Canva</span>
-            <span>Design</span>
-            <span>Creative Direction</span>
+
+        <!-- PROJECTS -->
+        <section class="projects-section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="eyebrow">SELECTED PROJECTS</span>
+
+                    <h2>
+                        Things I've
+                        <span>built & created.</span>
+                    </h2>
+
+                    <p>
+                        From full applications to creative web experiences,
+                        these projects represent my learning, experimentation
+                        and passion for technology.
+                    </p>
+
+                </div>
+
+
+                <!-- ZENORA -->
+                <article class="project-card featured-project reveal">
+
+                    <div class="project-image zenora-image">
+
+                        <div class="project-image-content">
+
+                            <div class="project-icon-box">
+                                Z
+                            </div>
+
+                            <h3>Zenora</h3>
+
+                            <p>
+                                AI-powered personal life organization
+                                and productivity application.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">01</span>
+
+                        <span class="project-category">
+                            FLUTTER APPLICATION
+                        </span>
+
+                        <h3>
+                            Zenora —
+                            <span>Your Life, Organized.</span>
+                        </h3>
+
+                        <p>
+                            Zenora is a smart personal assistant concept
+                            designed to organize everyday life in one place.
+                            It combines reminders, study planning, water
+                            tracking, expenses, meals, activities and more
+                            into a single modern experience.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                            <span>UI/UX</span>
+                            <span>AI</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- IMAGE PROJECTS -->
+                <div class="image-project-grid">
+
+
+                    <!-- HEALTHY BITES -->
+                    <article class="image-project-card reveal">
+
+                        <div class="image-box">
+
+                            <img
+                                src="./images/healthy_bites.jpeg"
+                                alt="Healthy Bites project design"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="image-project-info">
+
+                            <span class="project-number">02</span>
+
+                            <span class="project-category">
+                                WEB DESIGN
+                            </span>
+
+                            <h3>
+                                Healthy <span>Bites</span>
+                            </h3>
+
+                            <p>
+                                A fresh and engaging food-focused web
+                                design concept created with a clean,
+                                friendly and visually appealing interface.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>UI Design</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FASHION CREATIVE -->
+                    <article class="image-project-card reveal">
+
+                        <div class="image-box">
+
+                            <img
+                                src="./images/fashion_project.jpeg"
+                                alt="Fashion creative project design"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="image-project-info">
+
+                            <span class="project-number">03</span>
+
+                            <span class="project-category">
+                                CREATIVE DESIGN
+                            </span>
+
+                            <h3>
+                                Fashion <span>Creative</span>
+                            </h3>
+
+                            <p>
+                                A visually focused fashion design project
+                                exploring composition, typography,
+                                branding and modern visual presentation.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Canva</span>
+                                <span>Graphic Design</span>
+                                <span>Creative UI</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- PORTFOLIO -->
+                <article class="project-card reveal">
+
+                    <div class="project-image portfolio-image">
+
+                        <div class="project-image-content">
+
+                            <div class="project-icon-box">
+                                &lt;/&gt;
+                            </div>
+
+                            <h3>Personal Portfolio</h3>
+
+                            <p>
+                                A professional internship portfolio website.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">04</span>
+
+                        <span class="project-category">
+                            WEB DEVELOPMENT
+                        </span>
+
+                        <h3>
+                            Personal
+                            <span>Portfolio</span>
+                        </h3>
+
+                        <p>
+                            A responsive personal portfolio website created
+                            to showcase my skills, projects, education and
+                            journey as an IT student.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DOCUMENT DESIGN -->
+                <article class="project-card reveal">
+
+                    <div class="project-image document-image">
+
+                        <div class="project-image-content">
+
+                            <div class="project-icon-box">
+                                ✦
+                            </div>
+
+                            <h3>Document & Design</h3>
+
+                            <p>
+                                Creative academic and digital documentation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-number">05</span>
+
+                        <span class="project-category">
+                            DESIGN & DOCUMENTATION
+                        </span>
+
+                        <h3>
+                            Document &
+                            <span>Design Work</span>
+                        </h3>
+
+                        <p>
+                            Academic documents, presentations and creative
+                            digital designs created with attention to
+                            structure, clarity and visual presentation.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Canva</span>
+                            <span>MS Office</span>
+                            <span>Presentation</span>
+                            <span>Documentation</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT PHILOSOPHY -->
+                <section class="project-philosophy reveal">
+
+                    <div class="philosophy-content">
+
+                        <span class="eyebrow">MY APPROACH</span>
+
+                        <h2>
+                            I don't just build projects.
+                            <span>I build experiences.</span>
+                        </h2>
+
+                        <p>
+                            Every project is an opportunity to learn something
+                            new, solve a real problem and create something
+                            meaningful. I focus on combining functionality,
+                            simplicity and beautiful design.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CTA -->
+                <section class="project-cta reveal">
+
+                    <div class="cta-card">
+
+                        <span class="eyebrow">LET'S CREATE</span>
+
+                        <h2>
+                            Have an idea?
+                            <span>Let's build it.</span>
+                        </h2>
+
+                        <p>
+                            I'm always interested in learning, experimenting
+                            and working on meaningful technology projects.
+                        </p>
+
+                        <a href="contact.html" class="primary-button">
+                            Get In Touch
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-mark">Z</span>
+
+                    <span class="logo-text">Sushma</span>
+
+                </a>
+
+                <p>
+                    Building ideas with technology,
+                    creativity and curiosity.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="skills.html">Skills</a>
+
+                <a href="projects.html">Projects</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
         </div>
 
-    </div>
 
-</article>
-```
+        <div class="container footer-bottom">
 
-</div>
+            <p>
+                © 2026 A. Sushma. All rights reserved.
+            </p>
+
+            <p>
+                Designed & built with ♡
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="css/js/script.js"></script>
+
+</body>
+
+</html>
