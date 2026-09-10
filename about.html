@@ -17,18 +17,25 @@
 
 <body>
 
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
     <header class="site-header">
 
         <nav class="navbar">
 
             <a href="index.html" class="brand">
-                <span class="brand-logo">Z</span>
+
+                <span class="brand-logo">𝓢</span>
 
                 <span class="brand-text">
                     <strong>A. Sushma</strong>
                     <small>Creative Technology</small>
                 </span>
+
             </a>
+
 
             <button
                 class="menu-toggle"
@@ -42,12 +49,29 @@
                 <span></span>
             </button>
 
+
             <div class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="skills.html">Skills</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html" class="active">
+                    About
+                </a>
+
+                <a href="skills.html">
+                    Skills
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
 
         </nav>
@@ -57,26 +81,32 @@
 
     <main>
 
+        <!-- =====================================================
+             PAGE HERO
+        ====================================================== -->
+
         <section class="page-hero">
 
             <div class="background-shape shape-one"></div>
-            <div class="background-shape shape-three"></div>
+            <div class="background-shape shape-two"></div>
 
-            <div class="page-hero-content reveal">
+
+            <div class="page-hero-inner reveal">
 
                 <span class="eyebrow">
                     A little about me ✦
                 </span>
 
+
                 <h1>
-                    Curiosity,
-                    <span>creativity</span>
-                    and technology.
+                    Creativity with
+                    <span>purpose.</span>
                 </h1>
 
+
                 <p>
-                    I enjoy learning, designing and building solutions
-                    that connect technology with everyday life.
+                    I enjoy combining technology, design and problem-solving
+                    to create useful digital experiences.
                 </p>
 
             </div>
@@ -84,101 +114,117 @@
         </section>
 
 
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
         <section class="section">
 
-            <div class="about-layout">
-
-                <div class="about-image-card reveal-left">
-
-                    <!-- Your actual profile image -->
-                    <img
-                        src="js/images/profile.jpeg"
-                        alt="A. Sushma"
-                        class="about-image"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                    >
-
-                    <div class="about-fallback">
-                        A. Sushma
-                    </div>
-
-                    <div class="about-image-label">
-                        IT Student & Creative Technologist
-                    </div>
-
-                </div>
+            <div class="about-grid">
 
 
-                <div class="about-content reveal-right">
+                <article class="about-card reveal">
 
                     <span class="section-tag">
                         My Journey
                     </span>
 
-                    <h2>
-                        Learning technology while creating things that matter.
-                    </h2>
+
+                    <h3>
+                        From ideas to digital solutions.
+                    </h3>
+
 
                     <p>
-                        I am an IT student who enjoys exploring different
-                        areas of technology and creative work. My interests
-                        include web development, app designing, UI thinking,
-                        documentation and solving practical problems.
+                        I am A. Sushma, an IT student with a strong interest
+                        in web development, app designing and creative digital work.
+                        I enjoy taking an idea, understanding the problem behind it,
+                        and turning it into a practical technology-based solution.
                     </p>
+
+
+                    <p style="margin-top: 14px;">
+                        My learning journey includes building websites,
+                        designing applications, creating professional documents,
+                        working with Excel sheets and exploring ways technology
+                        can make everyday tasks simpler.
+                    </p>
+
+                </article>
+
+
+                <article class="about-card reveal">
+
+                    <span class="section-tag">
+                        What Drives Me
+                    </span>
+
+
+                    <h3>
+                        Useful technology that feels human.
+                    </h3>
+
 
                     <p>
-                        I believe good technology should not only work well.
-                        It should also feel simple, accessible and pleasant
-                        to use.
+                        I believe good technology should not only work well,
+                        but should also be simple, accessible and pleasant to use.
+                        That is why I care about both functionality and visual design.
                     </p>
 
-                    <div class="about-highlight">
 
-                        <strong>
-                            My approach
-                        </strong>
+                    <p style="margin-top: 14px;">
+                        My goal is to continue learning, create meaningful projects,
+                        and grow into a technology professional who can solve
+                        real-world problems through creative thinking.
+                    </p>
 
-                        <span>
-                            Learn → Create → Improve → Solve
-                        </span>
-
-                    </div>
-
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <section class="section soft-section">
+        <!-- =====================================================
+             INTERESTS
+        ====================================================== -->
+
+        <section class="section">
 
             <div class="section-heading reveal">
 
                 <span class="section-tag">
-                    What inspires me
+                    My Interests
                 </span>
 
+
                 <h2>
-                    Different interests, one creative mindset.
+                    Things I enjoy exploring.
                 </h2>
+
+
+                <p>
+                    A blend of technology, creativity and practical problem-solving.
+                </p>
 
             </div>
 
 
             <div class="interest-grid">
 
+
                 <article class="interest-card reveal">
 
-                    <span>01</span>
+                    <div class="feature-icon">
+                        &lt;/&gt;
+                    </div>
 
                     <h3>
-                        Technology
+                        Web Development
                     </h3>
 
                     <p>
-                        Exploring how technology can solve meaningful
-                        everyday problems.
+                        Creating responsive and user-friendly websites.
                     </p>
 
                 </article>
@@ -186,15 +232,16 @@
 
                 <article class="interest-card reveal">
 
-                    <span>02</span>
+                    <div class="feature-icon">
+                        ✦
+                    </div>
 
                     <h3>
-                        Design
+                        App Designing
                     </h3>
 
                     <p>
-                        Turning ideas into clean, visually engaging
-                        and user-friendly designs.
+                        Designing useful digital experiences and interfaces.
                     </p>
 
                 </article>
@@ -202,15 +249,16 @@
 
                 <article class="interest-card reveal">
 
-                    <span>03</span>
+                    <div class="feature-icon">
+                        ✎
+                    </div>
 
                     <h3>
-                        Learning
+                        Creative Design
                     </h3>
 
                     <p>
-                        Continuously developing new technical and
-                        creative skills.
+                        Exploring posters, resumes, documents and visual content.
                     </p>
 
                 </article>
@@ -218,15 +266,16 @@
 
                 <article class="interest-card reveal">
 
-                    <span>04</span>
+                    <div class="feature-icon">
+                        ♢
+                    </div>
 
                     <h3>
                         Problem Solving
                     </h3>
 
                     <p>
-                        Thinking beyond the obvious to find practical
-                        and useful solutions.
+                        Finding practical solutions to everyday challenges.
                     </p>
 
                 </article>
@@ -235,6 +284,109 @@
 
         </section>
 
+
+        <!-- =====================================================
+             FEATURED IDEA
+        ====================================================== -->
+
+        <section class="section">
+
+            <div class="featured-project reveal">
+
+                <div class="featured-project-content">
+
+                    <span class="section-tag">
+                        Personal Philosophy
+                    </span>
+
+
+                    <h2>
+                        Build with meaning.
+                    </h2>
+
+
+                    <p class="project-lead">
+                        Whether I am creating a website, an application,
+                        a document or a visual design, I aim to keep the
+                        experience clear, useful and purposeful.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>
+                            Creativity
+                        </span>
+
+                        <span>
+                            Technology
+                        </span>
+
+                        <span>
+                            Learning
+                        </span>
+
+                        <span>
+                            Problem Solving
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="projects.html"
+                        class="primary-button"
+                    >
+                        Explore My Projects
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+
+                <div class="zenora-visual">
+
+                    <div class="zenora-window">
+
+                        <div class="zenora-topbar">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="zenora-body">
+
+                            <div class="zenora-title-line"></div>
+
+                            <div class="zenora-title-line short"></div>
+
+
+                            <div class="zenora-box-grid">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
 
         <section class="section">
 
@@ -243,21 +395,27 @@
                 <div>
 
                     <span class="section-tag">
-                        Explore more
+                        Let's connect
                     </span>
 
+
                     <h2>
-                        Want to see what I can create?
+                        Have an idea worth exploring?
                     </h2>
 
+
                     <p>
-                        Take a look at my technical and creative skills.
+                        I would love to hear about it.
                     </p>
 
                 </div>
 
-                <a href="skills.html" class="primary-button">
-                    View My Skills
+
+                <a
+                    href="contact.html"
+                    class="secondary-button"
+                >
+                    Start a Conversation
                     <span>→</span>
                 </a>
 
@@ -268,6 +426,10 @@
     </main>
 
 
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="site-footer">
 
         <div class="footer-content">
@@ -275,20 +437,25 @@
             <div class="footer-brand">
 
                 <span class="brand-logo">
-                    Z
+                    𝓢
                 </span>
 
+
                 <div>
+
                     <strong>
                         A. Sushma
                     </strong>
 
+
                     <p>
                         IT Student • Web Developer • Creative Designer
                     </p>
+
                 </div>
 
             </div>
+
 
             <div class="footer-links">
 
@@ -328,7 +495,11 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="css/js/script.js"></script>
 
 </body>
 
