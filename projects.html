@@ -1,185 +1,2458 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <meta
-        name="description"
-        content="A. Sushma - Projects and Portfolio showcasing web development, UI design, Zenora, Healthy Bites and creative projects."
-    >
+<meta
+    name="description"
+    content="A. Sushma - Projects and Portfolio showcasing web development, UI design, Zenora, Healthy Bites and creative projects."
+>
 
-    <meta
-        name="author"
-        content="A. Sushma"
-    >
+<meta
+    name="author"
+    content="A. Sushma"
+>
 
-    <title>Projects | A. Sushma</title>
+<title>Projects | A. Sushma</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+
+<style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+        font-family:
+            "Segoe UI",
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        background:
+            linear-gradient(
+                135deg,
+                #f8f6ff 0%,
+                #fff5fb 45%,
+                #eefaff 100%
+            );
+
+        color: #24233a;
+
+        min-height: 100vh;
+
+        overflow-x: hidden;
+    }
+
+
+    body::before {
+        content: "";
+
+        position: fixed;
+
+        width: 500px;
+        height: 500px;
+
+        top: -180px;
+        right: -150px;
+
+        background:
+            radial-gradient(
+                circle,
+                rgba(255, 182, 230, .32),
+                transparent 70%
+            );
+
+        pointer-events: none;
+
+        z-index: -1;
+    }
+
+
+    body::after {
+        content: "";
+
+        position: fixed;
+
+        width: 450px;
+        height: 450px;
+
+        bottom: -180px;
+        left: -150px;
+
+        background:
+            radial-gradient(
+                circle,
+                rgba(127, 219, 255, .22),
+                transparent 70%
+            );
+
+        pointer-events: none;
+
+        z-index: -1;
+    }
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+
+    button {
+        font: inherit;
+    }
+
+
+    /* =====================================================
+       HEADER / NAVIGATION
+    ===================================================== */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+
+        z-index: 1000;
+
+        padding: 16px 22px;
+    }
+
+
+    .navbar {
+        width: min(1180px, 100%);
+
+        margin: auto;
+
+        min-height: 72px;
+
+        padding: 10px 14px 10px 18px;
+
+        display: flex;
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        border: 1px solid rgba(255, 255, 255, .8);
+
+        background:
+            rgba(255, 255, 255, .72);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border-radius: 24px;
+
+        box-shadow:
+            0 15px 45px rgba(96, 76, 145, .12);
+    }
+
+
+    .brand {
+        display: flex;
+        align-items: center;
+
+        gap: 11px;
+
+        flex-shrink: 0;
+    }
+
+
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 16px;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 25px;
+        font-weight: 900;
+
+        color: white;
+
+        background:
+            linear-gradient(
+                135deg,
+                #7c5cfc,
+                #c36cff 48%,
+                #ff6ba9
+            );
+
+        box-shadow:
+            0 8px 24px rgba(124, 92, 252, .28);
+    }
+
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+
+        line-height: 1.15;
+    }
+
+
+    .brand-text strong {
+        font-size: 16px;
+        letter-spacing: -.3px;
+    }
+
+
+    .brand-text small {
+        margin-top: 4px;
+
+        font-size: 10px;
+
+        color: #8b88a2;
+
+        letter-spacing: .9px;
+
+        text-transform: uppercase;
+    }
+
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+    }
+
+
+    .nav-links a {
+        position: relative;
+
+        padding: 11px 15px;
+
+        border-radius: 13px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        color: #68657e;
+
+        transition:
+            color .25s ease,
+            background .25s ease,
+            transform .25s ease;
+    }
+
+
+    .nav-links a:hover {
+        color: #6248d9;
+
+        background:
+            rgba(124, 92, 252, .08);
+
+        transform: translateY(-1px);
+    }
+
+
+    .nav-links a.active {
+        color: #6248d9;
+
+        background:
+            rgba(124, 92, 252, .11);
+    }
+
+
+    .nav-links a.active::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 5px;
+
+        width: 5px;
+        height: 5px;
+
+        border-radius: 50%;
+
+        transform: translateX(-50%);
+
+        background: #7c5cfc;
+    }
+
+
+    .menu-toggle {
+        display: none;
+
+        width: 46px;
+        height: 46px;
+
+        border: 0;
+
+        border-radius: 14px;
+
+        cursor: pointer;
+
+        background:
+            rgba(124, 92, 252, .09);
+    }
+
+
+    .menu-toggle span {
+        display: block;
+
+        width: 21px;
+        height: 2px;
+
+        margin: 5px auto;
+
+        border-radius: 5px;
+
+        background: #6248d9;
+
+        transition: .25s ease;
+    }
+
+
+    .menu-toggle.open span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .menu-toggle.open span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .page-hero {
+        position: relative;
+
+        min-height: 430px;
+
+        display: grid;
+        place-items: center;
+
+        padding: 90px 24px 80px;
+
+        overflow: hidden;
+    }
+
+
+    .background-shape {
+        position: absolute;
+
+        border-radius: 50%;
+
+        filter: blur(2px);
+
+        pointer-events: none;
+    }
+
+
+    .shape-one {
+        width: 270px;
+        height: 270px;
+
+        top: 20px;
+        left: -100px;
+
+        background:
+            rgba(184, 181, 255, .30);
+    }
+
+
+    .shape-three {
+        width: 300px;
+        height: 300px;
+
+        right: -110px;
+        bottom: -90px;
+
+        background:
+            rgba(255, 182, 230, .27);
+    }
+
+
+    .page-hero-content {
+        width: min(900px, 100%);
+
+        text-align: center;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .eyebrow,
+    .section-tag {
+        display: inline-flex;
+
+        align-items: center;
+
+        padding: 8px 14px;
+
+        border-radius: 100px;
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        letter-spacing: 1.4px;
+
+        color: #7358dc;
+
+        background:
+            rgba(124, 92, 252, .09);
+
+        border:
+            1px solid rgba(124, 92, 252, .11);
+    }
+
+
+    .page-hero h1 {
+        margin-top: 22px;
+
+        font-size:
+            clamp(42px, 7vw, 76px);
+
+        line-height: .98;
+
+        letter-spacing: -4px;
+
+        font-weight: 850;
+    }
+
+
+    .page-hero h1 span,
+    .section-heading h2 span,
+    .project-content h3 span,
+    .image-project-info h3 span,
+    .philosophy-content h2 span,
+    .cta-card h2 span {
+        background:
+            linear-gradient(
+                90deg,
+                #7155e8,
+                #b35df2,
+                #f15d9d
+            );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        color: transparent;
+    }
+
+
+    .page-hero p {
+        max-width: 680px;
+
+        margin: 26px auto 0;
+
+        font-size: 17px;
+
+        line-height: 1.8;
+
+        color: #747188;
+    }
+
+
+    /* =====================================================
+       MAIN SECTION
+    ===================================================== */
+
+    .section {
+        width: min(1180px, calc(100% - 40px));
+
+        margin: auto;
+
+        padding: 30px 0 100px;
+    }
+
+
+    .section-heading {
+        max-width: 760px;
+
+        margin: 0 auto 55px;
+
+        text-align: center;
+    }
+
+
+    .section-heading h2 {
+        margin-top: 20px;
+
+        font-size:
+            clamp(34px, 5vw, 52px);
+
+        line-height: 1.08;
+
+        letter-spacing: -2px;
+    }
+
+
+    .section-heading p {
+        margin-top: 18px;
+
+        color: #77738c;
+
+        line-height: 1.8;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       PROJECT CARDS
+    ===================================================== */
+
+    .project-card {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(0, .95fr);
+
+        overflow: hidden;
+
+        margin-bottom: 34px;
+
+        border-radius: 32px;
+
+        border:
+            1px solid rgba(255, 255, 255, .9);
+
+        background:
+            rgba(255, 255, 255, .70);
+
+        box-shadow:
+            0 22px 65px rgba(89, 72, 137, .10);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+    }
+
+
+    .project-card:hover {
+        transform: translateY(-6px);
+
+        box-shadow:
+            0 30px 75px rgba(89, 72, 137, .15);
+    }
+
+
+    .project-image {
+        min-height: 440px;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       ZENORA IMAGE
+    ===================================================== */
+
+    .zenora-image {
+        display: grid;
+        place-items: center;
+
+        padding: 30px;
+
+        cursor: zoom-in;
+
+        background:
+            linear-gradient(
+                135deg,
+                #f3edff,
+                #fff1fa 45%,
+                #eafaff
+            );
+    }
+
+
+    .zenora-logo-art {
+        width: min(430px, 100%);
+        aspect-ratio: 1;
+
+        position: relative;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle at 50% 45%,
+                rgba(255,255,255,.98),
+                rgba(241,238,255,.92) 65%,
+                rgba(224,239,255,.8)
+            );
+
+        box-shadow:
+            0 25px 60px rgba(124,92,252,.16);
+
+        border:
+            1px solid rgba(255,255,255,.9);
+    }
+
+
+    .zenora-ring {
+        position: absolute;
+
+        inset: 13%;
+
+        border-radius: 50%;
+
+        border:
+            2px solid rgba(127,219,255,.27);
+    }
+
+
+    .z-center {
+        width: 43%;
+        aspect-ratio: 1;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+
+        background:
+            radial-gradient(
+                circle at 30% 20%,
+                white,
+                rgba(255,255,255,.65)
+            );
+
+        box-shadow:
+            0 15px 40px rgba(124,92,252,.18),
+            inset 0 0 30px rgba(127,219,255,.20);
+
+        border:
+            1px solid rgba(255,255,255,.95);
+
+        position: relative;
+
+        z-index: 4;
+    }
+
+
+    .z-letter {
+        font-size: 82px;
+
+        font-weight: 950;
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        line-height: 1;
+
+        background:
+            linear-gradient(
+                135deg,
+                #29d4f5,
+                #6e58ed 48%,
+                #ff4fb4
+            );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        color: transparent;
+
+        transform: skew(-7deg);
+
+        text-shadow:
+            0 7px 20px rgba(124,92,252,.13);
+    }
+
+
+    .zenora-icon {
+        position: absolute;
+
+        width: 24%;
+
+        aspect-ratio: 1;
+
+        border-radius: 50%;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 42px;
+
+        background:
+            rgba(255,255,255,.56);
+
+        border:
+            1px solid rgba(255,255,255,.85);
+
+        box-shadow:
+            0 12px 30px rgba(80,70,120,.13);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        z-index: 5;
+    }
+
+
+    .icon-pill {
+        top: 7%;
+        left: 38%;
+    }
+
+
+    .icon-calendar {
+        top: 27%;
+        left: 7%;
+    }
+
+
+    .icon-water {
+        top: 27%;
+        right: 7%;
+    }
+
+
+    .icon-study {
+        bottom: 15%;
+        left: 15%;
+    }
+
+
+    .icon-food {
+        bottom: 15%;
+        right: 15%;
+    }
+
+
+    .icon-health {
+        bottom: 4%;
+        left: 38%;
+    }
+
+
+    .project-image::after {
+        content: "Click to view fullscreen";
+
+        position: absolute;
+
+        left: 50%;
+        bottom: 18px;
+
+        transform:
+            translateX(-50%)
+            translateY(10px);
+
+        opacity: 0;
+
+        padding: 8px 13px;
+
+        border-radius: 100px;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        color: #625b76;
+
+        background:
+            rgba(255,255,255,.78);
+
+        backdrop-filter: blur(10px);
+
+        transition: .3s ease;
+
+        pointer-events: none;
+    }
+
+
+    .project-image:hover::after {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+
+    /* =====================================================
+       PROJECT CONTENT
+    ===================================================== */
+
+    .project-content {
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 55px;
+    }
+
+
+    .project-number {
+        font-size: 12px;
+
+        font-weight: 900;
+
+        letter-spacing: 1px;
+
+        color: #9a96ac;
+    }
+
+
+    .project-category {
+        display: block;
+
+        margin-top: 12px;
+
+        font-size: 10px;
+
+        font-weight: 900;
+
+        letter-spacing: 1.5px;
+
+        color: #795fe0;
+    }
+
+
+    .project-content h3,
+    .image-project-info h3 {
+        margin-top: 15px;
+
+        font-size:
+            clamp(29px, 4vw, 43px);
+
+        line-height: 1.08;
+
+        letter-spacing: -1.8px;
+    }
+
+
+    .project-content p,
+    .image-project-info p {
+        margin-top: 19px;
+
+        color: #767287;
+
+        font-size: 15px;
+
+        line-height: 1.85;
+    }
+
+
+    .project-tags {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-top: 24px;
+    }
+
+
+    .project-tags span {
+        padding: 8px 11px;
+
+        border-radius: 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        color: #68627d;
+
+        background:
+            rgba(124,92,252,.07);
+
+        border:
+            1px solid rgba(124,92,252,.08);
+    }
+
+
+    /* =====================================================
+       IMAGE PROJECTS
+    ===================================================== */
+
+    .image-project-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 28px;
+
+        margin-bottom: 34px;
+    }
+
+
+    .image-project-card {
+        overflow: hidden;
+
+        border-radius: 30px;
+
+        border:
+            1px solid rgba(255,255,255,.9);
+
+        background:
+            rgba(255,255,255,.72);
+
+        box-shadow:
+            0 22px 60px rgba(89,72,137,.09);
+
+        transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+    }
+
+
+    .image-project-card:hover {
+        transform: translateY(-6px);
+
+        box-shadow:
+            0 28px 70px rgba(89,72,137,.14);
+    }
+
+
+    .image-box {
+        height: 330px;
+
+        overflow: hidden;
+
+        cursor: zoom-in;
+
+        background:
+            #eeeaf8;
+    }
+
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition:
+            transform .6s ease;
+    }
+
+
+    .image-box:hover img {
+        transform: scale(1.045);
+    }
+
+
+    .image-project-info {
+        padding: 34px;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO / DOCUMENT
+    ===================================================== */
+
+    .portfolio-image,
+    .document-image {
+        min-height: 380px;
+
+        display: grid;
+
+        place-items: center;
+
+        text-align: center;
+
+        padding: 35px;
+    }
+
+
+    .portfolio-image {
+        background:
+            linear-gradient(
+                135deg,
+                #ebe8ff,
+                #f9efff,
+                #e8faff
+            );
+    }
+
+
+    .document-image {
+        background:
+            linear-gradient(
+                135deg,
+                #e8fff4,
+                #eef9ff,
+                #fff0fa
+            );
+    }
+
+
+    .project-image-content {
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .project-icon-box {
+        width: 82px;
+        height: 82px;
+
+        margin: 0 auto 20px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 24px;
+
+        font-size: 27px;
+        font-weight: 900;
+
+        color: white;
+
+        background:
+            linear-gradient(
+                135deg,
+                #7c5cfc,
+                #f267b2
+            );
+
+        box-shadow:
+            0 18px 40px rgba(124,92,252,.25);
+    }
+
+
+    .project-image-content h3 {
+        font-size: 28px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .project-image-content p {
+        margin-top: 9px;
+
+        color: #77738c;
+    }
+
+
+    /* =====================================================
+       PHILOSOPHY
+    ===================================================== */
+
+    .project-philosophy {
+        margin: 70px 0 34px;
+
+        padding: 65px 55px;
+
+        border-radius: 32px;
+
+        text-align: center;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255,255,255,.82),
+                rgba(244,240,255,.72)
+            );
+
+        border:
+            1px solid rgba(255,255,255,.9);
+
+        box-shadow:
+            0 22px 60px rgba(89,72,137,.08);
+    }
+
+
+    .philosophy-content {
+        max-width: 760px;
+
+        margin: auto;
+    }
+
+
+    .philosophy-content h2 {
+        margin-top: 20px;
+
+        font-size:
+            clamp(31px, 5vw, 50px);
+
+        line-height: 1.08;
+
+        letter-spacing: -2px;
+    }
+
+
+    .philosophy-content p {
+        margin-top: 20px;
+
+        color: #77738c;
+
+        line-height: 1.85;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .project-cta {
+        margin-top: 34px;
+    }
+
+
+    .cta-card {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 70px 30px;
+
+        border-radius: 34px;
+
+        text-align: center;
+
+        background:
+            linear-gradient(
+                135deg,
+                #f3efff,
+                #fff1f8,
+                #edfaff
+            );
+
+        border:
+            1px solid rgba(255,255,255,.9);
+
+        box-shadow:
+            0 25px 70px rgba(89,72,137,.09);
+    }
+
+
+    .cta-card::before,
+    .cta-card::after {
+        content: "";
+
+        position: absolute;
+
+        border-radius: 50%;
+
+        pointer-events: none;
+    }
+
+
+    .cta-card::before {
+        width: 240px;
+        height: 240px;
+
+        top: -130px;
+        left: -90px;
+
+        background:
+            rgba(184,181,255,.28);
+    }
+
+
+    .cta-card::after {
+        width: 240px;
+        height: 240px;
+
+        bottom: -140px;
+        right: -90px;
+
+        background:
+            rgba(255,182,230,.25);
+    }
+
+
+    .cta-card h2 {
+        position: relative;
+
+        z-index: 2;
+
+        margin-top: 18px;
+
+        font-size:
+            clamp(35px, 6vw, 58px);
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .cta-card p {
+        position: relative;
+
+        z-index: 2;
+
+        max-width: 620px;
+
+        margin: 18px auto 0;
+
+        color: #77738c;
+
+        line-height: 1.8;
+    }
+
+
+    .primary-button {
+        position: relative;
+
+        z-index: 3;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 13px;
+
+        margin-top: 27px;
+
+        padding: 14px 20px;
+
+        border-radius: 15px;
+
+        color: white;
+
+        font-size: 14px;
+
+        font-weight: 800;
+
+        background:
+            linear-gradient(
+                135deg,
+                #7558e9,
+                #b45ced,
+                #ef639f
+            );
+
+        box-shadow:
+            0 13px 30px rgba(124,92,252,.22);
+
+        transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+    }
+
+
+    .primary-button:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 18px 38px rgba(124,92,252,.29);
+    }
+
+
+    .primary-button span {
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .site-footer {
+        width: min(1180px, calc(100% - 40px));
+
+        margin: 0 auto 25px;
+
+        padding: 30px 0 0;
+
+        border-top:
+            1px solid rgba(124,92,252,.10);
+    }
+
+
+    .footer-content {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 30px;
+    }
+
+
+    .footer-brand {
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+    }
+
+
+    .footer-brand .brand-logo {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 13px;
+
+        font-size: 21px;
+    }
+
+
+    .footer-brand strong {
+        font-size: 14px;
+    }
+
+
+    .footer-brand p {
+        margin-top: 4px;
+
+        font-size: 11px;
+
+        color: #8b879e;
+    }
+
+
+    .footer-links {
+        display: flex;
+
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+
+    .footer-links a {
+        font-size: 12px;
+
+        font-weight: 700;
+
+        color: #77738b;
+
+        transition: .2s ease;
+    }
+
+
+    .footer-links a:hover {
+        color: #7558e9;
+    }
+
+
+    .footer-bottom {
+        padding: 25px 0;
+
+        text-align: center;
+    }
+
+
+    .footer-bottom p {
+        color: #9a96a8;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       FULLSCREEN VIEWER
+    ===================================================== */
+
+    .image-fullscreen {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 5000;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 30px;
+
+        background:
+            rgba(25, 21, 42, .88);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition:
+            opacity .25s ease,
+            visibility .25s ease;
+    }
+
+
+    .image-fullscreen.active {
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    .image-fullscreen img {
+        max-width: 92vw;
+        max-height: 88vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border-radius: 24px;
+
+        box-shadow:
+            0 30px 90px rgba(0,0,0,.35);
+
+        transform: scale(.94);
+
+        transition:
+            transform .3s ease;
+    }
+
+
+    .image-fullscreen.active img {
+        transform: scale(1);
+    }
+
+
+    .fullscreen-close {
+        position: absolute;
+
+        top: 22px;
+        right: 25px;
+
+        width: 50px;
+        height: 50px;
+
+        border: 0;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        font-size: 30px;
+
+        line-height: 1;
+
+        color: white;
+
+        background:
+            rgba(255,255,255,.13);
+
+        backdrop-filter: blur(10px);
+
+        transition:
+            transform .2s ease,
+            background .2s ease;
+    }
+
+
+    .fullscreen-close:hover {
+        transform: rotate(90deg);
+
+        background:
+            rgba(255,255,255,.22);
+    }
+
+
+    /* =====================================================
+       REVEAL ANIMATION
+    ===================================================== */
+
+    .reveal {
+        opacity: 0;
+
+        transform: translateY(25px);
+
+        transition:
+            opacity .7s ease,
+            transform .7s ease;
+    }
+
+
+    .reveal.visible {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+        .project-card {
+            grid-template-columns: 1fr;
+        }
+
+
+        .project-image {
+            min-height: 400px;
+        }
+
+
+        .project-content {
+            padding: 40px;
+        }
+
+
+        .image-project-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .footer-content {
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+
+        .footer-links {
+            justify-content: flex-start;
+        }
+
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    @media (max-width: 760px) {
+
+        .site-header {
+            padding: 10px 12px;
+        }
+
+
+        .navbar {
+            min-height: 64px;
+
+            border-radius: 19px;
+
+            padding:
+                8px 9px 8px 12px;
+        }
+
+
+        .brand-logo {
+            width: 43px;
+            height: 43px;
+
+            border-radius: 13px;
+        }
+
+
+        .brand-text strong {
+            font-size: 14px;
+        }
+
+
+        .brand-text small {
+            font-size: 8px;
+        }
+
+
+        .menu-toggle {
+            display: block;
+
+            position: relative;
+
+            z-index: 1002;
+        }
+
+
+        .nav-links {
+            position: absolute;
+
+            top: calc(100% + 9px);
+
+            left: 0;
+            right: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+            gap: 5px;
+
+            padding: 10px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.94);
+
+            border:
+                1px solid rgba(255,255,255,.95);
+
+            box-shadow:
+                0 20px 50px rgba(70,60,110,.16);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform:
+                translateY(-8px)
+                scale(.98);
+
+            transform-origin: top;
+
+            transition:
+                opacity .22s ease,
+                visibility .22s ease,
+                transform .22s ease;
+        }
+
+
+        .nav-links.open {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        .nav-links a {
+            padding: 14px 16px;
+
+            text-align: center;
+
+            border-radius: 13px;
+        }
+
+
+        .nav-links a.active::after {
+            display: none;
+        }
+
+
+        .page-hero {
+            min-height: 390px;
+
+            padding:
+                65px 20px 65px;
+        }
+
+
+        .page-hero h1 {
+            letter-spacing: -2.5px;
+        }
+
+
+        .page-hero p {
+            font-size: 15px;
+        }
+
+
+        .section {
+            width:
+                min(
+                    100% - 26px,
+                    1180px
+                );
+        }
+
+
+        .section-heading {
+            margin-bottom: 38px;
+        }
+
+
+        .project-card,
+        .image-project-card,
+        .project-philosophy,
+        .cta-card {
+            border-radius: 24px;
+        }
+
+
+        .project-image {
+            min-height: 330px;
+        }
+
+
+        .zenora-image {
+            padding: 20px;
+        }
+
+
+        .z-letter {
+            font-size: 58px;
+        }
+
+
+        .zenora-icon {
+            font-size: 28px;
+        }
+
+
+        .project-content {
+            padding: 31px 25px;
+        }
+
+
+        .image-box {
+            height: 260px;
+        }
+
+
+        .image-project-info {
+            padding: 28px 24px;
+        }
+
+
+        .portfolio-image,
+        .document-image {
+            min-height: 310px;
+        }
+
+
+        .project-philosophy {
+            margin-top: 45px;
+
+            padding:
+                45px 25px;
+        }
+
+
+        .cta-card {
+            padding:
+                52px 22px;
+        }
+
+
+        .footer-content {
+            align-items: center;
+
+            text-align: center;
+        }
+
+
+        .footer-brand {
+            flex-direction: column;
+        }
+
+
+        .footer-links {
+            justify-content: center;
+        }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 420px) {
+
+        .brand-text small {
+            display: none;
+        }
+
+
+        .page-hero h1 {
+            font-size: 40px;
+        }
+
+
+        .zenora-logo-art {
+            width: 310px;
+        }
+
+
+        .z-letter {
+            font-size: 52px;
+        }
+
+
+        .zenora-icon {
+            font-size: 23px;
+        }
+
+
+        .project-image {
+            min-height: 310px;
+        }
+
+    }
+
+</style>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <!-- HEADER -->
+<header class="site-header">
 
-    <header class="site-header">
+    <nav class="navbar">
 
-        <nav class="navbar">
 
-            <!-- CHANGED Z TO S -->
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="A. Sushma Home"
+        >
 
-            <a
-                href="index.html"
-                class="brand"
-            >
+            <span class="brand-logo">
+                S
+            </span>
 
-                <span class="brand-logo">
-                    S
-                </span>
+            <span class="brand-text">
 
-                <span class="brand-text">
+                <strong>
+                    A. Sushma
+                </strong>
 
-                    <strong>
-                        A. Sushma
-                    </strong>
+                <small>
+                    Creative Technology
+                </small>
 
-                    <small>
-                        Creative Technology
-                    </small>
+            </span>
 
-                </span>
+        </a>
 
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <div
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
             </a>
 
+            <a href="about.html">
+                About
+            </a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a
+                href="projects.html"
+                class="active"
+                aria-current="page"
             >
+                Projects
+            </a>
 
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="contact.html">
+                Contact
+            </a>
 
-            </button>
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div class="background-shape shape-one"></div>
+
+        <div class="background-shape shape-three"></div>
+
+
+        <div class="page-hero-content reveal">
+
+            <span class="eyebrow">
+                My Work ✦
+            </span>
+
+
+            <h1>
+
+                Projects that turn
+
+                <span>
+                    ideas into reality.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                A collection of projects where technology,
+                creativity, design and problem-solving
+                come together.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECT SECTION -->
+
+    <section class="section">
+
+
+        <div class="section-heading reveal">
+
+            <span class="section-tag">
+                Selected Projects
+            </span>
+
+
+            <h2>
+
+                Things I've
+
+                <span>
+                    built & created.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                From full applications to creative web
+                experiences, these projects represent my
+                learning, experimentation and passion
+                for technology.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ZENORA
+        ================================================== -->
+
+        <article class="project-card featured-project reveal">
 
 
             <div
-                class="nav-links"
-                id="navLinks"
+                class="project-image zenora-image clickable-project-image"
+                data-fullscreen="zenora"
             >
 
-                <a href="./index.html">
-                    Home
-                </a>
 
-                <a href="./about.html">
-                    About
-                </a>
+                <div class="zenora-logo-art">
 
-                <a href="./skills.html">
-                    Skills
-                </a>
 
-                <a
-                    href="./projects.html"
-                    class="active"
-                >
-                    Projects
-                </a>
+                    <div class="zenora-ring"></div>
 
-                <a href="./contact.html">
-                    Contact
-                </a>
+
+                    <!-- PILL -->
+
+                    <div class="zenora-icon icon-pill">
+                        💊
+                    </div>
+
+
+                    <!-- CALENDAR -->
+
+                    <div class="zenora-icon icon-calendar">
+                        📅
+                    </div>
+
+
+                    <!-- WATER -->
+
+                    <div class="zenora-icon icon-water">
+                        💧
+                    </div>
+
+
+                    <!-- STUDY -->
+
+                    <div class="zenora-icon icon-study">
+                        🎓
+                    </div>
+
+
+                    <!-- FOOD -->
+
+                    <div class="zenora-icon icon-food">
+                        🍴
+                    </div>
+
+
+                    <!-- HEALTH -->
+
+                    <div class="zenora-icon icon-health">
+                        💗
+                    </div>
+
+
+                    <!-- CENTER Z -->
+
+                    <div class="z-center">
+
+                        <div class="z-letter">
+                            Z
+                        </div>
+
+                    </div>
+
+
+                </div>
 
             </div>
 
-        </nav>
-
-    </header>
 
 
+            <div class="project-content">
 
-    <!-- MAIN -->
-
-    <main>
-
-
-        <!-- HERO -->
-
-        <section class="page-hero">
-
-            <div class="background-shape shape-one"></div>
-
-            <div class="background-shape shape-three"></div>
-
-
-            <div class="page-hero-content reveal">
-
-                <span class="eyebrow">
-                    My Work ✦
+                <span class="project-number">
+                    01
                 </span>
 
 
-                <h1>
+                <span class="project-category">
+                    FLUTTER APPLICATION
+                </span>
 
-                    Projects that turn
+
+                <h3>
+
+                    Zenora —
 
                     <span>
-                        ideas into reality.
+                        Your Life, Organized.
                     </span>
 
-                </h1>
+                </h3>
 
 
                 <p>
 
-                    A collection of projects where technology,
-                    creativity, design and problem-solving
-                    come together.
+                    Zenora is a smart personal assistant concept
+                    designed to organize everyday life in one place.
+                    It combines reminders, study planning, water
+                    tracking, expenses, meals, activities and more
+                    into a single modern experience.
 
                 </p>
 
+
+                <div class="project-tags">
+
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>Firebase</span>
+                    <span>UI/UX</span>
+                    <span>AI</span>
+
+                </div>
+
             </div>
 
-        </section>
+        </article>
 
 
 
-        <!-- PROJECTS -->
+        <!-- =================================================
+             IMAGE PROJECTS
+        ================================================== -->
 
-        <section class="section">
+        <div class="image-project-grid">
 
-            <div class="section-heading reveal">
 
-                <span class="section-tag">
-                    Selected Projects
+            <!-- HEALTHY BITES -->
+
+            <article class="image-project-card reveal">
+
+
+                <div class="image-box clickable-project-image">
+
+                    <img
+                        src="images/healthy_bites.jpeg"
+                        alt="Healthy Bites project design"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="image-project-info">
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+
+                    <span class="project-category">
+                        WEB DESIGN
+                    </span>
+
+
+                    <h3>
+
+                        Healthy
+
+                        <span>
+                            Bites
+                        </span>
+
+                    </h3>
+
+
+                    <p>
+
+                        A fresh and engaging food-focused web
+                        design concept created with a clean,
+                        friendly and visually appealing interface.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>UI Design</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FASHION -->
+
+            <article class="image-project-card reveal">
+
+
+                <div class="image-box clickable-project-image">
+
+                    <img
+                        src="images/fashion_project.jpeg"
+                        alt="Fashion creative project design"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="image-project-info">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+
+                    <span class="project-category">
+                        CREATIVE DESIGN
+                    </span>
+
+
+                    <h3>
+
+                        Fashion
+
+                        <span>
+                            Creative
+                        </span>
+
+                    </h3>
+
+
+                    <p>
+
+                        A visually focused fashion design project
+                        exploring composition, typography,
+                        branding and modern visual presentation.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Canva</span>
+                        <span>Graphic Design</span>
+                        <span>Creative UI</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PORTFOLIO
+        ================================================== -->
+
+        <article class="project-card reveal">
+
+
+            <div class="project-image portfolio-image">
+
+                <div class="project-image-content">
+
+                    <div class="project-icon-box">
+                        &lt;/&gt;
+                    </div>
+
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+
+
+                    <p>
+                        A professional internship portfolio website.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-content">
+
+                <span class="project-number">
+                    04
+                </span>
+
+
+                <span class="project-category">
+                    WEB DEVELOPMENT
+                </span>
+
+
+                <h3>
+
+                    Personal
+
+                    <span>
+                        Portfolio
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    A responsive personal portfolio website created
+                    to showcase my skills, projects, education and
+                    journey as an IT student.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             DOCUMENT DESIGN
+        ================================================== -->
+
+        <article class="project-card reveal">
+
+
+            <div class="project-image document-image">
+
+                <div class="project-image-content">
+
+                    <div class="project-icon-box">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        Document & Design
+                    </h3>
+
+
+                    <p>
+                        Creative academic and digital documentation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-content">
+
+                <span class="project-number">
+                    05
+                </span>
+
+
+                <span class="project-category">
+                    DESIGN & DOCUMENTATION
+                </span>
+
+
+                <h3>
+
+                    Document &
+
+                    <span>
+                        Design Work
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Academic documents, presentations and creative
+                    digital designs created with attention to
+                    structure, clarity and visual presentation.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>Canva</span>
+                    <span>MS Office</span>
+                    <span>Presentation</span>
+                    <span>Documentation</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             PHILOSOPHY
+        ================================================== -->
+
+        <section class="project-philosophy reveal">
+
+            <div class="philosophy-content">
+
+                <span class="eyebrow">
+                    MY APPROACH
                 </span>
 
 
                 <h2>
 
-                    Things I've
+                    I don't just build projects.
 
                     <span>
-                        built & created.
+                        I build experiences.
                     </span>
 
                 </h2>
@@ -187,438 +2460,102 @@
 
                 <p>
 
-                    From full applications to creative web
-                    experiences, these projects represent my
-                    learning, experimentation and passion
-                    for technology.
+                    Every project is an opportunity to learn something
+                    new, solve a real problem and create something
+                    meaningful. I focus on combining functionality,
+                    simplicity and beautiful design.
 
                 </p>
 
             </div>
 
-
-
-            <!-- ZENORA -->
-
-            <article class="project-card featured-project reveal">
-
-
-                <div class="project-image zenora-image clickable-project-image">
-
-                    <img
-                        src="data:image/jpeg;base64,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"
-                        alt="Zenora - Your Life, Organized."
-                        loading="eager"
-                    >
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <span class="project-number">
-                        01
-                    </span>
-
-                    <span class="project-category">
-                        FLUTTER APPLICATION
-                    </span>
-
-                    <h3>
-                        Zenora —
-                        <span>
-                            Your Life, Organized.
-                        </span>
-                    </h3>
-
-                    <p>
-                        Zenora is a smart personal assistant concept
-                        designed to organize everyday life in one place.
-                        It combines reminders, study planning, water
-                        tracking, expenses, meals, activities and more
-                        into a single modern experience.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>Firebase</span>
-                        <span>UI/UX</span>
-                        <span>AI</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- IMAGE PROJECTS -->
-
-            <div class="image-project-grid">
-
-
-                <!-- HEALTHY BITES -->
-
-                <article class="image-project-card reveal">
-
-                    <div class="image-box clickable-project-image">
-
-                        <img
-                            src="./images/healthy_bites.jpeg"
-                            alt="Healthy Bites project design"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="image-project-info">
-
-                        <span class="project-number">
-                            02
-                        </span>
-
-                        <span class="project-category">
-                            WEB DESIGN
-                        </span>
-
-                        <h3>
-                            Healthy
-                            <span>
-                                Bites
-                            </span>
-                        </h3>
-
-                        <p>
-                            A fresh and engaging food-focused web
-                            design concept created with a clean,
-                            friendly and visually appealing interface.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>UI Design</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- FASHION CREATIVE -->
-
-                <article class="image-project-card reveal">
-
-                    <div class="image-box clickable-project-image">
-
-                        <img
-                            src="./images/fashion_project.jpeg"
-                            alt="Fashion creative project design"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="image-project-info">
-
-                        <span class="project-number">
-                            03
-                        </span>
-
-                        <span class="project-category">
-                            CREATIVE DESIGN
-                        </span>
-
-                        <h3>
-                            Fashion
-                            <span>
-                                Creative
-                            </span>
-                        </h3>
-
-                        <p>
-                            A visually focused fashion design project
-                            exploring composition, typography,
-                            branding and modern visual presentation.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>Canva</span>
-                            <span>Graphic Design</span>
-                            <span>Creative UI</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-
-            <!-- PORTFOLIO -->
-
-            <article class="project-card reveal">
-
-                <div class="project-image portfolio-image">
-
-                    <div class="project-image-content">
-
-                        <div class="project-icon-box">
-                            &lt;/&gt;
-                        </div>
-
-                        <h3>
-                            Personal Portfolio
-                        </h3>
-
-                        <p>
-                            A professional internship portfolio website.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <span class="project-number">
-                        04
-                    </span>
-
-                    <span class="project-category">
-                        WEB DEVELOPMENT
-                    </span>
-
-                    <h3>
-                        Personal
-                        <span>
-                            Portfolio
-                        </span>
-                    </h3>
-
-                    <p>
-                        A responsive personal portfolio website created
-                        to showcase my skills, projects, education and
-                        journey as an IT student.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- DOCUMENT DESIGN -->
-
-            <article class="project-card reveal">
-
-                <div class="project-image document-image">
-
-                    <div class="project-image-content">
-
-                        <div class="project-icon-box">
-                            ✦
-                        </div>
-
-                        <h3>
-                            Document & Design
-                        </h3>
-
-                        <p>
-                            Creative academic and digital documentation.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <span class="project-number">
-                        05
-                    </span>
-
-                    <span class="project-category">
-                        DESIGN & DOCUMENTATION
-                    </span>
-
-                    <h3>
-                        Document &
-                        <span>
-                            Design Work
-                        </span>
-                    </h3>
-
-                    <p>
-                        Academic documents, presentations and creative
-                        digital designs created with attention to
-                        structure, clarity and visual presentation.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Canva</span>
-                        <span>MS Office</span>
-                        <span>Presentation</span>
-                        <span>Documentation</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PROJECT PHILOSOPHY -->
-
-            <section class="project-philosophy reveal">
-
-                <div class="philosophy-content">
-
-                    <span class="eyebrow">
-                        MY APPROACH
-                    </span>
-
-                    <h2>
-                        I don't just build projects.
-                        <span>
-                            I build experiences.
-                        </span>
-                    </h2>
-
-                    <p>
-                        Every project is an opportunity to learn something
-                        new, solve a real problem and create something
-                        meaningful. I focus on combining functionality,
-                        simplicity and beautiful design.
-                    </p>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- CTA -->
-
-            <section class="project-cta reveal">
-
-                <div class="cta-card">
-
-                    <span class="eyebrow">
-                        LET'S CREATE
-                    </span>
-
-                    <h2>
-                        Have an idea?
-                        <span>
-                            Let's build it.
-                        </span>
-                    </h2>
-
-                    <p>
-                        I'm always interested in learning, experimenting
-                        and working on meaningful technology projects.
-                    </p>
-
-                    <a
-                        href="./contact.html"
-                        class="primary-button"
-                    >
-                        Get In Touch
-                        <span>
-                            →
-                        </span>
-                    </a>
-
-                </div>
-
-            </section>
-
-
         </section>
 
-    </main>
 
 
+        <!-- =================================================
+             CTA
+        ================================================== -->
 
-    <!-- FOOTER -->
+        <section class="project-cta reveal">
 
-    <footer class="site-footer">
+            <div class="cta-card">
 
-        <div class="footer-content">
-
-
-            <div class="footer-brand">
-
-                <!-- CHANGED Z TO S -->
-
-                <span class="brand-logo">
-                    S
+                <span class="eyebrow">
+                    LET'S CREATE
                 </span>
 
 
-                <div>
+                <h2>
 
-                    <strong>
-                        A. Sushma
-                    </strong>
+                    Have an idea?
 
-                    <p>
-                        IT Student • Web Developer • Creative Designer
-                    </p>
+                    <span>
+                        Let's build it.
+                    </span>
 
-                </div>
+                </h2>
+
+
+                <p>
+
+                    I'm always interested in learning, experimenting
+                    and working on meaningful technology projects.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="primary-button"
+                >
+
+                    Get In Touch
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
 
             </div>
 
+        </section>
 
 
-            <div class="footer-links">
+    </section>
 
-                <a href="./index.html">
-                    Home
-                </a>
+</main>
 
-                <a href="./about.html">
-                    About
-                </a>
 
-                <a href="./skills.html">
-                    Skills
-                </a>
 
-                <a href="./projects.html">
-                    Projects
-                </a>
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-                <a href="./contact.html">
-                    Contact
-                </a>
+<footer class="site-footer">
+
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <span class="brand-logo">
+                S
+            </span>
+
+
+            <div>
+
+                <strong>
+                    A. Sushma
+                </strong>
+
+
+                <p>
+                    IT Student • Web Developer • Creative Designer
+                </p>
 
             </div>
 
@@ -626,136 +2563,407 @@
 
 
 
-        <div class="footer-bottom">
+        <div class="footer-links">
 
-            <p>
-                © 2026 A. Sushma.
-                Built with creativity and technology.
-            </p>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
 
         </div>
-
-    </footer>
-
-
-
-    <!-- FULLSCREEN IMAGE VIEWER -->
-
-    <div
-        class="image-fullscreen"
-        id="imageFullscreen"
-        aria-hidden="true"
-    >
-
-        <button
-            class="fullscreen-close"
-            id="fullscreenClose"
-            type="button"
-            aria-label="Close fullscreen image"
-        >
-            ×
-        </button>
-
-
-        <img
-            id="fullscreenImage"
-            src=""
-            alt="Fullscreen project preview"
-        >
 
     </div>
 
 
 
-    <!-- JAVASCRIPT -->
+    <div class="footer-bottom">
 
-    <script src="js/script.js"></script>
+        <p>
+            © 2026 A. Sushma.
+            Built with creativity and technology.
+        </p>
+
+    </div>
+
+</footer>
 
 
-    <!-- FULLSCREEN IMAGE SCRIPT -->
 
-    <script>
+<!-- =====================================================
+     FULLSCREEN VIEWER
+===================================================== -->
 
-        document.addEventListener("DOMContentLoaded", function () {
+<div
+    class="image-fullscreen"
+    id="imageFullscreen"
+    aria-hidden="true"
+>
 
-            const clickableImages =
-                document.querySelectorAll(".clickable-project-image");
+
+    <button
+        class="fullscreen-close"
+        id="fullscreenClose"
+        type="button"
+        aria-label="Close fullscreen image"
+    >
+        ×
+    </button>
+
+
+    <img
+        id="fullscreenImage"
+        src=""
+        alt="Fullscreen project preview"
+    >
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+
+            /* ============================================
+               MOBILE NAVIGATION
+            ============================================ */
+
+            const menuToggle =
+                document.getElementById("menuToggle");
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+
+            menuToggle.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                        navLinks.classList.toggle("open");
+
+                    menuToggle.classList.toggle(
+                        "open",
+                        isOpen
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
+                    );
+
+                }
+            );
+
+
+            /* Close menu after navigation */
+
+            navLinks
+                .querySelectorAll("a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            navLinks.classList.remove("open");
+
+                            menuToggle.classList.remove("open");
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+                    );
+
+                });
+
+
+            /* Close menu when clicking outside */
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        !navLinks.contains(event.target) &&
+                        !menuToggle.contains(event.target)
+                    ) {
+
+                        navLinks.classList.remove("open");
+
+                        menuToggle.classList.remove("open");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+                }
+            );
+
+
+
+            /* ============================================
+               FULLSCREEN IMAGE VIEWER
+            ============================================ */
 
             const fullscreen =
-                document.getElementById("imageFullscreen");
+                document.getElementById(
+                    "imageFullscreen"
+                );
+
 
             const fullscreenImage =
-                document.getElementById("fullscreenImage");
+                document.getElementById(
+                    "fullscreenImage"
+                );
+
 
             const closeButton =
-                document.getElementById("fullscreenClose");
+                document.getElementById(
+                    "fullscreenClose"
+                );
+
+
+            const clickableImages =
+                document.querySelectorAll(
+                    ".clickable-project-image"
+                );
 
 
             function openFullscreen(image) {
-
-                fullscreenImage.src = image.src;
-                fullscreenImage.alt = image.alt;
-
-                fullscreen.classList.add("active");
-
-                fullscreen.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
-
-                document.body.style.overflow = "hidden";
-
-            }
-
-
-            function closeFullscreen() {
-
-                fullscreen.classList.remove("active");
-
-                fullscreen.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-                fullscreenImage.src = "";
-
-                document.body.style.overflow = "";
-
-            }
-
-
-            clickableImages.forEach(function (container) {
-
-                const image =
-                    container.querySelector("img");
 
                 if (!image) {
                     return;
                 }
 
 
-                container.style.cursor = "zoom-in";
+                fullscreenImage.src =
+                    image.src;
 
 
-                container.addEventListener(
-                    "click",
-                    function () {
+                fullscreenImage.alt =
+                    image.alt || "Project preview";
 
-                        openFullscreen(image);
 
-                    }
+                fullscreen.classList.add(
+                    "active"
                 );
 
-            });
+
+                fullscreen.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+
+                document.body.style.overflow =
+                    "hidden";
+
+            }
+
+
+            function openZenoraFullscreen() {
+
+                const zenoraArtwork =
+                    document.querySelector(
+                        ".zenora-logo-art"
+                    );
+
+
+                if (!zenoraArtwork) {
+                    return;
+                }
+
+
+                /*
+                   Create a temporary SVG image so
+                   the single-file Zenora artwork can
+                   also be shown fullscreen.
+                */
+
+                const svg =
+                    new XMLSerializer().serializeToString(
+                        zenoraArtwork
+                    );
+
+
+                const svgData =
+                    `
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="900"
+                        height="900"
+                        viewBox="0 0 900 900"
+                    >
+                        <foreignObject
+                            width="900"
+                            height="900"
+                        >
+                            <div
+                                xmlns="http://www.w3.org/1999/xhtml"
+                                style="
+                                    width:900px;
+                                    height:900px;
+                                    display:flex;
+                                    align-items:center;
+                                    justify-content:center;
+                                    background:linear-gradient(135deg,#f3edff,#fff1fa,#eafaff);
+                                "
+                            >
+                                ${svg}
+                            </div>
+                        </foreignObject>
+                    </svg>
+                    `;
+
+
+                const blob =
+                    new Blob(
+                        [svgData],
+                        {
+                            type: "image/svg+xml"
+                        }
+                    );
+
+
+                const url =
+                    URL.createObjectURL(blob);
+
+
+                fullscreenImage.src =
+                    url;
+
+
+                fullscreenImage.alt =
+                    "Zenora - Your Life, Organized.";
+
+
+                fullscreen.classList.add(
+                    "active"
+                );
+
+
+                fullscreen.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+
+                document.body.style.overflow =
+                    "hidden";
+
+            }
+
+
+            function closeFullscreen() {
+
+                fullscreen.classList.remove(
+                    "active"
+                );
+
+
+                fullscreen.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+                if (
+                    fullscreenImage.src.startsWith(
+                        "blob:"
+                    )
+                ) {
+
+                    URL.revokeObjectURL(
+                        fullscreenImage.src
+                    );
+
+                }
+
+
+                fullscreenImage.src = "";
+
+
+                document.body.style.overflow =
+                    "";
+
+            }
+
+
+            clickableImages.forEach(
+                function (container) {
+
+
+                    const image =
+                        container.querySelector("img");
+
+
+                    if (image) {
+
+                        container.addEventListener(
+                            "click",
+                            function () {
+
+                                openFullscreen(image);
+
+                            }
+                        );
+
+                    }
+                    else if (
+                        container.dataset.fullscreen ===
+                        "zenora"
+                    ) {
+
+                        container.addEventListener(
+                            "click",
+                            function () {
+
+                                openZenoraFullscreen();
+
+                            }
+                        );
+
+                    }
+
+                }
+            );
 
 
             closeButton.addEventListener(
                 "click",
-                function () {
-
-                    closeFullscreen();
-
-                }
+                closeFullscreen
             );
 
 
@@ -763,7 +2971,9 @@
                 "click",
                 function (event) {
 
-                    if (event.target === fullscreen) {
+                    if (
+                        event.target === fullscreen
+                    ) {
 
                         closeFullscreen();
 
@@ -778,21 +2988,129 @@
                 function (event) {
 
                     if (
-                        event.key === "Escape" &&
-                        fullscreen.classList.contains("active")
+                        event.key === "Escape"
                     ) {
 
-                        closeFullscreen();
+                        if (
+                            fullscreen.classList.contains(
+                                "active"
+                            )
+                        ) {
+
+                            closeFullscreen();
+
+                        }
+
+
+                        if (
+                            navLinks.classList.contains(
+                                "open"
+                            )
+                        ) {
+
+                            navLinks.classList.remove(
+                                "open"
+                            );
+
+                            menuToggle.classList.remove(
+                                "open"
+                            );
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
 
                     }
 
                 }
             );
 
-        });
 
-    </script>
 
+            /* ============================================
+               REVEAL ANIMATIONS
+            ============================================ */
+
+            const revealElements =
+                document.querySelectorAll(
+                    ".reveal"
+                );
+
+
+            if (
+                "IntersectionObserver"
+                in window
+            ) {
+
+                const observer =
+                    new IntersectionObserver(
+                        function (
+                            entries,
+                            observer
+                        ) {
+
+                            entries.forEach(
+                                function (entry) {
+
+                                    if (
+                                        entry.isIntersecting
+                                    ) {
+
+                                        entry.target.classList.add(
+                                            "visible"
+                                        );
+
+                                        observer.unobserve(
+                                            entry.target
+                                        );
+
+                                    }
+
+                                }
+                            );
+
+                        },
+                        {
+                            threshold: .12
+                        }
+                    );
+
+
+                revealElements.forEach(
+                    function (element) {
+
+                        observer.observe(
+                            element
+                        );
+
+                    }
+                );
+
+            }
+            else {
+
+                revealElements.forEach(
+                    function (element) {
+
+                        element.classList.add(
+                            "visible"
+                        );
+
+                    }
+                );
+
+            }
+
+
+        }
+
+    );
+
+</script>
+```
 
 </body>
 
