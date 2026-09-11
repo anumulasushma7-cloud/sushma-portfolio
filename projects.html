@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
         ====================================================== */
 
         .projects-page {
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
 
@@ -68,7 +69,7 @@
             background: linear-gradient(
                 135deg,
                 #ff4fd8,
-                #9b7cffff,
+                #9b7cff,
                 #00c2ff
             );
             -webkit-background-clip: text;
@@ -141,7 +142,7 @@
 
 
         /* =====================================================
-           PROJECT FILTER / INTRO
+           PROJECT HEADING
         ====================================================== */
 
         .projects-heading {
@@ -322,9 +323,18 @@
         .zenora-project-image {
             aspect-ratio: 16 / 10;
             min-height: 380px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f7ff,
+                    #f3eaff,
+                    #ffeaf7
+                );
         }
 
         .zenora-project-image img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             object-position: center;
         }
@@ -389,7 +399,7 @@
         .zenora-feature::before {
             content: "✦";
             margin-right: 7px;
-            color: #9b7cffff;
+            color: #9b7cff;
         }
 
 
@@ -765,6 +775,7 @@
     </header>
 
 
+
     <!-- =====================================================
          MAIN
     ====================================================== -->
@@ -779,6 +790,7 @@
         <section class="projects-hero">
 
             <div class="project-shape project-shape-one"></div>
+
             <div class="project-shape project-shape-two"></div>
 
 
@@ -855,10 +867,11 @@
                             data-image="zenora"
                         >
 
+                            <!-- ZENORA IMAGE -->
                             <img
                                 id="zenoraProjectImage"
-                                alt="Zenora application logo and feature icons"
-                                src="data:image/webp;base64,UklGRkpGAQBXRUJQVlA4ID5GAQBwegWdASrmBOYEPpVIn0wlpDQyo5XZmoASiWNu2HwIO7ah+Z9DiyB+"
+                                src="images/zenora_project.png"
+                                alt="Zenora application with a central Z and six feature icons"
                             >
 
                             <div class="image-overlay">
@@ -955,7 +968,9 @@
                      HEALTHY BITES
                 ============================================== -->
 
-                <article class="project-card project-reveal">
+                <article
+                    class="project-card project-reveal"
+                >
 
 
                     <div
@@ -966,7 +981,6 @@
                         <img
                             src="images/healthy_bites.jpeg"
                             alt="Healthy Bites project"
-                            onerror="this.style.display='none';"
                         >
 
                         <div class="image-overlay">
@@ -1025,7 +1039,9 @@
                      FASHION CREATIVE
                 ============================================== -->
 
-                <article class="project-card project-reveal">
+                <article
+                    class="project-card project-reveal"
+                >
 
 
                     <div
@@ -1036,7 +1052,6 @@
                         <img
                             src="images/fashion_project.jpeg"
                             alt="Fashion creative project"
-                            onerror="this.style.display='none';"
                         >
 
                         <div class="image-overlay">
@@ -1095,7 +1110,9 @@
                      PERSONAL PORTFOLIO
                 ============================================== -->
 
-                <article class="project-card project-reveal">
+                <article
+                    class="project-card project-reveal"
+                >
 
 
                     <div
@@ -1130,7 +1147,7 @@
                                         width:45%;
                                         height:10px;
                                         border-radius:20px;
-                                        background:#9b7cffff;
+                                        background:#9b7cff;
                                         margin-bottom:14px;
                                     "
                                 ></div>
@@ -1173,7 +1190,7 @@
                                         style="
                                             height:45px;
                                             border-radius:14px;
-                                            background:#e8ffeF;
+                                            background:#e8ffef;
                                         "
                                     ></div>
 
@@ -1248,7 +1265,9 @@
                      DOCUMENT & DESIGN WORK
                 ============================================== -->
 
-                <article class="project-card project-reveal">
+                <article
+                    class="project-card project-reveal"
+                >
 
 
                     <div
@@ -1653,32 +1672,6 @@
                             }
                         );
 
-
-                    document.addEventListener(
-                        "keydown",
-                        function (event) {
-
-                            if (event.key === "Escape") {
-
-                                navLinks.classList.remove(
-                                    "open"
-                                );
-
-                                menuToggle.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
-
-                                menuToggle.setAttribute(
-                                    "aria-label",
-                                    "Open navigation menu"
-                                );
-
-                            }
-
-                        }
-                    );
-
                 }
 
 
@@ -1723,9 +1716,12 @@
                                     return;
                                 }
 
+                                /*
+                                 * Check that the image actually loaded.
+                                 */
                                 if (
-                                    !image.src ||
-                                    image.style.display === "none"
+                                    !image.complete ||
+                                    image.naturalWidth === 0
                                 ) {
                                     return;
                                 }
@@ -1734,7 +1730,8 @@
                                     image.src;
 
                                 fullscreenImage.alt =
-                                    image.alt || "Project preview";
+                                    image.alt ||
+                                    "Project preview";
 
                                 fullscreen.classList.add(
                                     "active"
@@ -1903,3 +1900,4 @@
 </body>
 
 </html>
+
