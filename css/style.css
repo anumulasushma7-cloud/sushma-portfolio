@@ -31,6 +31,7 @@
     --radius-large: 34px;
 }
 
+
 /* =========================================================
    RESET
    ========================================================= */
@@ -47,7 +48,9 @@ html {
 
 body {
     min-height: 100vh;
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: var(--text-main);
 
     background:
@@ -69,6 +72,7 @@ body {
         );
 
     line-height: 1.7;
+
     overflow-x: hidden;
 }
 
@@ -87,6 +91,7 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+
 /* =========================================================
    NAVBAR
    ========================================================= */
@@ -96,6 +101,7 @@ a {
     z-index: 1000;
 
     width: 100%;
+
     padding: 18px 6%;
 }
 
@@ -110,6 +116,7 @@ a {
     padding: 12px 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -118,11 +125,13 @@ a {
     background: rgba(255, 255, 255, 0.94);
 
     border: 1px solid rgba(155, 124, 255, 0.12);
+
     border-radius: 24px;
 
     box-shadow:
         0 12px 40px rgba(101, 83, 157, 0.08);
 }
+
 
 /* =========================================================
    BRAND
@@ -130,6 +139,7 @@ a {
 
 .brand {
     display: inline-flex;
+
     align-items: center;
     justify-content: flex-start;
 
@@ -147,6 +157,7 @@ a {
     height: 46px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -154,11 +165,12 @@ a {
 
     border-radius: 15px;
 
-    background: linear-gradient(
-        135deg,
-        #c8b8ff,
-        #ffb6e6
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #c8b8ff,
+            #ffb6e6
+        );
 
     color: #ffffff;
 
@@ -169,6 +181,7 @@ a {
 
     font-size: 30px;
     font-weight: 700;
+
     font-style: italic;
 
     line-height: 1;
@@ -190,7 +203,9 @@ a {
 
 .brand-text {
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
     align-items: flex-start;
 
@@ -199,6 +214,7 @@ a {
 
 .brand-text strong {
     font-size: 16px;
+
     font-weight: 800;
 
     color: var(--text-dark);
@@ -210,6 +226,7 @@ a {
     margin-top: 3px;
 
     font-size: 10px;
+
     font-weight: 600;
 
     letter-spacing: 0.4px;
@@ -219,12 +236,14 @@ a {
     white-space: nowrap;
 }
 
+
 /* =========================================================
    NAV LINKS
    ========================================================= */
 
 .nav-links {
     display: flex;
+
     align-items: center;
     justify-content: flex-end;
 
@@ -233,6 +252,7 @@ a {
 
 .nav-links a {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -241,6 +261,7 @@ a {
     color: var(--text-soft);
 
     font-size: 14px;
+
     font-weight: 700;
 
     border-radius: 12px;
@@ -262,15 +283,17 @@ a {
 .nav-links a.active {
     color: #ffffff;
 
-    background: linear-gradient(
-        135deg,
-        var(--purple),
-        var(--pink)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--pink)
+        );
 
     box-shadow:
         0 8px 20px rgba(155, 124, 255, 0.2);
 }
+
 
 /* =========================================================
    MOBILE MENU
@@ -284,11 +307,13 @@ a {
 
     align-items: center;
     justify-content: center;
+
     flex-direction: column;
 
     gap: 5px;
 
     border: none;
+
     border-radius: 14px;
 
     background: #f4efff;
@@ -304,6 +329,7 @@ a {
 
     background: var(--purple-dark);
 }
+
 
 /* =========================================================
    HERO
@@ -321,6 +347,7 @@ a {
 
 .hero-container {
     position: relative;
+
     z-index: 2;
 
     max-width: 1250px;
@@ -335,6 +362,7 @@ a {
 
     gap: 80px;
 }
+
 
 /* =========================================================
    BACKGROUND SHAPES
@@ -378,6 +406,7 @@ a {
     background: rgba(184, 255, 216, 0.24);
 }
 
+
 /* =========================================================
    HERO CONTENT
    ========================================================= */
@@ -388,6 +417,7 @@ a {
 
 .eyebrow {
     display: inline-flex;
+
     align-items: center;
 
     padding: 8px 14px;
@@ -403,6 +433,7 @@ a {
     color: var(--purple-dark);
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
@@ -421,13 +452,15 @@ a {
 
     font-weight: 900;
 
-    background: linear-gradient(
-        135deg,
-        #7658dc,
-        #ef72b7
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #7658dc,
+            #ef72b7
+        );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
@@ -459,12 +492,14 @@ a {
     font-size: 16px;
 }
 
+
 /* =========================================================
    BUTTONS
    ========================================================= */
 
 .hero-buttons {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 14px;
@@ -489,15 +524,17 @@ a {
 
     border-radius: 14px;
 
-    background: linear-gradient(
-        135deg,
-        #b8b0ff,
-        #ffb6df
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #b8b0ff,
+            #ffb6df
+        );
 
     color: #ffffff;
 
     font-size: 14px;
+
     font-weight: 800;
 
     box-shadow:
@@ -519,8 +556,10 @@ a {
 .primary-button span,
 .secondary-button span {
     font-size: 18px;
+
     line-height: 1;
 }
+
 
 /* =========================================================
    HERO VISUAL
@@ -539,6 +578,7 @@ a {
 
 .profile-card {
     position: relative;
+
     z-index: 3;
 
     width: min(100%, 390px);
@@ -562,21 +602,24 @@ a {
 
 .profile-image-wrap {
     width: 100%;
+
     height: 390px;
 
     overflow: hidden;
 
     border-radius: 25px;
 
-    background: linear-gradient(
-        145deg,
-        #ece5ff,
-        #ffe5f4
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #ece5ff,
+            #ffe5f4
+        );
 }
 
 .profile-image {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -584,21 +627,24 @@ a {
 
 .profile-fallback {
     width: 100%;
+
     height: 100%;
 
     align-items: center;
     justify-content: center;
 
     font-size: 90px;
+
     font-weight: 900;
 
     color: #ffffff;
 
-    background: linear-gradient(
-        135deg,
-        #9b7cff,
-        #ff8ec7
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #9b7cff,
+            #ff8ec7
+        );
 }
 
 .profile-card-content {
@@ -609,9 +655,11 @@ a {
     color: var(--purple-dark);
 
     font-size: 12px;
+
     font-weight: 800;
 
     text-transform: uppercase;
+
     letter-spacing: 1px;
 }
 
@@ -630,6 +678,7 @@ a {
 
     font-size: 14px;
 }
+
 
 /* =========================================================
    FLOATING CARDS
@@ -674,11 +723,13 @@ a {
 
 .floating-card-one {
     top: 60px;
+
     right: 5px;
 }
 
 .floating-card-two {
     bottom: 80px;
+
     left: 2px;
 
     animation-delay: 1s;
@@ -686,6 +737,7 @@ a {
 
 .floating-card-three {
     bottom: 15px;
+
     right: 20px;
 
     animation-delay: 2s;
@@ -701,6 +753,7 @@ a {
         transform: translateY(-9px);
     }
 }
+
 
 /* =========================================================
    SECTIONS
@@ -732,6 +785,7 @@ a {
     color: var(--purple-dark);
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 1.2px;
@@ -756,6 +810,7 @@ a {
 
     font-size: 15px;
 }
+
 
 /* =========================================================
    FEATURE GRID
@@ -798,11 +853,13 @@ a {
     position: absolute;
 
     top: 22px;
+
     right: 24px;
 
     color: #c8c2e0;
 
     font-size: 14px;
+
     font-weight: 800;
 }
 
@@ -819,15 +876,17 @@ a {
 
     border-radius: 17px;
 
-    background: linear-gradient(
-        135deg,
-        #e6deff,
-        #ffe2f4
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #e6deff,
+            #ffe2f4
+        );
 
     color: var(--purple-dark);
 
     font-size: 21px;
+
     font-weight: 800;
 }
 
@@ -853,12 +912,14 @@ a {
     color: var(--purple-dark);
 
     font-size: 13px;
+
     font-weight: 800;
 }
 
 .feature-card a:hover {
     color: var(--pink);
 }
+
 
 /* =========================================================
    FEATURED PROJECT
@@ -885,11 +946,12 @@ a {
 
     border-radius: var(--radius-large);
 
-    background: linear-gradient(
-        135deg,
-        rgba(255, 234, 248, 0.95),
-        rgba(237, 246, 255, 0.95)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 234, 248, 0.95),
+            rgba(237, 246, 255, 0.95)
+        );
 
     border: 1px solid rgba(155, 124, 255, 0.11);
 
@@ -928,8 +990,10 @@ a {
     color: var(--purple-dark);
 
     font-size: 11px;
+
     font-weight: 800;
 }
+
 
 /* =========================================================
    ZENORA VISUAL
@@ -992,6 +1056,7 @@ a {
 
 .zenora-title-line {
     width: 70%;
+
     height: 17px;
 
     border-radius: 8px;
@@ -1020,12 +1085,14 @@ a {
 
     border-radius: 17px;
 
-    background: linear-gradient(
-        135deg,
-        #eee9ff,
-        #ffe7f5
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #eee9ff,
+            #ffe7f5
+        );
 }
+
 
 /* =========================================================
    CTA
@@ -1035,7 +1102,6 @@ a {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     gap: 30px;
@@ -1044,11 +1110,12 @@ a {
 
     border-radius: var(--radius-large);
 
-    background: linear-gradient(
-        135deg,
-        #f1eaff,
-        #fff0f9
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #f1eaff,
+            #fff0f9
+        );
 
     border: 1px solid rgba(155, 124, 255, 0.12);
 
@@ -1068,6 +1135,7 @@ a {
 
     color: var(--text-soft);
 }
+
 
 /* =========================================================
    PAGE HERO
@@ -1102,13 +1170,15 @@ a {
 }
 
 .page-hero h1 span {
-    background: linear-gradient(
-        135deg,
-        #7658dc,
-        #ef72b7
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #7658dc,
+            #ef72b7
+        );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
@@ -1123,6 +1193,7 @@ a {
 
     font-size: 16px;
 }
+
 
 /* =========================================================
    ABOUT
@@ -1161,6 +1232,7 @@ a {
 
     font-size: 15px;
 }
+
 
 /* =========================================================
    INTERESTS
@@ -1209,6 +1281,7 @@ a {
 
     font-size: 13px;
 }
+
 
 /* =========================================================
    SKILLS
@@ -1264,6 +1337,7 @@ a {
     font-weight: 700;
 }
 
+
 /* =========================================================
    PROJECTS
    ========================================================= */
@@ -1301,6 +1375,7 @@ a {
 
 .project-image {
     width: 100%;
+
     height: 260px;
 
     object-fit: cover;
@@ -1337,6 +1412,7 @@ a {
 
     font-weight: 800;
 }
+
 
 /* =========================================================
    CONTACT
@@ -1393,6 +1469,7 @@ a {
 
     font-size: 14px;
 }
+
 
 /* =========================================================
    FORM
@@ -1492,6 +1569,7 @@ a {
     display: block;
 }
 
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -1514,7 +1592,6 @@ a {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
     gap: 35px;
@@ -1587,6 +1664,7 @@ a {
     text-align: center;
 }
 
+
 /* =========================================================
    ANIMATION
    ========================================================= */
@@ -1609,12 +1687,14 @@ a {
     }
 }
 
+
 /* =========================================================
    ORGANIZED PROJECT IMAGE BOXES
    ========================================================= */
 
 .image-project-grid {
     width: 100%;
+
     max-width: 1100px;
 
     margin: 50px auto 0;
@@ -1627,12 +1707,14 @@ a {
     gap: 30px;
 }
 
+
 /* =========================================================
    IMAGE PROJECT CARD
    ========================================================= */
 
 .image-project-card {
     width: 100%;
+
     min-width: 0;
 
     background: rgba(255, 255, 255, 0.78);
@@ -1658,12 +1740,14 @@ a {
         0 25px 60px rgba(80, 60, 120, 0.16);
 }
 
+
 /* =========================================================
    IMAGE BOX
    ========================================================= */
 
 .image-box {
     width: 100%;
+
     height: 320px;
 
     padding: 14px;
@@ -1678,12 +1762,14 @@ a {
     justify-content: center;
 }
 
+
 /* =========================================================
    ACTUAL IMAGE
    ========================================================= */
 
 .image-box img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -1701,6 +1787,7 @@ a {
     transform: scale(1.035);
 }
 
+
 /* =========================================================
    TEXT AREA
    ========================================================= */
@@ -1708,6 +1795,7 @@ a {
 .image-project-info {
     padding: 28px 30px 30px;
 }
+
 
 /* =========================================================
    CATEGORY
@@ -1729,6 +1817,7 @@ a {
     opacity: 0.65;
 }
 
+
 /* =========================================================
    PROJECT TITLE
    ========================================================= */
@@ -1742,6 +1831,7 @@ a {
 
     font-weight: 700;
 }
+
 
 /* =========================================================
    PROJECT DESCRIPTION
@@ -1758,6 +1848,7 @@ a {
 
     opacity: 0.72;
 }
+
 
 /* =========================================================
    TAGS
@@ -1790,6 +1881,7 @@ a {
 
     font-weight: 600;
 }
+
 
 /* =========================================================
    TABLET
@@ -1850,6 +1942,7 @@ a {
     }
 }
 
+
 /* =========================================================
    TABLET PROJECT IMAGES
    ========================================================= */
@@ -1868,6 +1961,7 @@ a {
         height: 350px;
     }
 }
+
 
 /* =========================================================
    MOBILE MENU
@@ -1943,6 +2037,7 @@ a {
     }
 }
 
+
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -1985,6 +2080,7 @@ a {
         line-height: 1.65;
     }
 }
+
 
 /* =========================================================
    SMALL MOBILE
@@ -2083,6 +2179,7 @@ a {
     }
 }
 
+
 /* =========================================================
    EXTRA SMALL DEVICES
    ========================================================= */
@@ -2125,6 +2222,429 @@ a {
 
     .floating-card span {
         font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   ZENORA PROJECT IMAGE
+   RESPONSIVE SIZE FIX
+   Keeps all six icons visible
+   ========================================================= */
+
+.zenora-project-image {
+    position: relative;
+
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   ZENORA INNER VISUAL
+   ========================================================= */
+
+.zenora-project-image .zenora-visual {
+    position: absolute;
+
+    inset: 32px 55px;
+
+    width: auto;
+    height: auto;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ZENORA CENTER
+   ========================================================= */
+
+.zenora-project-image .zenora-center {
+    position: relative;
+
+    z-index: 10;
+
+    width: 112px;
+    height: 112px;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ZENORA ORBIT ICONS
+   ========================================================= */
+
+.zenora-project-image .zenora-orbit-icon {
+    width: 68px;
+
+    min-width: 68px;
+
+    min-height: 68px;
+
+    padding: 6px 4px;
+
+    gap: 3px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    z-index: 8;
+}
+
+
+/* =========================================================
+   ORBIT SYMBOLS
+   ========================================================= */
+
+.zenora-project-image
+.zenora-orbit-icon
+.orbit-symbol {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    font-size: 15px;
+
+    border-radius: 9px;
+}
+
+
+/* =========================================================
+   ORBIT LABELS
+   ========================================================= */
+
+.zenora-project-image
+.zenora-orbit-icon
+.orbit-label {
+    font-size: 7px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOVE SIX ICONS INWARD
+   ========================================================= */
+
+.zenora-project-image .zenora-pill {
+    top: 3%;
+
+    left: 9%;
+}
+
+.zenora-project-image .zenora-meals {
+    top: 3%;
+
+    right: 9%;
+}
+
+.zenora-project-image .zenora-water {
+    top: 50%;
+
+    right: 1%;
+
+    transform: translateY(-50%);
+}
+
+.zenora-project-image .zenora-study {
+    bottom: 3%;
+
+    right: 9%;
+}
+
+.zenora-project-image .zenora-finance {
+    bottom: 3%;
+
+    left: 9%;
+}
+
+.zenora-project-image .zenora-activities {
+    top: 50%;
+
+    left: 1%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   TABLET ZENORA
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .zenora-project-image {
+        min-height: 350px;
+    }
+
+    .zenora-project-image .zenora-visual {
+        inset: 28px 48px;
+    }
+
+    .zenora-project-image .zenora-center {
+        width: 100px;
+        height: 100px;
+    }
+
+    .zenora-project-image .zenora-orbit-icon {
+        width: 62px;
+
+        min-width: 62px;
+
+        min-height: 62px;
+
+        padding: 5px 3px;
+
+        border-radius: 16px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-symbol {
+        width: 27px;
+        height: 27px;
+
+        font-size: 14px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-label {
+        font-size: 6.5px;
+    }
+
+    .zenora-project-image .zenora-pill {
+        left: 7%;
+    }
+
+    .zenora-project-image .zenora-meals {
+        right: 7%;
+    }
+
+    .zenora-project-image .zenora-finance {
+        left: 7%;
+    }
+
+    .zenora-project-image .zenora-study {
+        right: 7%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE ZENORA
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .zenora-project-image {
+        min-height: 300px;
+
+        aspect-ratio: 1 / 1;
+
+        border-radius: 20px;
+    }
+
+    .zenora-project-image .zenora-visual {
+        inset: 22px 35px;
+    }
+
+    .zenora-project-image .zenora-center {
+        width: 86px;
+        height: 86px;
+
+        border-radius: 24px;
+    }
+
+    .zenora-project-image .zenora-center-logo {
+        width: 56px;
+        height: 56px;
+
+        border-radius: 18px;
+    }
+
+    .zenora-project-image
+    .zenora-center-logo
+    span {
+        font-size: 38px;
+    }
+
+    .zenora-project-image .zenora-orbit-icon {
+        width: 52px;
+
+        min-width: 52px;
+
+        min-height: 52px;
+
+        padding: 4px 2px;
+
+        gap: 2px;
+
+        border-radius: 14px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-symbol {
+        width: 24px;
+        height: 24px;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-label {
+        font-size: 5.5px;
+    }
+
+    .zenora-project-image .zenora-pill {
+        top: 1%;
+
+        left: 5%;
+    }
+
+    .zenora-project-image .zenora-meals {
+        top: 1%;
+
+        right: 5%;
+    }
+
+    .zenora-project-image .zenora-water {
+        right: 0;
+    }
+
+    .zenora-project-image .zenora-study {
+        bottom: 1%;
+
+        right: 5%;
+    }
+
+    .zenora-project-image .zenora-finance {
+        bottom: 1%;
+
+        left: 5%;
+    }
+
+    .zenora-project-image .zenora-activities {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .zenora-project-image {
+        min-height: 275px;
+
+        aspect-ratio: 1 / 1;
+    }
+
+    .zenora-project-image .zenora-visual {
+        inset: 18px 28px;
+    }
+
+    .zenora-project-image .zenora-center {
+        width: 76px;
+        height: 76px;
+
+        border-radius: 21px;
+    }
+
+    .zenora-project-image .zenora-center-logo {
+        width: 49px;
+        height: 49px;
+
+        border-radius: 15px;
+    }
+
+    .zenora-project-image
+    .zenora-center-logo
+    span {
+        font-size: 33px;
+    }
+
+    .zenora-project-image .zenora-orbit-icon {
+        width: 47px;
+
+        min-width: 47px;
+
+        min-height: 47px;
+
+        padding: 3px 1px;
+
+        border-radius: 12px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-symbol {
+        width: 21px;
+        height: 21px;
+
+        border-radius: 6px;
+
+        font-size: 10px;
+    }
+
+    .zenora-project-image
+    .zenora-orbit-icon
+    .orbit-label {
+        font-size: 5px;
+    }
+
+    .zenora-project-image .zenora-pill {
+        left: 3%;
+    }
+
+    .zenora-project-image .zenora-meals {
+        right: 3%;
+    }
+
+    .zenora-project-image .zenora-finance {
+        left: 3%;
+    }
+
+    .zenora-project-image .zenora-study {
+        right: 3%;
+    }
+
+    .zenora-project-image .zenora-water {
+        right: -2%;
+    }
+
+    .zenora-project-image .zenora-activities {
+        left: -2%;
     }
 }
 
